@@ -21,7 +21,11 @@
 
 <body>
 
-    <div class="">this is a market trading app</div>
+    <div class="container-body">
+        <div class="">this is a market trading app</div>
+        <div class="" ui-view="header"></div>
+        <div class="" ui-view="root"></div>
+    </div>
 
     <!-- build:js inline app/__dist/desktop.min.js-->
     <!-- dependency-->
@@ -39,17 +43,22 @@
     <!--app scrpipt-->
 
     <script src="app/app.js"></script>
-    <script src="app/routing/routes.js"></script>
+    <script src="app/routes/routes.js"></script>
     <script src="app/run.js"></script>
     <!--app script-->
 
 
     <!--controllers-->
-   
+    <script src="app/controllers/getin/getinCtrl.js"></script>
+
+    <script src="app/controllers/getin/emailCtrl.js"></script>
+    <script src="app/controllers/getin/pwdCtrl.js"></script>
+    <script src="app/controllers/getin/notFoundCtrl.js"></script>
+
     <!--controllers-->
 
     <!--/build -->
-    
+
 </body>
 
 </html>
