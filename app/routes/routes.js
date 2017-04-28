@@ -17,7 +17,6 @@ nevApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
         {
             views: {
                 "root": {
-                    url:'/email',
                     templateUrl: 'app/views/getin/email.html',
                     controller: 'emailCtrl',
                     controllerAs: 'email'

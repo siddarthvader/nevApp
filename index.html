@@ -12,8 +12,8 @@
     <!-- build:css inline app/__dist/desktop.min.css-->
     <link rel="stylesheet" href="app/static/css/reset.css">
     <link rel="stylesheet" href="app/static/css/animate.min.css">
-    <!--<link rel="stylesheet" href="bower_components/bulma/css/bulma.css">-->
-    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="app/styles/style_desktop.css">
 
     <base href="/">
@@ -21,10 +21,9 @@
 
 <body>
 
-    <div class="container-body">
-        <div class="">this is a market trading app</div>
-        <div class="" ui-view="header"></div>
-        <div class="" ui-view="root"></div>
+    <div class="container is-fluid">
+        <div ui-view="header"></div>
+        <div class="column is-mobile " ui-view="root"></div>
     </div>
 
     <!-- build:js inline app/__dist/desktop.min.js-->
