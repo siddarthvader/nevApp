@@ -1,0 +1,37 @@
+{
+  "name": "nevapp",
+  "description": "market research app",
+  "main": "index.js",
+  "authors": [
+    "siddharth jain"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "market",
+    "share",
+    "quiity",
+    "future"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "~1.5.5",
+    "angular-cookies": "~1.5.5",
+    "angular-httpshooter": "^1.0.1",
+    "angular-messages": "~1.5.5",
+    "angular-resource": "~1.5.5",
+    "angular-translate": "~2.11.0",
+    "angular-ui-router": "~0.3.2",
+    "animate.css": "^3.5.2",
+    "moment": "~2.13.0",
+    "moment-timezone": "~0.5.3",
+    "ngstorage": "~0.3.9"
+}
+}

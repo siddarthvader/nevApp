@@ -1,0 +1,27 @@
+{
+  "name": "nevapp",
+  "version": "1.0.0",
+  "description": "market research app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git.com"
+  },
+  "keywords": [
+    "market",
+    "share",
+    "quiity",
+    "future"
+  ],
+  "author": "siddharth jain",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
