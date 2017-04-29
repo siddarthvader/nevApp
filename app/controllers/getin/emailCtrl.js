@@ -4,7 +4,7 @@ nevApp.controller("emailCtrl", function ($state, $scope, $httpshooter) {
     $scope.submitEmail = function(){
         $httpshooter.queue({
             method: 'POST',
-            url: api.email,
+        url: api.email,
             data: {
                 email: $scope.email
             }
