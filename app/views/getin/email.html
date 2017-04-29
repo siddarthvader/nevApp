@@ -1,7 +1,7 @@
 <div class="field">
   <label class="label">Email</label>
   <p class="control has-icons-left has-icons-right">
-    <input class="input" type="text" placeholder="Email input" value="">
+    <input class="input" ng-model="emailId" type="text" placeholder="Email input">
     <span class="icon is-small is-left">
       <i class="fa fa-envelope"></i>
     </span>
@@ -11,3 +11,7 @@
   </p>
   <p class="help is-danger is-hidden">This email is invalid</p>
 </div>
+
+<div class="block is-4 is-offset-8 column has-text-right is-paddingless">
+    <button class="is-primary button is-outlined is-righ-aligned" ng-click="submitEmail()">Submit</button>
+  </div>dsdsd
