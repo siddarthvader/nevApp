@@ -1,6 +1,6 @@
 nevApp.controller("pwdCtrl",function($state,$scope,$httpshooter){
     console.log('inside epwd controller')
-    $scope.pwd=null;
+    $scope.pwdVal=null;
     $scope.submitPwd = function(){
         $httpshooter.queue({
             method: 'POST',
@@ -10,7 +10,7 @@ nevApp.controller("pwdCtrl",function($state,$scope,$httpshooter){
             }
         }).then(function(data){
                if(data.message){
-                   $state.go('getin.pwd');
+                   $state.go('getin.pwdVal');
                } 
         })
     };
