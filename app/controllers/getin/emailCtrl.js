@@ -6,13 +6,12 @@ nevApp.controller("emailCtrl", function ($state, $scope, $httpshooter) {
             method: 'POST',
         url: api.email,
             data: {
-                email: $scope.email
+                email: $scope.emailId
             }
         }).then(function(data){
                if(data.message){
                    $state.go('getin.pwd');
-               } 
+               }
         })
     }
-
 });
