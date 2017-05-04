@@ -2,62 +2,62 @@
 <html lang="en" ng-app="nevApp">
 
 <head>
-    <meta charset="UTF-8">
-    <title> Market Research </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title> Market Research </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
 
-    <!-- build:css inline app/__dist/desktop.min.css-->
-    <link rel="stylesheet" href="app/static/css/reset.css">
-    <link rel="stylesheet" href="app/static/css/animate.min.css">
-    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="app/styles/style_desktop.css">
+  <!-- build:css inline app/__dist/desktop.min.css-->
+  <link rel="stylesheet" href="app/static/css/reset.css">
+  <link rel="stylesheet" href="app/static/css/animate.min.css">
+  <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="app/styles/style_desktop.css">
 
-    <base href="/">
+  <base href="/">
 </head>
 
 <body>
 
-    <div class="container is-fluid">
-        <div ui-view="header"></div>
-        <div class="column is-mobile " ui-view="root"></div>
-    </div>
+  <div class="container is-fluid">
+    <div ui-view="header"></div>
+    <div class="column is-mobile " ui-view="root"></div>
+  </div>
 
-    <!-- build:js inline app/__dist/desktop.min.js-->
-    <!-- dependency-->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/moment-timezone/moment-timezone.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="bower_components/angular-httpshooter/angular-httpshooter.js"></script>
+  <!-- build:js inline app/__dist/desktop.min.js-->
+  <!-- dependency-->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/moment-timezone/moment-timezone.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-httpshooter/angular-httpshooter.js"></script>
 
-    <!--app scrpipt-->
+  <!--app scrpipt-->
 
-    <script src="app/app.js"></script>
-    <script src="app/routes/routes.js"></script>
-    <script src="app/run.js"></script>
-    <script src="app/config/var.js"></script>
-    <!--app script-->
+  <script src="app/app.js"></script>
+  <script src="app/routes/routes.js"></script>
+  <script src="app/run.js"></script>
+  <script src="app/config/var.js"></script>
+  <!--app script-->
 
 
-    <!--controllers-->
-    <script src="app/controllers/getin/getinCtrl.js"></script>
+  <!--controllers-->
+  <script src="app/controllers/getin/getinCtrl.js"></script>
+  <script src="app/controllers/getin/emailCtrl.js"></script>
+  <script src="app/controllers/getin/pwdCtrl.js"></script>
+  <script src="app/controllers/getin/notFoundCtrl.js"></script>
+  <script src="app/controllers/static/headerCtrl.js"></script>
+  <script src="app/controllers/landing/landingCtrl.js"></script>
+  <!--controllers-->
 
-    <script src="app/controllers/getin/emailCtrl.js"></script>
-    <script src="app/controllers/getin/pwdCtrl.js"></script>
-    <script src="app/controllers/getin/notFoundCtrl.js"></script>
-
-    <!--controllers-->
-
-    <!--/build -->
+  <!--/build -->
 
 </body>
 

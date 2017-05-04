@@ -1,4 +1,4 @@
-nevApp.controller("pwdCtrl",function($state,$scope,$httpshooter){
+nevApp.controller("pwdCtrl",function($state,$scope,$httpshooter,$localStorage){
     console.log('inside epwd controller')
     $scope.pwdVal=null;
     $scope.submitPwd = function(){
@@ -6,12 +6,13 @@ nevApp.controller("pwdCtrl",function($state,$scope,$httpshooter){
             method: 'POST',
             url: api.pwd,
             data: {
-                pwd: $scope.pwd
+                email:$localStorage.userData.email,
+                pwd: $scope.pwdVal
             }
         }).then(function(data){
                if(data.message){
-                   $state.go('getin.pwdVal');
-               } 
+                   $state.go('landing');
+               }
         })
     };
 });

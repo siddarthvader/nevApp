@@ -1,0 +1,3 @@
+nevApp.controller('footerCtrl',function(){
+
+});

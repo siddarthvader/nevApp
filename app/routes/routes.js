@@ -41,8 +41,18 @@ nevApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
                     controllerAs: 'notFound'
                 }
             }
-
+        }).state('landing',{
+          views:{
+              'header':{
+                templateUrl:'app/views/static/header.html',
+                controller:'headerCtrl',
+                controllerAs:'header'
+              },
+              'root':{
+                templateUrl:'app/views/landing/landing.html',
+                controller:'landingCtrl',
+                controllerAs:'landing'
+              }
+          }
         })
 }]);
-
-
