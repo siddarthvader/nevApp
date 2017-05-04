@@ -9,7 +9,7 @@ nevApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
             views: {
                 'root': {
                     controller: 'getinCtrl',
-                    templateUrl:'app/views/getin/getin.html'
+                    templateUrl: 'app/views/getin/getin.html'
                 }
             }
 
@@ -41,18 +41,66 @@ nevApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
                     controllerAs: 'notFound'
                 }
             }
-        }).state('landing',{
-          views:{
-              'header':{
-                templateUrl:'app/views/static/header.html',
-                controller:'headerCtrl',
-                controllerAs:'header'
-              },
-              'root':{
-                templateUrl:'app/views/landing/landing.html',
-                controller:'landingCtrl',
-                controllerAs:'landing'
-              }
-          }
-        })
+        }).state('landing', {
+            views: {
+                'header': {
+                    templateUrl: 'app/views/static/header.html',
+                    controller: 'headerCtrl',
+                    controllerAs: 'header'
+                },
+                'root': {
+                    templateUrl: 'app/views/landing/landing.html',
+                    controller: 'landingCtrl',
+                    controllerAs: 'landing'
+                }
+            }
+        }).state('landing.macros', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/macros.html',
+                    controller: "macrosCtrl",
+                    controllerAs: "macros"
+                }
+            }
+        }).state('landing.setting', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/setting.html',
+                    controller: "settingCtrl",
+                    controllerAs: "setting"
+                }
+            }
+        }).state('landing.monitor', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/monitor.html',
+                    controller: "monitorCtrl",
+                    controllerAs: "monitor"
+                }
+            }
+        }).state('landing.season', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/season.html',
+                    controller: "seasonCtrl",
+                    controllerAs: "season"
+                }
+            }
+        }).state('landing.fundamental', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/fundamental.html',
+                    controller: "fundamentalCtrl",
+                    controllerAs: "fundamental"
+                }
+            }
+        }).state('landing.preEarn', {
+            views: {
+                'root': {
+                    templateUrl: 'app/views/landing/pre-earn.html',
+                    controller: "preEarnCtrl",
+                    controllerAs: "preEarn"
+                }
+            }
+        });
 }]);

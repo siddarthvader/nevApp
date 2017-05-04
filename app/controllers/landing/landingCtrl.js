@@ -1,3 +1,3 @@
-nevApp.controller('landingCtrl',function(){
-
+nevApp.controller('landingCtrl',function($state){
+    $state.go('landing.macros');
 });
