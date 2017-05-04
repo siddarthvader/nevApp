@@ -1,4 +1,4 @@
-nevApp.controller("emailCtrl", function($state, $scope, $httpshooter,$localstorage) {
+nevApp.controller("emailCtrl", function($state, $scope, $httpshooter,$localStorage) {
   console.log('inside email controller');
   $scope.emailId = null;
   $scope.submitEmail = function() {
@@ -12,7 +12,7 @@ nevApp.controller("emailCtrl", function($state, $scope, $httpshooter,$localstora
       if (data.message) {
         data=data.data;
         if (data.state == 'goToPwd') {
-          $localstorage.userData=data;
+          $localStorage.userData=data.userData;
           $state.go('getin.pwd');
         }
       }
