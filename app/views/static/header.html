@@ -1,1 +1,32 @@
-header
+<div class="is-paddingless">
+    <nav class="nav has-shadow">
+        <div class="container">
+            <div class="nav-left">
+                <div class="nav-item title is-5">
+                    Market Trading App
+                </div>
+            </div>
+            <div class="nav-center">
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.macros" ng-class={'is-active':getStateName()=='landing.macros'}>Macros</a>
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.monitor" ng-class={'is-active':getStateName()=='landing.monitor'}>Market Monitoring</a>
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.season" ng-class={'is-active':getStateName()=='landing.season'}>Seasonality</a>
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.fundamental" ng-class={'is-active':getStateName()=='landing.fundamental'}>Fundamentals & Technical</a>
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.preEarn" ng-class={'is-active':getStateName()=='landing.preEarn'}>5 Day Pre-Earnings Game</a>
+                <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.setting" ng-class={'is-active':getStateName()=='landing.setting'}>Settings</a>
+            </div>
+            <span class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <div class="nav-center nav-menu">
+                <a class="nav-item is-tab is-hidden-tablet is-active">Macros</a>
+                <a class="nav-item is-tab is-hidden-tablet">Market Monitoring</a>
+                <a class="nav-item is-tab is-hidden-tablet">Seasonality</a>
+                <a class="nav-item is-tab is-hidden-tablet">Fundamentals & Technical</a>
+                <a class="nav-item is-tab is-hidden-tablet">5 Dat Pre-Earnings Game</a>
+                <a class="nav-item is-tab is-hidden-tablet">Setting</a>
+            </div>
+        </div>
+    </nav>
+</div>
