@@ -1,6 +1,13 @@
-nevApp.controller('headerCtrl',function($state,$scope){
-    var header=this;
-    $scope.getStateName=function(){
+nevApp.controller('headerCtrl', function ($state, $scope, $rootScope) {
+    var header = this;
+    $scope.getStateName = function () {
         return $state.current.name;
     };
+
+    $scope.isMenuOpen = false;
+    $scope.toggleMenu = function () {
+        if ($rootScope.isMobile()) {
+            $scope.isMenuOpen = !$scope.isMenuOpen;
+        }
+    }
 });
