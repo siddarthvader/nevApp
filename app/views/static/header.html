@@ -1,6 +1,7 @@
+
 <div class="is-paddingless">
     <nav class="nav has-shadow">
-        <div class="container">
+        <div class="container is-fluid">
             <div class="nav-left">
                 <div class="nav-item title is-5">
                     Market Trading App
@@ -14,12 +15,13 @@
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.preEarn" ng-class={'is-active':getStateName()=='landing.preEarn'}>5 Day Pre-Earnings Game</a>
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.setting" ng-class={'is-active':getStateName()=='landing.setting'}>Settings</a>
             </div>
-            <span class="nav-toggle">
+
+            <span class="nav-toggle" ng-class="{'is-active':$root.isMobile()&&isMenuOpen}" ng-click=toggleMenu()>
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
-            <div class="nav-center nav-menu">
+            <div class="nav-right nav-menu" ng-if="$root.isMobile()" ng-class="{'is-active': isMenuOpen && $root.isMobile() }">
                 <a class="nav-item is-tab is-hidden-tablet is-active">Macros</a>
                 <a class="nav-item is-tab is-hidden-tablet">Market Monitoring</a>
                 <a class="nav-item is-tab is-hidden-tablet">Seasonality</a>

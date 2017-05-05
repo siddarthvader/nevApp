@@ -1,3 +1,4 @@
-nevApp.controller('macrosCtrl',function($state){
-    
+nevApp.controller('macrosCtrl',function($state,$scope,$rootScope){
+    console.log($rootScope.isMobile());
+       
 });

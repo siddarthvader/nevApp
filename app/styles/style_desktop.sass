@@ -1,0 +1,21 @@
+@import "bulma/sass/utilities/variables"
+@import "bulma/sass/elements/table.sass"
+body
+    font-size : $size-6
+
+.m-6
+    margin: $size-6    
+.cursor-p
+    cursor : pointer
+
+.table-container
+    overflow-x : auto
+    table
+        font-size : $size-7
+        tr
+            >.is-selected
+                color: white
+                border-color: #fff
+                background-color:  $table-row-active-background
+            >[clickable]
+                cursor : pointer

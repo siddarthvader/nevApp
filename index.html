@@ -21,9 +21,9 @@
 
 <body>
 
-  <div class="container is-fluid">
-    <div ui-view="header"></div>
-    <div ui-view="root"></div>
+  <div class="container is-fluid hero">
+    <div ui-view="header" class="hero-head"></div>
+    <div ui-view="root" class="hero-body"></div>
   </div>
 
   <!-- build:js inline app/__dist/desktop.min.js-->
@@ -47,6 +47,9 @@
   <script src="app/config/var.js"></script>
   <!--app script-->
 
+  <!--directives-->
+      <script src="app/directives/clickable/clickable.js"></script>
+  <!--directives-->
 
   <!--controllers-->
   <script src="app/controllers/getin/getinCtrl.js"></script>
