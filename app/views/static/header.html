@@ -1,13 +1,13 @@
 
 <div class="is-paddingless">
     <nav class="nav has-shadow">
-        <div class="container is-fluid">
+       
             <div class="nav-left">
-                <div class="nav-item title is-5">
+                <div class="nav-item is-brand">
                     Market Trading App
                 </div>
             </div>
-            <div class="nav-center">
+            <div class="nav-center is-hidden-mobile">
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.macros" ng-class={'is-active':getStateName()=='landing.macros'}>Macros</a>
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.monitor" ng-class={'is-active':getStateName()=='landing.monitor'}>Market Monitoring</a>
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.season" ng-class={'is-active':getStateName()=='landing.season'}>Seasonality</a>
@@ -16,7 +16,7 @@
                 <a class="nav-item is-tab is-hidden-mobile" ui-sref="landing.setting" ng-class={'is-active':getStateName()=='landing.setting'}>Settings</a>
             </div>
 
-            <span class="nav-toggle" ng-class="{'is-active':$root.isMobile()&&isMenuOpen}" ng-click=toggleMenu()>
+            <span id="nav-toggle" class="nav-toggle" ng-class="{'is-active':$root.isMobile()&&isMenuOpen}" ng-click=toggleMenu()>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,6 +29,7 @@
                 <a class="nav-item is-tab is-hidden-tablet">5 Dat Pre-Earnings Game</a>
                 <a class="nav-item is-tab is-hidden-tablet">Setting</a>
             </div>
-        </div>
+       
     </nav>
+
 </div>

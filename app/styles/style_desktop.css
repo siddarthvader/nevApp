@@ -96,6 +96,10 @@ body {
   cursor: pointer;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .table-container {
   overflow-x: auto;
 }
