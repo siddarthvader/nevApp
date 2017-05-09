@@ -108,6 +108,48 @@ body {
   cursor: pointer;
 }
 
+.on-hover {
+  transition: all 200ms ease;
+}
+
+.on-hover:hover {
+  transition: all 200ms ease;
+  transform: translate3d(0, -0.15rem, 0);
+  box-shadow: 0 0.25rem 1.25rem rgba(10, 10, 10, 0.4), 0 0 0.25rem rgba(10, 10, 10, 0.12);
+}
+
+.on-hover:hover.red .title {
+  color: #ff3860;
+}
+
+.on-hover:hover.red .icon {
+  color: #ff3860;
+}
+
+.on-hover:hover.blue .title {
+  color: #3273dc;
+}
+
+.on-hover:hover.blue .icon {
+  color: #3273dc;
+}
+
+.on-hover:hover.green .title {
+  color: #23d160;
+}
+
+.on-hover:hover.green .icon {
+  color: #23d160;
+}
+
+.on-hover:hover.orange .title {
+  color: #ff470f;
+}
+
+.on-hover:hover.orange .icon {
+  color: #ff470f;
+}
+
 .has-fixed-header {
   position: fixed;
   right: 0;
