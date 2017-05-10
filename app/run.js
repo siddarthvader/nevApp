@@ -1,6 +1,16 @@
-nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage) {
+nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage,AuthFactory) {
     console.info('iadhr');
-    $state.go('landing');
+    if($localStorage.session){
+        if($localStorage.session.token){
+            AuthFactory.validateToken();
+        }
+        else{
+            $state.go('getin');
+        }
+    }
+    else{
+        $state.go('getin');
+    }
     $rootScope.$state = $state;
     $window.$ls = $localStorage;
     $window.$state = $state;
