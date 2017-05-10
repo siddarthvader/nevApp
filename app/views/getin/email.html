@@ -1,17 +1,21 @@
-<div class="field">
-  <label class="label">Email</label>
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" ng-model="emailId" type="text" placeholder="Email input">
-    <span class="icon is-small is-left">
+<form name="emailForm"  ng-submit="submitEmail()">
+  <div class="field">
+
+    <label class="label">Email</label>
+    <p class="control has-icons-left has-icons-right">
+      <input class="input" name="email" autocomplete="off" required ng-model="emailId" type="email" placeholder="Email input" ng-class="{ 'is-danger':emailNotValid}">
+      <span class="icon is-small is-left">
       <i class="fa fa-envelope"></i>
     </span>
-    <span class="icon is-small is-right">
-      <i class="fa fa-warning is-hidden"></i>
+      <span class="icon is-small is-right">
+      <i class="fa fa-warning" ng-if="error.emailNotValid"></i>
     </span>
-  </p>
-  <p class="help is-danger is-hidden">This email is invalid</p>
-</div>
+    </p>
+    <p class="help is-danger" ng-if="error.emailNotExists">This email does not exist</p>
+  </div>
 
-<div class="block is-4 is-offset-8 column has-text-right is-paddingless">
-  <button class="is-primary button is-outlined is-righ-aligned" ng-click="submitEmail()">Submit</button>
-</div>
+
+  <div class="block is-4 is-offset-8 column has-text-right is-paddingless">
+    <button class="is-primary button is-outlined is-righ-aligned" type="submit">Submit</button>
+  </div>
+</form>
