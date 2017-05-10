@@ -9,7 +9,6 @@ nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state', functi
                     email: $localStorage.userData.email
                 },
                 headers: {
-                    'Content-Type':'application/json',
                     'Token': $localStorage.session.token
                 }
             }).then(function (data) {
