@@ -1,4 +1,4 @@
-nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage) {
+nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage,AuthFactory) {
     console.info('iadhr');
     if($localStorage.session){
         if($localStorage.session.token){
