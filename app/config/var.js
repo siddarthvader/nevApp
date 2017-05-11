@@ -6,7 +6,10 @@ var api={
     pwd:server+'pwd',
     validateToken:server+'validateToken',
     logout:server+'logout',
-    invite:server+'inviteUser'
+    invite:server+'inviteUser',
+    getUsers:server+'getUsers',
+    removeUser:server+'removeUser',
+    history:server+'history'
 }
 
 Object.size = function(obj) {

@@ -108,6 +108,10 @@ body {
   cursor: pointer;
 }
 
+.blue-text {
+  color: #3273dc;
+}
+
 .on-hover {
   transition: all 200ms ease;
 }
