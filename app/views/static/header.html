@@ -22,12 +22,12 @@
                 <span></span>
             </span>
             <div class="nav-right nav-menu" ng-if="$root.isMobile()" ng-class="{'is-active': isMenuOpen && $root.isMobile() }">
-                <a class="nav-item is-tab is-hidden-tablet is-active">Macros</a>
-                <a class="nav-item is-tab is-hidden-tablet">Market Monitoring</a>
-                <a class="nav-item is-tab is-hidden-tablet">Seasonality</a>
-                <a class="nav-item is-tab is-hidden-tablet">Fundamentals & Technical</a>
-                <a class="nav-item is-tab is-hidden-tablet">5 Dat Pre-Earnings Game</a>
-                <a class="nav-item is-tab is-hidden-tablet">Setting</a>
+                 <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.macros" ng-class={'is-active':getStateName()=='landing.macros'}>Macros</a>
+                <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.monitor" ng-class={'is-active':getStateName()=='landing.monitor'}>Market Monitoring</a>
+                <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.season" ng-class={'is-active':getStateName()=='landing.season'}>Seasonality</a>
+                <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.fundamental" ng-class={'is-active':getStateName()=='landing.fundamental'}>Fundamentals & Technical</a>
+                <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.preEarn" ng-class={'is-active':getStateName()=='landing.preEarn'}>5 Day Pre-Earnings Game</a>
+                <a class="nav-item is-tab is-hidden-tablet" ui-sref="landing.setting" ng-class={'is-active':getStateName()=='landing.setting'}>Settings</a>
             </div>
        
     </nav>
