@@ -150,12 +150,20 @@ body {
   color: #ff470f;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .has-fixed-header {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
-  background: white;
+  z-index: 20;
+  background: #fff;
 }
 
 .overflow-auto {

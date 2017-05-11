@@ -18,7 +18,7 @@ nevApp.controller("pwdCtrl", function ($state, $scope, $httpshooter, $localStora
                 switch (data.state) {
                     case 'goToLanding': 
                         $localStorage.session = data.data;
-                        $state.go('landing');
+                        $state.go('landing.macros');
                         break;
                     case 'notFound':
                         $scope.error.pwd=true;

@@ -1,11 +1,11 @@
-<div class="container overflow is-fluid">
+<div class="container is-fluid">
     <div class="columns">
         <div class="column is-4 is-offset-4">
             <div class="tile is-vertical is-8 is-offset-4">
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <div class="box cursor-p on-hover orange" ng-click="logout()">
-                            <div class="level">
+                            <div class="level is-mobile">
                                 <div class="level-left">
                                     <div class="title is-4 level-item grey">
                                         Log-Out
@@ -21,8 +21,8 @@
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child">
-                        <div class="box cursor-p on-hover green">
-                            <div class="level">
+                        <div class="box cursor-p on-hover green" ng-click="pwdChangeOverlayOpen()">
+                            <div class="level is-mobile">
                                 <div class="level-left">
                                     <div class="title is-4 level-item">Add User</div>
                                 </div>
@@ -36,9 +36,9 @@
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <div class="box cursor-p on-hover red">
-                            <div class="level">
+                            <div class="level is-mobile">
                                 <div class="level-left">
-                                    <div class="title is-4">Remove User</div>
+                                    <div class="title is-4 level-item">Remove User</div>
                                 </div>
                                 <div class="level-right has-text-centered">
                                     <span class="icon level-item is-medium"><i class="fa fa-minus"></i></span>
@@ -50,12 +50,26 @@
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <div class="box cursor-p on-hover blue">
-                            <div class="level">
+                            <div class="level is-mobile">
                                 <div class="level-right">
-                                    <div class="title is-4">Login History</div>
+                                    <div class="level-item title is-4">Login History</div>
                                 </div>
                                 <div class="level-left has-text-centered">
                                     <span class="icon level-item is-medium"><i class="fa fa-history"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child">
+                        <div class="box cursor-p on-hover blue">
+                            <div class="level is-mobile">
+                                <div class="level-right">
+                                    <div class="level-item title is-4">Change Password</div>
+                                </div>
+                                <div class="level-left has-text-centered">
+                                    <span class="level-item icon level-item is-medium"><i class="fa fa-key"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -65,3 +79,11 @@
         </div>
     </div>
 </div>
+
+  <div class="modal animated rotateInUpRight z-30" ng-class="{'is-active':modalOpen}">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      yes do it
+    </div>
+    <button class="modal-close" ng-click="toggleModal()"></button>
+  </div>
