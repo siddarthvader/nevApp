@@ -5,7 +5,8 @@ var api={
     email:server+'email',
     pwd:server+'pwd',
     validateToken:server+'validateToken',
-    logout:server+'logout'
+    logout:server+'logout',
+    invite:server+'inviteUser'
 }
 
 Object.size = function(obj) {
