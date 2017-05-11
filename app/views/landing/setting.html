@@ -1,7 +1,7 @@
-<div class="container is-fluid">
+<div class="container is-fluid animated fadeInUp">
     <div class="columns">
         <div class="column is-4 is-offset-4">
-            <div class="tile is-vertical is-8 is-offset-4">
+            <div class="tile is-vertical is-12">
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <div class="box cursor-p on-hover orange" ng-click="logout()">
@@ -14,14 +14,13 @@
                                 <div class="level-right has-text-centered">
                                     <span class="icon level-item is-medium"><i class="fa fa-sign-out"></i></span>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tile is-parent">
+                <div class="tile is-parent" ng-if="is_admin">
                     <div class="tile is-child">
-                        <div class="box cursor-p on-hover green" ng-click="userInviteModalOpen()">
+                        <div class="box cursor-p on-hover green" ng-click="inviteUserModalOpen()">
                             <div class="level is-mobile">
                                 <div class="level-left">
                                     <div class="title is-4 level-item">Add User</div>
@@ -33,9 +32,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile is-parent">
+                <div class="tile is-parent" ng-if="is_admin">
                     <div class="tile is-child">
-                        <div class="box cursor-p on-hover red">
+                        <div class="box cursor-p on-hover red" ng-click="removeUserModalOpen()">
                             <div class="level is-mobile">
                                 <div class="level-left">
                                     <div class="title is-4 level-item">Remove User</div>
@@ -49,7 +48,7 @@
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child">
-                        <div class="box cursor-p on-hover blue">
+                        <div class="box cursor-p on-hover blue" ng-click="loginHistoryModalOpen()">
                             <div class="level is-mobile">
                                 <div class="level-right">
                                     <div class="level-item title is-4">Login History</div>
@@ -92,7 +91,7 @@
                     <div class="field-body">
                         <div class="field has-addons">
                             <p class="control is-expanded">
-                                <input class="input" ng-model="setting.emailId" type="email" required autocomplete="off" placeholder="Email">
+                                <input class="input" ng-model="setting.inviteEmailId" type="email" required autocomplete="off" placeholder="Email">
                             </p>
                             <p class="control">
                                 <button class="button is-primary" type="submit">Invite</button>
@@ -103,8 +102,45 @@
                 </div>
                 <p class="help is-success has-text-centered" ng-if="userAdded">User added successfully</p>
                 <p class="help is-danger has-text-centered" ng-if="userExists">User already exists</p>
-                
+
             </form>
+        </div>
+        <div class="box" ng-if="modalMode==='removeUser'">
+            <div class="title is-3 has-text-centered">
+                User List
+            </div>
+            <div class="level is-mobile" ng-repeat="user in usersList track by $index" ng-if="user.role==='user'">
+                <div class="level-item blue-text">
+                   <label>{{user.email}}</label> 
+                </div>
+                <div class="level-item primary">
+                    {{user.role}}
+                </div>
+                <div class="level-item" ng-click="removeUserByEmail(user.email,$index)">
+                    <button class="delete">
+                    </button>
+                </div>
+            </div>
+            <p class="help is-success has-text-centered" ng-if="userRemoved">User removed successfully</p>
+
+        </div>
+        <div class="box" ng-if="modalMode==='history'">
+            <div class="title is-3 has-text-centered">
+                Login History
+            </div>
+            <div class="level is-mobile" ng-repeat="session in loginHistory track by $index">
+                <div class="level-item blue-text">
+                   <label>{{session.created_on}}</label> 
+                </div>
+                <div class="level-item primary">
+                    {{session.device.OS}}
+                </div>
+                <div class="level-item">
+                    {{session.device.browser}}
+                </div>
+            </div>
+            <p class="help is-success has-text-centered" ng-if="userRemoved">User removed successfully</p>
+
         </div>
     </div>
     <button class="modal-close" ng-click="toggleModal()"></button>
