@@ -13,23 +13,34 @@ nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state', functi
                 }
             }).then(function (data) {
                 if (data.data.state === 'goToLanding') {
-                    $state.go('landing');
+                    if (!$localStorage.currentState) {
+                        $state.go('landing.macros');
+                    }
+                    else {
+                        $state.go($localStorage.currentState);
+                    }
                 }
                 else {
-                    delete $localStorage.userData;
-                    delete $localStorage.session;
+                    destroyData();
                     $state.go('getin');
                 }
             });
         }
         else {
-            delete $localStorage.userData;
-            delete $localStorage.session;
+           destroyData();
             $state.go('getin');
         }
     }
 
-    return{
-        validateToken:validateToken
+    var destroyData=function(){
+        delete $localStorage.currentState;
+        delete $localStorage.userData;
+        delete $localStorage.session;
+    }
+
+    return {
+        validateToken: validateToken,
+        destroyData:destroyData
+
     }
 }])
