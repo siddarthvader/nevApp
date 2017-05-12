@@ -26,9 +26,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(__dirname));
 
-
-http.listen(port, listen_IP, function() {
-  console.log('up and running');
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
 
 app.get("*", function(req, res) {
