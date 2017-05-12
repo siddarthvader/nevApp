@@ -6,8 +6,8 @@ var bodyParser = require('body-parser');
 var Path = require('path');
 var compression = require('compression');
 
-var listen_IP='127.0.0.1';
-// var listen_IP='192.168.1.79';
+// var listen_IP='127.0.0.1';
+var listen_IP='192.168.1.79';
 // var listen_IP='192.168.1.124';
 
 var port =8080;
