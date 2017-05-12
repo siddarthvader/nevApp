@@ -20,6 +20,9 @@
     "test",
     "tests"
   ],
+  "resolutions": {
+    "angular": "^1.6.4"
+  },
   "dependencies": {
     "angular": "^1.6.4",
     "angular-animate": "~1.5.5",
