@@ -6,6 +6,10 @@ var bodyParser = require('body-parser');
 var Path = require('path');
 var compression = require('compression');
 
+var listen_IP='127.0.0.1';
+// var listen_IP='192.168.1.79';
+// var listen_IP='192.168.1.124';
+
 var port =8080;
 
 app.use(compression({
@@ -18,12 +22,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(__dirname));
 
-// http.listen(port, "192.168.1.124", function () {
-// 	console.log('up and running');
-// });
 
-
-http.listen(port, "192.168.1.79", function() {
+http.listen(port, listen_IP, function() {
   console.log('up and running');
 });
 

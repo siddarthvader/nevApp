@@ -1,10 +1,10 @@
-<div class="container overflow-scroll is-fluid animated fadeInUp">
+<div class="container  is-fluid animated fadeInUp">
     <div class="tile is-ancestor">
-        <div class="tile is-vertical is-7 overflow-auto">
-            <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <div class="tile is-child ">
-                        <div class=" box table-container">
+        <div class="tile is-vertical is-7 overflow-auto is-parent">
+            <div class="tile is-child ">
+                <div class=" box table-container">
+                    <div class="columns">
+                        <div class="column is-10 is-offset-2">
                             <table class="table is-striped">
                                 <thead>
                                     <tr>
@@ -58,53 +58,66 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="box">
+                    </div>
+                </div>
+                <div class="box ">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <figure class="image">
+                                <img src="app/static/images/macro_circle.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="column is-8">
                             <figure class="image">
                                 <img src="app/static/images/macros_cycle.png">
                             </figure>
                         </div>
                     </div>
-                    <div class="tile is-child">
-                        <div class="overflow-auto box">
-                            <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&importance=2,3&features=datepicker,timezone,timeselector,filters&countries=25,32,6,37,72,22,17,39,10,35,43,36,110,26,12,4,5&calType=week&timeZone=55&lang=1"
-                                width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
-                            <div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time Economic Calendar provided by <a href="https://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span></div>
 
+
+
+                </div>
+                <div class="overflow-auto box">
+                    <div class="columns">
+                        <div class="column is-8 is-offset-2">
+                            <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&importance=2,3&features=datepicker,timezone,timeselector,filters&countries=25,32,6,37,72,17,39,35,43,36,4,5&calType=week&timeZone=55&lang=1"
+                                width="100%" height="700" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <div class="tile is-vertical is-parent is-5">
-                <div class="tile is-child">
-                    <div class="overflow-scroll">
-                        <div class="box">
-                            <figure class="image">
-                                <img src="app/static/images/us_consumer_confidence.PNG">
-                            </figure>
-                        </div>
-                        <div class="box">
-                            <figure class="image">
-                                <img src="app/static/images/us_consumer_confidence.PNG">
-                            </figure>
-                        </div>
+        <div class="tile is-vertical is-5 is-parent">
+
+            <div class="tile is-child">
+                <div class="box">
+                    <iframe src='https://d3fy651gv2fhd3.cloudfront.net/embed/?s=concconf&v=201705041725u&d1=20070101&d2=20171231&type=type=line&h=auto&w=auto'
+                        height='250px' width='100%' frameborder='0' scrolling='no'></iframe>
+
+                </div>
+                <div class="box">
+                    <iframe src='https://d3fy651gv2fhd3.cloudfront.net/embed/?s=ip+yoy&v=201704242324u&d1=20070101&d2=20171231&type=type=line&h=300&w=600'
+                        height='100%' width='250px' frameborder='0' scrolling='no'></iframe>
+                </div>
+                <div class="box">
+                    <figure class="image">
+                        <iframe src='https://d3fy651gv2fhd3.cloudfront.net/embed/?s=fdtr&v=201705092125u&d1=20070101&d2=20171231&h=300&w=600' height='250px'
+                            width='100%' frameborder='0' scrolling='no'></iframe>
+                    </figure>
+                </div>
+
+                <div class="box" style="width:100%;height:250px;float:left;border:2px solid #00aa00;margin:5px">
+                    <div style="background-color:#00aa00;padding:6px 6px 16px 6px;margin-top:5px;color:#fff;font:10px arial,sans-serif"><span><a href="https://www.oanda.com/register/#/sign-up" target="_blank" style="font-weight:bold;color:#fff;text-decoration:none">Register for an OANDA forex trading account</a></span>
+                        <span style="float:right;"><a id="econostats_fxtrade_tool_link" href="https://www.oanda.com/forex-trading/analysis/economic-indicators"
+                                    target="_blank" style="font-weight:bold;color:#fff;text-decoration:none">Econostats</a> powered
+                                by <a id="econostats_fxtrade_link" href="https://www.oanda.com" target="_blank" style="font-weight:bold;color:#fff;text-decoration:none">OANDA</a></span>
                     </div>
-
+                    <script src='https://www.oanda.com/embed/get/econostats/?s=%7B%220%22%3A%7B%22gr_name%22%3A%22Fixed-Income+Securities%22%2C%22gr_country%22%3A%22US%22%2C%22gr_detail_name%22%3A%221m%22%2C%22gr_grouped%22%3A1%2C%22gr_is_relative%22%3A0%7D%7D'></script>
+                    <div style="clear:both"></div>
                 </div>
-                <div class="tile is-child box">
 
-                    <figure class="image">
-                        <img src="app/static/images/us_consumer_confidence.PNG">
-                    </figure>
-
-                </div>
-                <div class="tile is-child box">
-
-                    <figure class="image">
-                        <img src="app/static/images/us_consumer_confidence.PNG">
-                    </figure>
-
-                </div>
             </div>
-
+        </div>
     </div>
+</div>
