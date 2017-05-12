@@ -15,7 +15,7 @@ listen_IP=process.env.SERVER_IP||listen_IP;
 var port =process.env.PORT||8080;
 
 
-
+app.use(express.static(__dirname+'/app'));
 app.use(compression({
   level: 6
 })); //6 is default
@@ -24,9 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(express.static(__dirname));
 
-app.listen(port, function() {
+app.listen(process.env.PORT||port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
 
