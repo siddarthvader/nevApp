@@ -6,11 +6,13 @@ var bodyParser = require('body-parser');
 var Path = require('path');
 var compression = require('compression');
 
-// var listen_IP='127.0.0.1';
-var listen_IP='192.168.1.79';
+ var listen_IP='127.0.0.1';
+// var listen_IP='192.168.1.79';
 // var listen_IP='192.168.1.124';
 
-var port =8080;
+listen_IP=process.env.SERVER_IP||listen_IP;
+
+var port =process.env.SERVER_PORT||8080;
 
 app.use(compression({
   level: 6
