@@ -19,6 +19,9 @@
   ],
   "author": "siddharth jain",
   "license": "ISC",
+  "engines": {
+    "node": "6.10.2"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "bower": "^1.8.0",
