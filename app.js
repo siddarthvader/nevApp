@@ -14,7 +14,7 @@ listen_IP=process.env.SERVER_IP||listen_IP;
 
 var port =process.env.PORT||8080;
 
-
+app.use(express.static(__dirname));
 app.use(express.static(__dirname+'/app'));
 app.use(compression({
   level: 6
@@ -29,6 +29,6 @@ app.listen(process.env.PORT||port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
 
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
