@@ -1,2 +1,2 @@
-var nevApp=angular.module('nevApp', ['ui.router', 'ngAnimate', 'ngResource', 'ngCookies','angular-httpshooter','ngStorage']);
+var nevApp=angular.module('nevApp', ['ui.router', 'ngResource', 'ngCookies','angular-httpshooter','ngStorage']);
 
