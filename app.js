@@ -12,7 +12,9 @@ var compression = require('compression');
 
 listen_IP=process.env.SERVER_IP||listen_IP;
 
-var port =process.env.SERVER_PORT||8080;
+var port =process.env.PORT||8080;
+
+
 
 app.use(compression({
   level: 6
