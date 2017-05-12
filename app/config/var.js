@@ -1,6 +1,7 @@
 // var server='http://192.168.1.79:3000/'
 var server="http://127.0.0.1:3000/";
 // var server="http://localhost:3000/"
+server=process.env.API||server;
 var api={
     email:server+'email',
     pwd:server+'pwd',
