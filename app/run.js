@@ -1,3 +1,6 @@
+nevApp.config(function($qProvider){
+    $qProvider.errorOnUnhandledRejections(false);
+})
 nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthFactory) {
     if ($localStorage.session) {
         if ($localStorage.session.token) {
