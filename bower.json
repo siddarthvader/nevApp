@@ -24,7 +24,7 @@
     "angular": "^1.6.4"
   },
   "dependencies": {
-    "angular": "1.6.4",
+    "angular": "^1.6.4",
     "angular-cookies": "~1.5.5",
     "angular-httpshooter": "^1.0.1",
     "angular-messages": "~1.5.5",
