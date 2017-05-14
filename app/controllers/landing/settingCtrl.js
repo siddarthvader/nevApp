@@ -16,7 +16,6 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
             data = data.data;
             AuthFactory.destroyData();
             $state.go('getin');
-
         })
     };
 
