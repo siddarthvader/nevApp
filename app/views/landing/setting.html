@@ -111,7 +111,7 @@
             </div>
             <div class="level is-mobile" ng-repeat="user in usersList track by $index" ng-if="user.role==='user'">
                 <div class="level-item blue-text">
-                   <label>{{user.email}}</label> 
+                    <label>{{user.email}}</label>
                 </div>
                 <div class="level-item primary">
                     {{user.role}}
@@ -124,22 +124,42 @@
             <p class="help is-success has-text-centered" ng-if="userRemoved">User removed successfully</p>
 
         </div>
-        <div class="box" ng-if="modalMode==='history'">
+        <div class="box overflow-auto" ng-if="modalMode==='history'">
             <div class="title is-3 has-text-centered">
                 Login History
             </div>
-            <div class="level is-mobile" ng-repeat="session in loginHistory track by $index">
-                <div class="level-item blue-text">
-                   <label>{{session.created_on}}</label> 
-                </div>
-                <div class="level-item primary">
-                    {{session.device.OS}}
-                </div>
-                <div class="level-item">
-                    {{session.device.browser}}
-                </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><abbr title="Created On">Created</abbr></th>
+                        <th>Browser</th>
+                        <th><abbr title="Is this token Alive?">alive</abbr></th>
+                        <th><abbr title="Destroyed On">Destroyed</abbr></th>
+                        <th><abbr title="Duration">Duration</abbr></th>
+                        <th><abbr title="Lost"></abbr></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="session in loginHistory track by $index">
+                        <td>{{moment(session.created_on,'X').format('HH:mm ddd MM')}}</td>
+                        <td>{{session.device.browser.substr(0,10)}}</td>
+                        <td>{{session.is_alive}}</td>
+                        <td ng-if="!session.destroyed_on">NA</td>
+                        <td ng-if="session.destroyed_on">
+                            {{moment(session.destroyed_on,'X').format('HH:mm ddd MM')}}
+                        </td>
+                        <td ng-if="!session.destroyed_on">'NA'</td>
+                        <td ng-if="session.destroyed_on">{{(moment(moment(session.destroyed_on,'X')).diff(moment(session.created_on,'X'),'hours',true)).toString().substr(0,4)}}
+                            hours</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="block is-marginless has-text-centered">
+                <button type="submit" ng-click="deleteTokenTrigger()" class="button is-danger is-big is-expanded">Delete All tokens</button>
             </div>
-            <p class="help is-success has-text-centered" ng-if="userRemoved">User removed successfully</p>
+
+            <p class="help is-danger has-text-centered">if you delete all tokens, app will be logged out from all the devices, including this one</p>
 
         </div>
     </div>

@@ -83,7 +83,7 @@
                             <span>
                                 {{note.text}}
                                 </span>
-                            <u>{{moment(note.timestamp,'X').format("DD-MM-YYYY")}}</u>
+                            <u>{{moment(note.timestamp,'X').format("DD-MMM-YY")}}</u>
                         </li>
                     </ul>
                     <p ng-if="!notes.length" class="help is-info has-text-centered">
