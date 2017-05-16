@@ -12,23 +12,23 @@
   <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="app/styles/style_desktop.css">
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
 
   <base href="/">
 </head>
 
 <body>
-  <!-- TradingView Widget END -->
-
 
   <div class="container is-fluid hero">
     <div ui-view="header" class="hero-head has-fixed-header"></div>
     <div ui-view="root" class="hero-body mt-4 "></div>
   </div>
 
-  
+
 
   <!-- build:js inline app/__dist/desktop.min.js-->
   <!-- dependency-->
+  <script src="bower_components/d3/d3.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/ngstorage/ngStorage.min.js"></script>
@@ -38,10 +38,10 @@
   <script src="bower_components/moment-timezone/moment-timezone.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
   <script src="bower_components/angular-httpshooter/angular-httpshooter.js"></script>
-
   <!--app scrpipt-->
 
   <script src="app/app.js"></script>
+  <script src="app/d3Module.js"></script>
   <script src="app/routes/routes.js"></script>
   <script src="app/run.js"></script>
   <script src="app/config/var.js"></script>

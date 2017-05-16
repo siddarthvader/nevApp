@@ -1,40 +1,98 @@
 <div class="container is-fluid animated fadeInUp">
-    <div class="tile is-ancestor">
-        <div class="tile is-vertical is-4">
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
-                </div>
+    <div class="columns">
+        <div class="column is-4 is-offset-4 is-mobile">
+            <div class="field has-addons">
+                <p class="control is-expanded">
+                    <input class="input" type="text" ng-model="preEarn.searchKey">
+                </p>
+                <p class="control">
+                    <span class="select">
+                    <select ng-model="preEarn.prefix">
+                        <option value="AMEX">American Stock Exchange</option>
+                        <option value="AMS">Euronext Amsterdam</option>
+                        <option value="ASX">Australian Securities Exchange</option>
+                        <option value="BRU">Euronext Brussels</option>
+                        <option value="CBOT">Chicago Board of Trade</option>
+                        <option value="CFE">Chicago Futures Exchange</option>
+                        <option value="CME">Chicago Merchantile Exchange</option>
+                        <option value="COMEX">New York Commodity Exchange</option>
+                        <option value="EUREX">EUREX Futures Exchange</option>
+                        <option value="FOREX">Foreign Exchange</option>
+                        <option value="HKEX">Hong Kong Stock Exchange</option>
+                        <option value="INDEX">Global Indices</option>
+                        <option value="KCBT">Kansas City Board of Trade</option>
+                        <option value="LIFFE">LIFFE Futures and Options</option>
+                        <option value="LIS">Euronext Lisbon</option>
+                        <option value="LSE">London Stock Exchange</option>
+                        <option value="MGEX">Minneapolis Grain Exchange</option>
+                        <option value="MLSE">Milan Stock Exchange</option>
+                        <option value="MSE">Madrid Stock Exchange</option>
+                        <option value="NASDAQ">NASDAQ Stock Exchange</option>
+                        <option value="NYBOT">New York Board of Trade</option>
+                        <option value="NYMEX">New York Merchantile Exchange</option>
+                        <option selected="selected" value="NYSE">New York Stock Exchange</option>
+                        <option value="NZX">New Zealand Exchange</option>
+                        <option value="OTCBB">OTC Bulletin Board</option>
+                        <option value="PAR">Euronext Paris</option>
+                        <option value="SGX">Singapore Stock Exchange</option>
+                        <option value="TSX">Toronto Stock Exchange</option>
+                        <option value="TSXV">Toronto Venture Exchange</option>
+                        <option value="USMF">Mutual Funds</option>
+                        <option value="WCE">Winnipeg Commodity Exchange</option>
+                    </select>
+                </span>
+                </p>
+                <p class="control">
+                    <a class="button is-primary" ng-click="fetchPreEarn()">
+                    Search
+                    </a>
+                </p>
             </div>
         </div>
-        <div class="tile is-vertical is-4">
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
+
+    </div>
+    <div class="tile is-ancestor is-vertical">
+        <div class="tile is-parent">
+            <div class="tile is-child is-4">
+                <div class="box">
+                    <iframe ng-src="https://sslearnings.forexprostools.com?columns=exc_flags,symbols,exc_importance,exc_actual,exc_forecast,exc_previous,companyname,period&importance=2,3&features=datepicker,timeselector,filters&countries=25,32,6,37,22,17,35,43,36,4,5&calType=week&lang=1"
+                        width="100%" height="700" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
                 </div>
             </div>
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
+            <div class="tile is-child is-8">
+                <div class="box">
+                    <iframe id="tradingChart" src='https://www.tradingview.com/widgetembed/?symbol=NASDAQ%3AAAPL&interval=D&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=f1f3f6&calendar=1&news=1&newsvendors=stocktwits%1Fheadlines&studies=&theme=White&style=1&timezone=Etc%2FUTC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=www.tradingview.com&utm_medium=widget&utm_campaign=chart&utm_term=NASDAQ%3AAAPL'
+                        height='700' width='100%' frameborder='0' scrolling='no'></iframe>
+
                 </div>
+
+
             </div>
+
         </div>
-        <div class="tile is-vertical is-4">
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
+
+        <div class="tile is-parent">
+            <div class="tile is-child is-3">
+                <div class="box">
+
                 </div>
             </div>
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <div class="box"></div>
+            <div class="tile is-child is-6">
+                <div class="box">
+                    <iframe id="zacksEPS" width="700px" height="400px" scrolling="no" src="https://www.zacks.com/stock/chart/tmo/price-consensus-eps-surprise-chart#chart_canvas"
+                        frameborder="0"></iframe>
+
                 </div>
             </div>
+            <div class="tile is-child is-3">
+                <div class="box">
+                    <feed id="newsFeed" url="https://feeds.finance.yahoo.com/rss/2.0/headline?s=AAPL&region=US&lang=en-US" summary="true">
+
+                    </feed>
+                </div>
+            </div>
+
         </div>
+
     </div>
 </div>
