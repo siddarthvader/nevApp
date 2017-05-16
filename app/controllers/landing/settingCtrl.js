@@ -1,8 +1,15 @@
-nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localStorage, AuthFactory) {
+nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localStorage, AuthFactory, $timeout) {
     var setting = this;
     $scope.moment = moment;
     $scope.modalOpen = false;
     $scope.is_admin = $localStorage.session.is_admin;
+
+    $scope.pwdError = {
+        noMatch: false,
+        wrongOldPwd: false,
+        successPwdChange: false
+    }
+
     $scope.logout = function () {
         $httpshooter.queue({
             method: 'POST',
@@ -28,7 +35,7 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
 
     $scope.pwdChangeOverlayOpen = function () {
         $scope.toggleModal();
-        $scope.modalMode = 'pwd';
+        $scope.modalMode = 'pwdChange';
     };
 
     $scope.inviteUserModalOpen = function () {
@@ -139,5 +146,45 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
             $state.go('getin');
         });
     };
+
+    $scope.changePwd = function () {
+        if (setting.newPwd === setting.newPwdRepeat) {
+            $scope.pwdError = {
+                noMatch: false,
+                wrongOldPwd: false,
+                successPwdChange: false
+            }
+            $httpshooter.queue({
+                method: 'POST',
+                url: api.changePwd,
+                headers: {
+                    token: $localStorage.session.token
+                },
+                data: {
+                    email: $localStorage.session.email,
+                    oldPwd:setting.oldPwd,
+                    newPwd:setting.newPwd
+                }
+            }).then(function (data) {
+                data = data.data;
+                if (data.state === 'success') {
+                    $scope.pwdError.successPwdChange = true;
+                    $timeout(function () {
+                        $state.go('getin');
+                    }, 5000)
+                    AuthFactory.destroyData();
+                    $state.go('getin');
+                }
+                else if (data.state === 'wrongPwd') {
+                    $scope.pwdError.wrongOldPwd = true;
+                }
+            });
+        }
+        else {
+            $scope.pwdError.noMatch = true;
+        }
+
+    };
+
 
 });
