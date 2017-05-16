@@ -3,6 +3,7 @@ nevApp.directive('clickable', function () {
         restrict: 'A',
         scope: {
             clickable: "="
+            
         },
         link: function (scope, elem, attrs) {
             // elem[].bind('click', function () {
