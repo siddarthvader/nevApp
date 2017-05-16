@@ -1,5 +1,6 @@
 nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localStorage, AuthFactory) {
     var setting = this;
+    $scope.moment = moment;
     $scope.modalOpen = false;
     $scope.is_admin = $localStorage.session.is_admin;
     $scope.logout = function () {
@@ -23,7 +24,7 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
         $scope.modalOpen = !$scope.modalOpen;
         document.getElementsByTagName('html')[0].classList.toggle('is-clipped');
 
-    }
+    };
 
     $scope.pwdChangeOverlayOpen = function () {
         $scope.toggleModal();
@@ -36,7 +37,7 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
         $scope.userExists = false;
         $scope.userAdded = false;
         setting.inviteEmailId = null;
-    }
+    };
 
     $scope.inviteUser = function () {
         $scope.userExists = false;
@@ -121,6 +122,22 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
             $scope.toggleModal();
             $scope.loginHistory = data.history;
         });
-    }
+    };
+
+    $scope.deleteTokenTrigger = function () {
+        $httpshooter.queue({
+            method: "POST",
+            url: api.deleteTokens,
+            headers: {
+                token: $localStorage.session.token
+            },
+            data: {
+                email: $localStorage.session.email
+            }
+        }).then(function (data) {
+            AuthFactory.destroyData();
+            $state.go('getin');
+        });
+    };
 
 });

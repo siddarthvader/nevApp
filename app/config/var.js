@@ -13,7 +13,8 @@ var api={
     history:server+'history',
     scrapeEPS:server+'scrapeZacksForEPS',
     addNote:server+'addNote',
-    getNote:server+'getNote'
+    getNote:server+'getNote',
+    deleteTokens:server+'deleteTokens'
 }
 
 Object.size = function(obj) {
