@@ -1,4 +1,23 @@
 <div class="container  is-fluid animated fadeInUp">
+    <div class="tabs is-toggle is-right is-fullwidth">
+        <ul>
+            <li ng-class="{'is-active':subMenuMode==='equities'}" ng-click="toggleSubmenu('equities')"><a>Equities</a></li>
+            <li ng-class="{'is-active':subMenuMode==='etf'}" ng-click="toggleSubmenu('etf')"><a> ETF</a></li>
+        </ul>
+    </div>
+    <div class="columns">
+        <div class="column is-4 is-offset-4 is-mobile">
+            <div class="field has-addons">
+                <p class="control is-expanded">
+                    <input class="input" type="text">
+                </p>
+                <p class="control">
+                    <a class="button is-primary">
+                    Search
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    funda
+    </div>
 </div>

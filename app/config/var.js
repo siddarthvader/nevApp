@@ -10,7 +10,8 @@ var api={
     invite:server+'inviteUser',
     getUsers:server+'getUsers',
     removeUser:server+'removeUser',
-    history:server+'history'
+    history:server+'history',
+    scrapeEPS:server+'scrapeZacksForEPS'
 }
 
 Object.size = function(obj) {
