@@ -41,9 +41,9 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
             wrongOldPwd: false,
             successPwdChange: false
         };
-        setting.oldPwd=null;
-        setting.newPwd=null;
-        setting.newPwdRepeat=null;
+        setting.oldPwd = null;
+        setting.newPwd = null;
+        setting.newPwdRepeat = null;
     };
 
     $scope.inviteUserModalOpen = function () {
@@ -140,6 +140,7 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
     };
 
     $scope.deleteTokenTrigger = function () {
+        $scope.tokenDeleteSuccess = false;
         $httpshooter.queue({
             method: "POST",
             url: api.deleteTokens,
@@ -150,8 +151,12 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
                 email: $localStorage.session.email
             }
         }).then(function (data) {
-            AuthFactory.destroyData();
-            $state.go('getin');
+            $scope.tokenDeleteSuccess = true;
+            $timeout(function () {
+                AuthFactory.destroyData();
+                $state.go('getin');
+            }, 5000)
+
         });
     };
 
@@ -178,10 +183,9 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
                 if (data.state === 'success') {
                     $scope.pwdError.successPwdChange = true;
                     $timeout(function () {
+                        AuthFactory.destroyData();
                         $state.go('getin');
-                    }, 5000)
-                    AuthFactory.destroyData();
-                    $state.go('getin');
+                    }, 5000);
                 }
                 else if (data.state === 'wrongPwd') {
                     $scope.pwdError.wrongOldPwd = true;

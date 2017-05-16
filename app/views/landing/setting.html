@@ -156,9 +156,13 @@
                     </tr>
                 </tbody>
             </table>
+            <p class="help is-info has-text-centered" ng-if="tokenDeleteSuccess">
+                All tokens deleted
+            </p>
             <div class="block is-marginless has-text-centered">
                 <button type="submit" ng-click="deleteTokenTrigger()" class="button is-danger is-big is-expanded">Delete All tokens</button>
             </div>
+
             <p class="help is-danger has-text-centered">if you delete all tokens, app will be logged out from all the devices, including this one</p>
 
         </div>
@@ -194,10 +198,10 @@
                             </p>
                         </div>
                         <p class="help is-info has-text-centered">Passwords must be 8 characters long</p>
-                        
+
                         <p class="help is-danger has-text-centered" ng-if="pwdError.noMatch">Passwords dont match</p>
                         <p class="help is-danger has-text-centered" ng-if="pwdError.wrongOldPwd">Incorrect Old Password</p>
-                        <div class="help is-success has-text-centered" ng-if="pwdError.succeessPwdChange">
+                        <div class="help is-success has-text-centered" ng-if="pwdError.successPwdChange">
                             Passsword Changed Succcessfully
                         </div>
                     </form>
