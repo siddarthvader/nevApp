@@ -74,6 +74,28 @@
         <div class="tile is-parent">
             <div class="tile is-child is-3">
                 <div class="box">
+                        <ul ng-if="notes.length">
+                            <li ng-repeat="note in notes track by $index">
+                                {{$index+1}}
+                                <span>
+                                {{note.text}}
+                                </span>
+                                <u>{{moment(note.timestamp,'X').format("DD-MM-YYYY")}}</u>
+                             </li>
+                        </ul>
+                        <p ng-if="!notes.length" class="help is-info has-text-centered">
+                            Nothing to show
+                        </p>
+                        <div class="field has-addons">
+                <p class="control is-expanded">
+                    <textarea class="input" type="text" ng-model="preEarn.noteText"></textarea>
+                </p>
+                <p class="control">
+                    <a class="button is-primary" ng-click="addNote()">
+                    Add
+                    </a>
+                </p>
+            </div>
 
                 </div>
             </div>
