@@ -62,7 +62,7 @@
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child">
-                        <div class="box cursor-p on-hover blue">
+                        <div class="box cursor-p on-hover blue" ng-click="pwdChangeOverlayOpen()">
                             <div class="level is-mobile">
                                 <div class="level-right">
                                     <div class="level-item title is-4">Change Password</div>
@@ -151,15 +151,58 @@
                         </td>
                         <td ng-if="!session.destroyed_on">'NA'</td>
                         <td ng-if="session.destroyed_on">{{(moment(moment(session.destroyed_on,'X')).diff(moment(session.created_on,'X'),'hours',true)).toString().substr(0,4)}}
-                            hours</td>
+                            hours
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <div class="block is-marginless has-text-centered">
                 <button type="submit" ng-click="deleteTokenTrigger()" class="button is-danger is-big is-expanded">Delete All tokens</button>
             </div>
-
             <p class="help is-danger has-text-centered">if you delete all tokens, app will be logged out from all the devices, including this one</p>
+
+        </div>
+        <div class="box overflow-auto" ng-if="modalMode==='pwdChange'">
+            <div class="title is-3 has-text-centered">
+                Change Password
+            </div>
+            <div class="columns">
+                <div class="column is-10 is-offset-1">
+                    <form name="inviteForm" ng-submit="changePwd()">
+                        <div class="field is-narrow">
+                            <label class="label">Current Password</label>
+                            <p class="control">
+                                <input class="input" ng-model="setting.oldPwd" type="password" required autocomplete="off">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">New Password</label>
+                            <p class="control">
+                                <input class="input" pattern=".{8,}" ng-model="setting.newPwd" type="password" required autocomplete="off">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">New Password (Repeat)</label>
+                            <p class="control">
+                                <input class="input" pattern=".{8,}" ng-model="setting.newPwdRepeat" type="password" required autocomplete="off">
+                            </p>
+                        </div>
+
+                        <div class="field has-addons has-addons-right">
+                            <p class="control">
+                                <button type="submit" class="button is-primary">Submit</button>
+                            </p>
+                        </div>
+                        <p class="help is-info has-text-centered">Passwords must be 8 characters long</p>
+                        
+                        <p class="help is-danger has-text-centered" ng-if="pwdError.noMatch">Passwords dont match</p>
+                        <p class="help is-danger has-text-centered" ng-if="pwdError.wrongOldPwd">Incorrect Old Password</p>
+                        <div class="help is-success has-text-centered" ng-if="pwdError.succeessPwdChange">
+                            Passsword Changed Succcessfully
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         </div>
     </div>
