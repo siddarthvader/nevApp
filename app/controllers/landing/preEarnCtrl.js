@@ -43,11 +43,12 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
                 noteText:preEarn.noteText
             }
         }).then(function (data) {
-            preEarn.noteText=null;
+
             $scope.notes.push({
                 text:preEarn.noteText,
                 timestamp:moment().unix()
-            })
+            });
+            preEarn.noteText=null;
         });
     }
 
