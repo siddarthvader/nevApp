@@ -1,4 +1,4 @@
-nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state', function ($httpshooter, $localStorage, $state) {
+nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state','$sessionStorage', function ($httpshooter, $localStorage, $state,$sessionStorage) {
 
     var validateToken = function () {
         if ($localStorage.session.email === $localStorage.userData.email) {
@@ -13,11 +13,11 @@ nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state', functi
                 }
             }).then(function (data) {
                 if (data.data.state === 'goToLanding') {
-                    if (!$localStorage.currentState) {
+                    if (!$sessionStorage.currentState) {
                         $state.go('landing.macros');
                     }
                     else {
-                        $state.go($localStorage.currentState);
+                        $state.go($sessionStorage.currentState);
                     }
                 }
                 else {
@@ -33,7 +33,7 @@ nevApp.factory('AuthFactory', ['$httpshooter', '$localStorage', '$state', functi
     }
 
     var destroyData=function(){
-        delete $localStorage.currentState;
+        delete $sessionStorage.currentState;
         delete $localStorage.userData;
         delete $localStorage.session;
     }

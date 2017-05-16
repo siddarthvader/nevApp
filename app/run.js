@@ -1,7 +1,8 @@
 nevApp.config(function($qProvider){
     $qProvider.errorOnUnhandledRejections(false);
 });
-nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthFactory) {
+nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthFactory,$sessionStorage)
+ {
     if ($localStorage.session) {
         if ($localStorage.session.token) {
             AuthFactory.validateToken();
@@ -20,7 +21,7 @@ nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthF
 
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParam) {
         console.log(toState);
-        $localStorage.currentState = toState.name;
+        $sessionStorage.currentState = toState.name;
     });
     $rootScope.isMobile = function () {
         var check = false;
