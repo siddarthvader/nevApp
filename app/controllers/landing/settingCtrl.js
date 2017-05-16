@@ -36,6 +36,14 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
     $scope.pwdChangeOverlayOpen = function () {
         $scope.toggleModal();
         $scope.modalMode = 'pwdChange';
+        $scope.pwdError = {
+            noMatch: false,
+            wrongOldPwd: false,
+            successPwdChange: false
+        };
+        setting.oldPwd=null;
+        setting.newPwd=null;
+        setting.newPwdRepeat=null;
     };
 
     $scope.inviteUserModalOpen = function () {
@@ -153,7 +161,7 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
                 noMatch: false,
                 wrongOldPwd: false,
                 successPwdChange: false
-            }
+            };
             $httpshooter.queue({
                 method: 'POST',
                 url: api.changePwd,
@@ -162,8 +170,8 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
                 },
                 data: {
                     email: $localStorage.session.email,
-                    oldPwd:setting.oldPwd,
-                    newPwd:setting.newPwd
+                    oldPwd: setting.oldPwd,
+                    newPwd: setting.newPwd
                 }
             }).then(function (data) {
                 data = data.data;
