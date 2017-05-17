@@ -1,5 +1,6 @@
-nevApp.config(function($qProvider){
+nevApp.config(function($qProvider,$sceProvider){
     $qProvider.errorOnUnhandledRejections(false);
+    $sceProvider.enabled(false);
 });
 nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthFactory,$sessionStorage)
  {
