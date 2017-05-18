@@ -124,6 +124,10 @@ body {
   padding-left: 1rem;
 }
 
+.m-40px {
+  margin: 60px;
+}
+
 .cursor-p {
   cursor: pointer;
 }

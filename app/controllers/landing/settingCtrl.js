@@ -30,7 +30,6 @@ nevApp.controller('settingCtrl', function ($state, $scope, $httpshooter, $localS
     $scope.toggleModal = function () {
         $scope.modalOpen = !$scope.modalOpen;
         document.getElementsByTagName('html')[0].classList.toggle('is-clipped');
-
     };
 
     $scope.pwdChangeOverlayOpen = function () {
