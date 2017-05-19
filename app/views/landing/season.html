@@ -68,18 +68,6 @@
                 </div>
             </div>
             <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Types</label>
-                </div>
-                <div class="field-body">
-                    <div class="field is-narrow">
-                        <p class="control">
-                            <input class="input" type="text" placeholder="text">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="field is-horizontal">
                 <div class="field-label">
                     <label class="label">Consecutive 2 weeks?</label>
                 </div>
@@ -98,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
@@ -110,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Industry</label>
                 </div>
@@ -122,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Market Cap</label>
                 </div>
@@ -134,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Volume</label>
                 </div>
@@ -181,7 +169,7 @@
     <div class="modal-background">
         <div class="is-fullwidth m-40px">
             <div class="box">
-
+                
             </div>
         </div>
     </div>
