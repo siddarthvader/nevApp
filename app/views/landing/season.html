@@ -3,6 +3,24 @@
         <div class="column is-6 is-offset-4">
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
+                    <label class="label">Product type</label>
+                </div>
+                <div class="field-body">
+                    <div class="field is-narrow ">
+                        <p class="control">
+                            <span class="select">
+                                <select ng-model="season.productType">
+                                        <option value="CUR">Currency</option>
+                                        <option value="EQU">Equities</option>
+                                        <option value="FUT">Futures</option>
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
                     <label class="label">Week No.</label>
                 </div>
                 <div class="field-body">
@@ -50,18 +68,6 @@
                 </div>
             </div>
             <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Types</label>
-                </div>
-                <div class="field-body">
-                    <div class="field is-narrow">
-                        <p class="control">
-                            <input class="input" type="text" placeholder="text">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="field is-horizontal">
                 <div class="field-label">
                     <label class="label">Consecutive 2 weeks?</label>
                 </div>
@@ -80,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
@@ -92,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Industry</label>
                 </div>
@@ -104,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Market Cap</label>
                 </div>
@@ -116,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Volume</label>
                 </div>
@@ -147,15 +153,27 @@
                 <div class="field-body">
                     <div class="field is-narrow is-grouped">
                         <p class="control">
-                            <button class="button is-primary">Submit</button>
+                            <button class="button is-primary" ng-click="showResOverlay()">Submit</button>
                         </p>
                         <p class="control">
                             <button class="button is-link">Cancel</button>
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
+    </div>
+</div>
+
+<div class="modal animated fadeInUpBig z-30" ng-class="{'is-active':modalOpen}">
+    <div class="modal-background">
+        <div class="is-fullwidth m-40px">
+            <div class="box">
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal-close" ng-click="toggleModal()">
+
     </div>
 </div>

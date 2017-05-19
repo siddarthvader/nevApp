@@ -1,5 +1,5 @@
 
-nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localStorage, $sce, d3,$http) {
+nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localStorage, $sce, d3, $http) {
     var preEarn = this;
     var tradingViewChartUrl;
     $scope.moment = moment;
@@ -8,14 +8,18 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
 
 
     $scope.fetchYahooNews = () => {
-        var yahooUrl='https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20pm.finance.articles%20where%20symbol%20%3D%22AAPL%22&format=json&diagnostics=true';
+        var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
+
+        var yahooUrl = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20pm.finance.articles%20where%20symbol%20in%20(%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22)&format=json&diagnostics=true&callback=&appid=' + APP_ID;
         $sce.trustAsResourceUrl(yahooUrl);
-        $http.jsonp(yahooUrl,{jsonpCallbackParam:'callback'})
-            .then(function (data) {
-                console.log(data);
-            },function(err){
-                console.log(err,"err")
-            });
+        $httpshooter.queue({
+            method: 'GET',
+            url: yahooUrl
+        }).then(function (data) {
+            console.log(data);
+        }, function (err) {
+            console.log(err, "err")
+        });
 
 
     };
