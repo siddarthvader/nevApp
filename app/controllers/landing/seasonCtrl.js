@@ -1,4 +1,4 @@
-nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter) {
+nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter,$localStorage,$rootScope,$sessionStorage) {
     var season = this;
     season.productType = 'CUR';
     $scope.toggleModal = function () {
@@ -7,16 +7,23 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter) {
     };
 
     $scope.showResOverlay = function () {
-        var BASE_URL = 'https://query.yahooapis.com/v1/yql?q=';
-        var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
-        var API_QUERY = 'select * from yahoo.finance.historicaldata where symbol = "YHOO" and startDate = "2009-09-11" and endDate = "2010-03-10"';
+        // var BASE_URL = 'https://query.yahooapis.com/v1/yql?q=';
+        // var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
+        // var API_QUERY = 'select * from yahoo.finance.historicaldata where symbol = "YHOO" and startDate = "2009-09-11" and endDate = "2010-03-10"';
+        var symbols=['GBP','AUD'];
         $scope.toggleModal();
         $httpshooter.queue({
             // url: BASE_URL + encodeURIComponent(API_QUERY) + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&appid=' + APP_ID,
-            url:'https://api.ofx.com/PublicSite.ApiService/SpotRateHistory/USD/EUR/536437800/1495045800000?DecimalPlaces=6&ReportingInterval=daily',
-            method: "GET"
+            url:api.currencyData,
+            method: "POST",
+            headers: {
+                    'Token': $localStorage.session.token
+            },
+            data:{
+                symbols:symbols
+            }
         }).then(function (data) {
-            console.log(data);
+            console.log(data,"oye");
         });
     }
 });

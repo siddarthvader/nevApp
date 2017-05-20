@@ -1,5 +1,5 @@
-var server='http://192.168.1.79:3000/'
-// var server="http://127.0.0.1:3000/";
+// var server='http://192.168.1.79:3000/'
+var server="http://127.0.0.1:3000/";
 // var server="http://localhost:3000/"
 // var server="https://enigmatic-savannah-85059.herokuapp.com/";
 var api={
@@ -15,7 +15,8 @@ var api={
     addNote:server+'addNote',
     getNote:server+'getNote',
     deleteTokens:server+'deleteTokens',
-    changePwd:server+'changePwd'
+    changePwd:server+'changePwd',
+    currencyData:server+'currencyData'
 }
 
 Object.size = function(obj) {
