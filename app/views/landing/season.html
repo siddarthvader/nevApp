@@ -168,15 +168,32 @@
 <div class="modal animated fadeInUpBig z-30" ng-class="{'is-active':modalOpen}">
     <div class="modal-background overflow-auto">
         <div class="is-fullwidth m-40px ">
-            <div class="box">
-                <div class="columns is-multiline" ng-repeat="year in years">
-                    <div class="column is-1 is-bordered" ng-repeat="(key,val) in currencyData.weekly[year]">
-                        <span class="blue-text is-paddingless ">Week {{key}}</span>
-                        <div ng-repeat="(sym,data) in val" class="">
-                            {{sym}}:{{data.reliabality}}
+            <div class="box column">
+                <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">
+                    
+                    <div class="column is-12" ng-repeat="(year,yearData) in dataSet ">
+                        <div class="" ng-repeat="(type,entityData) in yearData">
+                            <div class="columns mt-4">
+                                <div class="column is-12 has-text-centered is-paddingless">
+                                    <div class="blue-text title is-4 is-bold is-marginless">{{freq.toUpperCase()}}</div>
+                                    <span class="is-bold"> ({{year}} - {{currentYear}}) or (last {{currentYear-year}} years) - {{type}} </span>
+                                </div>
+                            </div>
+                            <div class="columns is-multiline">
+                                <div class="column is-1 is-bordered" ng-repeat="(key,val) in entityData">
+                                    <span class="is-bold is-paddingless ">Week {{key}}</span>
+                                    <div ng-repeat="(sym,data) in val" class="">
+                                        {{sym}}-{{data.reliabality}}%
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>

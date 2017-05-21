@@ -108,6 +108,10 @@ body {
   margin-left: 1.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
 .pt-4 {
   padding-top: 1.5rem;
 }
@@ -140,8 +144,16 @@ body {
   border: solid 1px #b5b5b5;
 }
 
+.is-bordered-bottom {
+  border-bottom: solid 1px #b5b5b5;
+}
+
 .blue-text {
   color: #3273dc;
+}
+
+.green-text {
+  color: #23d160;
 }
 
 .flex {
