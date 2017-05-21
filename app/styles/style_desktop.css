@@ -132,8 +132,28 @@ body {
   cursor: pointer;
 }
 
+.is-bold {
+  font-weight: bold;
+}
+
+.is-bordered {
+  border: solid 1px #b5b5b5;
+}
+
 .blue-text {
   color: #3273dc;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .on-hover {
