@@ -17,7 +17,8 @@ nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthF
     }
     $rootScope.$state = $state;
     $window.$ls = $localStorage;
-    $window.$state = $state;
+    $window.$rs=$rootScope;
+    $window.$ss=$sessionStorage;
 
 
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParam) {

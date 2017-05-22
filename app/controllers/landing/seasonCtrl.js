@@ -48,5 +48,12 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             $scope.currencyData = data.data;
             console.log($scope.currencyData, "yes");
         });
-    }
+    };
+
+    $scope.goToFunda=function(mode,data){
+        $sessionStorage.fundamental={};
+        $sessionStorage.fundamental.mode=mode;
+        $sessionStorage.fundamental.data=data;
+        $state.go('landing.fundamental')
+    };
 });
