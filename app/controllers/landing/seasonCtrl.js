@@ -4,6 +4,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.Object=Object;
     $scope.currencyData;
     $scope.currentYear = moment().year() - 1;
+    $scope.currentWeek=moment().isoWeek();
     $scope.years = [];
     $scope.types = ['long', 'short'];
 
