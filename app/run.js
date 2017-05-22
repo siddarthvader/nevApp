@@ -23,6 +23,7 @@ nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthF
 
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParam) {
         console.log(toState);
+        $window.scrollTo(0,0)
         $sessionStorage.currentState = toState.name;
     });
     $rootScope.isMobile = function () {
