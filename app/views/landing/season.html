@@ -9,7 +9,7 @@
                     <div class="field is-narrow ">
                         <p class="control">
                             <span class="select">
-                                <select ng-model="season.productType">
+                                <select ng-model="searchProductType">
                                         <option value="CUR">Currency</option>
                                         <option value="EQU">Equities</option>
                                         <option value="FUT">Futures</option>
@@ -26,7 +26,7 @@
                 <div class="field-body">
                     <div class="field is-narrow ">
                         <p class="control">
-                            <input class="input" type="text" placeholder="Week No.">
+                            <input class="input" type="text" placeholder="Week No." ng-model="searchWeekNum">
                         </p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="text" placeholder="number" ng-model="searchMinProbChange">
                         </p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="text" placeholder="number" ng-model="searchMinValChange">
                         </p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="field-body">
                     <div class="field is-narrow ">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="text" placeholder="number" ng-model="searchMinPerChange">
                         </p>
                     </div>
                 </div>
@@ -75,18 +75,19 @@
                     <div class="field is-narrow">
                         <div class="control">
                             <label class="radio">
-                                    <input type="radio" name="conWeeks">
+                               
+                                    <input type="radio" ng-model="conWeeks" name="conWeeks" ng-value=true>
                                     Yes
                                 </label>
                             <label class="radio">
-                                <input type="radio" name="conWeeks">
+                                <input type="radio" ng-model="conWeeks" name="conWeeks" ng-value=false>
                                 No
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
+            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
@@ -98,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
+            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Industry</label>
                 </div>
@@ -110,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
+            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Market Cap</label>
                 </div>
@@ -122,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="season.productType!='CUR'">
+            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Volume</label>
                 </div>
@@ -141,7 +142,7 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <textarea class="textarea" placeholder="Separated by Commas"></textarea>
+                            <textarea class="textarea" placeholder="Separated by Commas" ng-model="searchSymbol"></textarea>
                         </p>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
         <div class="is-fullwidth m-40px ">
             <div class="box column">
                 <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">
-                    
+
                     <div class="column is-12" ng-repeat="(year,yearData) in dataSet ">
                         <div class="" ng-repeat="(type,entityData) in yearData">
                             <div class="columns mt-4">
@@ -180,9 +181,10 @@
                                 </div>
                             </div>
                             <div class="columns is-multiline">
-                                <div class="column is-1 is-bordered" ng-repeat="(key,val) in entityData">
+                                <div class="column is-1 is-bordered" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
+                                ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
                                     <span class="is-bold is-paddingless ">Week {{key}}</span>
-                                    <div ng-repeat="(sym,data) in val" class="">
+                                    <div ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
                                         {{sym}}-{{data.reliabality}}%
                                     </div>
                                 </div>
