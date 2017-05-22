@@ -184,8 +184,12 @@
                                 <div class="column is-1 is-bordered" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
                                 ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
                                     <span class="is-bold is-paddingless ">Week {{key}}</span>
-                                    <div ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
-                                        {{sym}}-{{data.reliabality}}%
+                                    <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
+                                        <span>{{sym}}-{{data.reliabality}}%</span>
+                                        <div class="box smallView">
+                                            <span class="blue-text is-underlline">ETF</span>
+                                            <span class="blue-text is-underlline">Equities</span>
+                                        </div>
                                     </div>
                                 </div>
 
