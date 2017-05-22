@@ -1,4 +1,4 @@
-<div class="container  is-fluid animated fadeInUp">
+<div class="container is-fluid animated fadeInUp">
     <div class="tabs is-toggle is-right is-fullwidth">
         <ul>
             <li ng-class="{'is-active':subMenuMode==='equities'}" ng-click="toggleSubmenu('equities')"><a>Equities</a></li>
@@ -24,7 +24,7 @@
             <table class="table is-striped is-bordered">
                 <thead>
                     <tr>
-                        <th>Data</th>
+                        <th>Date</th>
                         <th>Stock Ticker</th>
                         <th>Desc</th>
                         <th>Price</th>
@@ -44,10 +44,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            {{moment(fundaData.date,'X').format('DD-MM-YYYY')}}
+                        </td>
+                        <td>
+                            {{fundaData.symbol}}
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>

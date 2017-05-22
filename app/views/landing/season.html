@@ -186,9 +186,9 @@
                                     <span class="is-bold is-paddingless ">Week {{key}}</span>
                                     <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
                                         <span>{{sym}}-{{data.reliabality}}%</span>
-                                        <div class="box smallView">
-                                            <span class="blue-text is-underlline">ETF</span>
-                                            <span class="blue-text is-underlline">Equities</span>
+                                        <div class="box smallView" ng-if="searchProductType!=='CUR'">
+                                            <span class="blue-text is-underlline" ng-click="goToFunda('etf',data)">ETF</span>
+                                            <span class="blue-text is-underlline" ng-click="goToFunda('equities',data)">Equities</span>
                                         </div>
                                     </div>
                                 </div>

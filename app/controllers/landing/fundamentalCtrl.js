@@ -1,6 +1,13 @@
-nevApp.controller('fundamentalCtrl',function($state,$scope,$localStorage,$rootScope){
+nevApp.controller('fundamentalCtrl',function($state,$scope,$localStorage,$rootScope,$sessionStorage){
     var funda=this;
-    $scope.subMenuMode='equities';
+    $scope.moment=moment;
+    if(Object.size($sessionStorage.fundamental)){
+        $scope.subMenuMode=$sessionStorage.fundamental.mode;
+        $scope.fundaData=$sessionStorage.fundamental.data;
+    }
+    else{
+        $scope.subMenuMode='equities';
+    }
     $scope.toggleSubmenu=function(mode){
         $scope.subMenuMode=mode;
         if(mode==='etf'){
@@ -9,6 +16,12 @@ nevApp.controller('fundamentalCtrl',function($state,$scope,$localStorage,$rootSc
         else{
             
         }
-    }
+    };
+
+    $scope.$on('$stateChangeSuccess',function(event,toState,toParams,fromState,fromParams){
+        if(fromState==='landing.fundamental'){
+            delete $sessionStorage.fundamental;
+        }
+    })
 
 });
