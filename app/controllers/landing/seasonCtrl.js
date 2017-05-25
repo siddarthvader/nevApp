@@ -1,10 +1,10 @@
 nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localStorage, $rootScope, $sessionStorage) {
     var season = this;
     $scope.searchProductType = 'CUR';
-    $scope.Object=Object;
+    $scope.Object = Object;
     $scope.currencyData;
     $scope.currentYear = moment().year() - 1;
-    $scope.currentWeek=moment().isoWeek();
+    $scope.currentWeek = moment().isoWeek();
     $scope.years = [];
     $scope.types = ['long', 'short'];
 
@@ -25,7 +25,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         // var API_QUERY = 'select * from yahoo.finance.historicaldata where symbol = "YHOO" and startDate = "2009-09-11" and endDate = "2010-03-10"';
         var symbols = $scope.searchSymbol.toUpperCase().split(',');
         var payload = {};
-
+        var url;
         if ($scope.searchProductType === 'CUR') {
             payload = {
                 symbols: symbols,
@@ -33,27 +33,53 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
                 minValChange: parseFloat($scope.searchMinValChange),
                 minPer: parseFloat($scope.searchMinPerChange)
             };
+            url = api.currencyData;
+        }
+        else if($scope.searchProductType==='EQU') {
+            payload = {
+                symbols: symbols,
+                minProb: parseFloat($scope.searchMinProbChange),
+                minValChange: parseFloat($scope.searchMinValChange),
+                minPer: parseFloat($scope.searchMinPerChange)
+            };
+            url = api.getEquitiesData;
+        }
+        else if($scope.searchProductType==='FUT') {
+            payload = {
+                symbols: symbols,
+                minProb: parseFloat($scope.searchMinProbChange),
+                minValChange: parseFloat($scope.searchMinValChange),
+                minPer: parseFloat($scope.searchMinPerChange)
+            };
+            url = api.getFuturesData;
         }
 
         $scope.toggleModal();
         $httpshooter.queue({
-            // url: BASE_URL + encodeURIComponent(API_QUERY) + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&appid=' + APP_ID,
-            url: api.currencyData,
+            url: url,
             method: "POST",
             headers: {
                 'Token': $localStorage.session.token
             },
             data: payload
         }).then(function (data) {
-            $scope.currencyData = data.data;
+            if($scope.searchProductType==='CUR'){
+                            $scope.currencyData = data.data;
             console.log($scope.currencyData, "yes");
+            }
+            else if($scope.searchProductType==='EQU'){
+
+            }else{
+
+            } 
+
         });
     };
 
-    $scope.goToFunda=function(mode,data){
-        $sessionStorage.fundamental={};
-        $sessionStorage.fundamental.mode=mode;
-        $sessionStorage.fundamental.data=data;
+    $scope.goToFunda = function (mode, data) {
+        $sessionStorage.fundamental = {};
+        $sessionStorage.fundamental.mode = mode;
+        $sessionStorage.fundamental.data = data;
         $state.go('landing.fundamental')
     };
 });

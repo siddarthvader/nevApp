@@ -16,7 +16,9 @@ var api={
     getNote:server+'getNote',
     deleteTokens:server+'deleteTokens',
     changePwd:server+'changePwd',
-    currencyData:server+'currencyData'
+    currencyData:server+'currencyData',
+    getEquitiesData:server+'getEquitiesData',
+    getFuturesData:server+'getFuturesData'
 }
 
 Object.size = function(obj) {
