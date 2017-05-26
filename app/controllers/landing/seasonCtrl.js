@@ -7,6 +7,10 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.currentWeek = moment().isoWeek();
     $scope.years = [];
     $scope.types = ['long', 'short'];
+    $scope.searchCap=0;
+    $scope.searchVolume=0;
+    $scope.searchIndustry;
+    $scope.searchSector;
 
     //form vars
     $scope.conWeeks = true
@@ -41,7 +45,11 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
                 symbols: symbols,
                 minProb: parseFloat($scope.searchMinProbChange),
                 minValChange: parseFloat($scope.searchMinValChange),
-                minPer: parseFloat($scope.searchMinPerChange)
+                minPer: parseFloat($scope.searchMinPerChange),
+                sector:$scope.searchSector,
+                industry:$scope.searchIndustry,
+                cap:$scope.searchCap,
+                volume:$scope.searchVolume
             };
             url = api.getEquitiesData;
         }
@@ -50,7 +58,11 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
                 symbols: symbols,
                 minProb: parseFloat($scope.searchMinProbChange),
                 minValChange: parseFloat($scope.searchMinValChange),
-                minPer: parseFloat($scope.searchMinPerChange)
+                minPer: parseFloat($scope.searchMinPerChange),
+                sector:$scope.searchSector,
+                industry:$scope.searchIndustry,
+                cap:$scope.cap,
+                volume:$scope.volume
             };
             url = api.getFuturesData;
         }

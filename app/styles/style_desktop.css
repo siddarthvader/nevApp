@@ -157,7 +157,7 @@ body {
 }
 
 .green-text {
-  color: #23d160;
+  color: #23d160 !important;
 }
 
 .green-background {
