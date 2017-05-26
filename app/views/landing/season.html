@@ -87,14 +87,14 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show ="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="text" ng-model="searchSector" placeholder="number">
                         </p>
                     </div>
                 </div>
@@ -106,31 +106,31 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="text" ng-model="searchIndustry" placeholder="number">
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Market Cap</label>
                 </div>
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="number" ng-model="searchCap" placeholder="number">
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Volume</label>
                 </div>
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" placeholder="number">
+                            <input class="input" type="number" ng-model="searchVolume" placeholder="number">
                         </p>
                     </div>
                 </div>
@@ -170,8 +170,10 @@
     <div class="modal-background overflow-auto">
         <div class="is-fullwidth m-40px ">
             <div class="box column">
+                <span class="tag is-info">Current Week</span>
+                <span class="tag is-warning">Chosen Week</span>
+                <span class="tag is-light green-text">Consecutive Weeks</span>
                 <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">
-
                     <div class="column is-12" ng-repeat="(year,yearData) in dataSet ">
                         <div class="" ng-repeat="(type,entityData) in yearData">
                             <div class="columns mt-4">
@@ -183,14 +185,14 @@
                             <div class="columns is-multiline">
                                 <div class="column is-1 is-bordered padding-1-imp" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
                                 ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
-                                    <span class="is-bold is-paddingless ">Week {{key}}</span>
-                                    <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
+                                    <div class="is-bold is-paddingless ">Week {{key}}</div>
+                                    <span class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
                                         <span>{{sym}}-{{data.reliabality}}%</span>
-                                        <div class="box smallView" ng-if="searchProductType!=='CUR'">
+                                        <span class="box smallView" ng-if="searchProductType!=='CUR'">
                                             <span class="blue-text is-underlline" ng-click="goToFunda('etf',data)">ETF</span>
                                             <span class="blue-text is-underlline" ng-click="goToFunda('equities',data)">Equities</span>
-                                        </div>
-                                    </div>
+                                        </span>
+                                    </span>
                                 </div>
 
                             </div>
