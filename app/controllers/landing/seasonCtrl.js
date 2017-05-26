@@ -17,6 +17,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.toggleModal = function () {
         $scope.modalOpen = !$scope.modalOpen;
         document.getElementsByTagName('html')[0].classList.toggle('is-clipped');
+        $scope.currencyData = {};
     };
 
     $scope.showResOverlay = function () {
@@ -35,7 +36,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             };
             url = api.currencyData;
         }
-        else if($scope.searchProductType==='EQU') {
+        else if ($scope.searchProductType === 'EQU') {
             payload = {
                 symbols: symbols,
                 minProb: parseFloat($scope.searchMinProbChange),
@@ -44,7 +45,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             };
             url = api.getEquitiesData;
         }
-        else if($scope.searchProductType==='FUT') {
+        else if ($scope.searchProductType === 'FUT') {
             payload = {
                 symbols: symbols,
                 minProb: parseFloat($scope.searchMinProbChange),
@@ -63,15 +64,15 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             },
             data: payload
         }).then(function (data) {
-            if($scope.searchProductType==='CUR'){
-                            $scope.currencyData = data.data;
-            console.log($scope.currencyData, "yes");
+            if ($scope.searchProductType === 'CUR') {
+                $scope.currencyData = data.data;
+                console.log($scope.currencyData, "yes");
             }
-            else if($scope.searchProductType==='EQU'){
+            else if ($scope.searchProductType === 'EQU') {
+                $scope.currencyData = data.data;
+            } else {
 
-            }else{
-
-            } 
+            }
 
         });
     };

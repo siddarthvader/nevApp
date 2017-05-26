@@ -181,7 +181,7 @@
                                 </div>
                             </div>
                             <div class="columns is-multiline">
-                                <div class="column is-1 is-bordered" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
+                                <div class="column is-1 is-bordered padding-1-imp" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
                                 ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
                                     <span class="is-bold is-paddingless ">Week {{key}}</span>
                                     <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
