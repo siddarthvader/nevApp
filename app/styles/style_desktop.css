@@ -176,6 +176,10 @@ body {
   background: #3273dc;
 }
 
+.small-text {
+  font-size: .85rem;
+}
+
 .flex {
   display: flex;
 }

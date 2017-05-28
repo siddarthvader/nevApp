@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show="searchProductType==='EQU'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-if="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-if="searchProductType==='EQU'">
                 <div class="field-label is-normal">
                     <label class="label">Industry</label>
                 </div>
@@ -143,8 +143,8 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <div isteven-multi-select input-model="allTickers" output-properties="Name Sector Maker Industry" output-model="searchSymbol" button-label="Name"
-                                item-label="Maker" tick-property="Ticked"></div>
+                            <div isteven-multi-select input-model="allTickers" output-properties="Name Sector Maker Industry Exchange Code Contracts"
+                                output-model="searchSymbol" button-label="Name" item-label="Maker Exchange" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -172,9 +172,34 @@
     <div class="modal-background overflow-auto">
         <div class="is-fullwidth m-40px ">
             <div class="box column">
-                <span class="tag is-info black-text">Current Week</span>
-                <span class="tag is-warning">Chosen Week</span>
-                <span class="tag is-light green-text" ng-if="conWeeks">Consecutive Weeks</span>
+                <div class="columns">
+                    <div class="column is-6">
+                        <span class="tag is-info black-text">Current Week</span>
+                        <span class="tag is-warning">Chosen Week</span>
+                        <span class="tag is-light green-text" ng-if="conWeeks">Consecutive Weeks</span>
+
+                    </div>
+
+                    <div class="column is-6">
+                        <table class="table is-striped" ng-if="Object.size(dates)">
+                              <thead>
+                                  <tr>
+                                      <th class="small-text"><strong> Symbol</strong></th>
+                                      <th class="small-text"><strong>From Date</strong></th>
+                                  </tr>
+                              </thead> 
+                              <tbody>
+                                  <tr ng-repeat="(ticker,date) in dates">
+                                      <td class="small-text">{{ticker}}</td>
+                                      <td class="small-text">{{date}}</td>
+                                  </tr>
+                              </tbody>  
+                        </table>
+                    </div>
+                </div>
+
+
+
                 <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">
                     <div class="column is-12" ng-repeat="(year,yearData) in dataSet ">
                         <div class="" ng-repeat="(type,entityData) in yearData">
@@ -188,8 +213,8 @@
                                 <div class="column is-1 is-bordered padding-1-imp" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
                                     <div class="is-bold is-paddingless ">Week {{key}}</div>
                                     <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[toInt(key)-1][sym].count || entityData[toInt(key)+1][sym].count)}">
-                                        <span>{{sym}}-{{data.reliabality}}%</span>
-                                        <span class="box smallView" ng-if="searchProductType!=='CUR'">
+                                        <span class="small-text">{{sym}}-{{data.reliabality}}%</span>
+                                        <span class="box smallView" ng-if="searchProductType==='EQU'">
                                             <span class="blue-text is-underlline" ng-click="goToFunda('etf',data)">ETF</span>
                                         <span class="blue-text is-underlline" ng-click="goToFunda('equities',data)">Equities</span>
                                         </span>
