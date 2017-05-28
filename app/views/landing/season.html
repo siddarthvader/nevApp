@@ -9,7 +9,7 @@
                     <div class="field is-narrow ">
                         <p class="control">
                             <span class="select">
-                                <select ng-model="searchProductType">
+                                <select ng-model="searchProductType" ng-change="changeProductType()">
                                         <option value="CUR">Currency</option>
                                         <option value="EQU">Equities</option>
                                         <option value="FUT">Futures</option>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-show ="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
@@ -139,10 +139,12 @@
                 <div class="field-label is-normal">
                     <label class="label">Search Symbol</label>
                 </div>
+
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <textarea class="textarea" placeholder="Separated by Commas" ng-model="searchSymbol"></textarea>
+                            <div isteven-multi-select input-model="allTickers" output-properties="Name" output-model="searchSymbol" button-label="Name"
+                                item-label="Maker" tick-property="ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -154,7 +156,7 @@
                 <div class="field-body">
                     <div class="field is-narrow is-grouped">
                         <p class="control">
-                            <button class="button is-primary" ng-click="showResOverlay()">Submit</button>
+                            <button class="button is-primary is-outlined" ng-click="showResOverlay()">Submit</button>
                         </p>
                         <p class="control">
                             <button class="button is-link">Cancel</button>
@@ -172,34 +174,30 @@
             <div class="box column">
                 <span class="tag is-info">Current Week</span>
                 <span class="tag is-warning">Chosen Week</span>
-                <span class="tag is-light green-text">Consecutive Weeks</span>
+                <span class="tag is-light green-text" ng-if="conWeeks">Consecutive Weeks</span>
                 <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">
                     <div class="column is-12" ng-repeat="(year,yearData) in dataSet ">
                         <div class="" ng-repeat="(type,entityData) in yearData">
                             <div class="columns mt-4">
                                 <div class="column is-12 has-text-centered is-paddingless">
                                     <div class="blue-text title is-4 is-bold is-marginless">{{freq.toUpperCase()}}</div>
-                                    <span class="is-bold"> ({{year}} - {{currentYear}}) or (last {{currentYear-year}} years) - {{type}} </span>
+                                    <span class="is-bold"> ({{year-5}} - {{currentYear}}) or (last {{currentYear-year}} years) - {{type}} </span>
                                 </div>
                             </div>
                             <div class="columns is-multiline">
-                                <div class="column is-1 is-bordered padding-1-imp" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" 
-                                ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
+                                <div class="column is-1 is-bordered padding-1-imp" ng-repeat="(key,val) in entityData" ng-if="Object.size(val)" ng-class="{'yellow-background':searchWeekNum==key,'blue-background':currentWeek==key,'green-background':false}">
                                     <div class="is-bold is-paddingless ">Week {{key}}</div>
-                                    <span class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[key-1][sym].count || entityData[key+1][sym].count)}">
+                                    <div class="hoverView" ng-repeat="(sym,data) in val" ng-class="{'green-text':conWeeks && (entityData[toInt(key)-1][sym].count || entityData[toInt(key)+1][sym].count)}">
                                         <span>{{sym}}-{{data.reliabality}}%</span>
                                         <span class="box smallView" ng-if="searchProductType!=='CUR'">
                                             <span class="blue-text is-underlline" ng-click="goToFunda('etf',data)">ETF</span>
-                                            <span class="blue-text is-underlline" ng-click="goToFunda('equities',data)">Equities</span>
+                                        <span class="blue-text is-underlline" ng-click="goToFunda('equities',data)">Equities</span>
                                         </span>
-                                    </span>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
