@@ -4,7 +4,7 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
     var tradingViewChartUrl;
     $scope.moment = moment;
     preEarn.prefix = "NASDAQ";
-    preEarn.ticker = "AAPL";
+    preEarn.searchKey = "AAPL";
 
 
     $scope.fetchYahooNews = () => {
