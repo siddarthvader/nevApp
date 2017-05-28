@@ -1,263 +1,4891 @@
 {
     "data": [
         {
-            "Name": "B",
-            "Maker": "Brent Crude Futures",
+            "Name": "0D",
+            "Exchange": "CME",
+            "Maker": "Mini European 3.5% Fuel Oil Barges FOB Rdam (Platts)",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_0D",
             "Ticked": false
         },
         {
-            "Name": "T",
-            "Maker": "WTI Crude Futures",
+            "Name": "0F",
+            "Exchange": "CME",
+            "Maker": "Mini Singapore Fuel Oil 180 cst (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_0F",
             "Ticked": false
         },
         {
-            "Name": "G",
-            "Maker": "Gas Oil Futures",
+            "Name": "1MF",
+            "Exchange": "SGX",
+            "Maker": "Platts Singapore Fuel Oil 180cst Index",
+            "Contracts": 3,
+            "Code": "CHRIS/SGX_1MF",
             "Ticked": false
         },
         {
-            "Name": "ULS",
-            "Maker": "Low Sulphur Gasoil Futures",
+            "Name": "1N",
+            "Exchange": "CME",
+            "Maker": "Singapore Mogas 92 Unleaded (Platts)",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_1N",
             "Ticked": false
         },
         {
-            "Name": "N",
-            "Maker": "NYH RBOB Gasoline",
+            "Name": "1NB",
+            "Exchange": "CME",
+            "Maker": "Singapore Mogas 92 Unleaded (Platts) Brent Crack Spread",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_1NB",
             "Ticked": false
         },
         {
-            "Name": "O",
-            "Maker": "Heating Oil Futures",
+            "Name": "1R",
+            "Exchange": "CME",
+            "Maker": "Propane Non-LDH Mont Belvieu (OPIS)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_1R",
             "Ticked": false
         },
         {
-            "Name": "M",
-            "Maker": "UK Natural Gas Futures",
+            "Name": "1U",
+            "Exchange": "CME",
+            "Maker": "NY Jet Fuel (Platts) vs. NY Harbor ULSD",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_1U",
             "Ticked": false
         },
         {
-            "Name": "ATW",
-            "Maker": "Rotterdam Coal Futures",
+            "Name": "3MF",
+            "Exchange": "SGX",
+            "Maker": "Platts Singapore Fuel Oil 380cst Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_3MF",
+            "Ticked": false
+        },
+        {
+            "Name": "46",
+            "Exchange": "CME",
+            "Maker": "PJM METED Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_46",
+            "Ticked": false
+        },
+        {
+            "Name": "47",
+            "Exchange": "CME",
+            "Maker": "PJM METED Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_47",
+            "Ticked": false
+        },
+        {
+            "Name": "4L",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone F 5 MW Peak Calendar-Month Day-Ahead LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_4L",
+            "Ticked": false
+        },
+        {
+            "Name": "4M",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone F 5 MW Off-Peak Calendar-Month Day-Ahead LBMP",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_4M",
+            "Ticked": false
+        },
+        {
+            "Name": "4N",
+            "Exchange": "CME",
+            "Maker": "PJM PECO Zone 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_4N",
+            "Ticked": false
+        },
+        {
+            "Name": "4P",
+            "Exchange": "CME",
+            "Maker": "PJM PECO Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 16,
+            "Code": "CHRIS/CME_4P",
+            "Ticked": false
+        },
+        {
+            "Name": "58",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone E 5 MW Off-Peak Calendar-Month Day-Ahead LBMP",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_58",
+            "Ticked": false
+        },
+        {
+            "Name": "5C",
+            "Exchange": "CME",
+            "Maker": "Chicago ULSD (Platts) vs. NY Harbor ULSD",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_5C",
+            "Ticked": false
+        },
+        {
+            "Name": "5Z",
+            "Exchange": "CME",
+            "Maker": "Columbia Gulf Mainline Natural Gas (Platts IFERC) Basis",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_5Z",
+            "Ticked": false
+        },
+        {
+            "Name": "6T",
+            "Exchange": "CME",
+            "Maker": "In Delivery Month European Union Allowance (EUA)",
+            "Contracts": 6,
+            "Code": "CHRIS/CME_6T",
+            "Ticked": false
+        },
+        {
+            "Name": "6Z",
+            "Exchange": "CME",
+            "Maker": "Tennessee 800 Leg Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_6Z",
+            "Ticked": false
+        },
+        {
+            "Name": "71",
+            "Exchange": "CME",
+            "Maker": "Ethanol Forward Month",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_71",
+            "Ticked": false
+        },
+        {
+            "Name": "7H",
+            "Exchange": "CME",
+            "Maker": "Gasoline Euro-bob Oxy NWE Barges (Argus)",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_7H",
+            "Ticked": false
+        },
+        {
+            "Name": "7K",
+            "Exchange": "CME",
+            "Maker": "Gasoline Euro-bob Oxy NWE Barges (Argus) Crack Spread",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_7K",
+            "Ticked": false
+        },
+        {
+            "Name": "7Q",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Natural Gasoline (OPIS)",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_7Q",
+            "Ticked": false
+        },
+        {
+            "Name": "7Y",
+            "Exchange": "CME",
+            "Maker": "NY ULSD (Argus) vs. NY Harbor ULSD",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_7Y",
+            "Ticked": false
+        },
+        {
+            "Name": "8I",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Iso-Butane (OPIS)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_8I",
+            "Ticked": false
+        },
+        {
+            "Name": "8Z",
+            "Exchange": "CME",
+            "Maker": "Southern Star Tx.-Okla.-Kan. Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_8Z",
+            "Ticked": false
+        },
+        {
+            "Name": "9F",
+            "Exchange": "CME",
+            "Maker": "Texas Gas Zone 1 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_9F",
+            "Ticked": false
+        },
+        {
+            "Name": "A3",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone C 5 MW Off-Peak Calendar-Month Day-Ahead LBMP",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_A3",
+            "Ticked": false
+        },
+        {
+            "Name": "A5",
+            "Exchange": "CME",
+            "Maker": "EIA Flat Tax On-Highway Diesel",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_A5",
+            "Ticked": false
+        },
+        {
+            "Name": "A6",
+            "Exchange": "CME",
+            "Maker": "Group Three ULSD (Platts) vs. NY Harbor ULSD",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_A6",
+            "Ticked": false
+        },
+        {
+            "Name": "AB",
+            "Exchange": "ODE",
+            "Maker": "Azuki Beans",
+            "Contracts": 2,
+            "Code": "CHRIS/ODE_AB",
+            "Ticked": false
+        },
+        {
+            "Name": "ABY",
+            "Exchange": "CME",
+            "Maker": "WTI-Brent Bullet",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_ABY",
+            "Ticked": false
+        },
+        {
+            "Name": "AD",
+            "Exchange": "CME",
+            "Maker": "Australian Dollar",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_AD",
+            "Ticked": false
+        },
+        {
+            "Name": "AFF",
+            "Exchange": "CME",
+            "Maker": "WTI Midland (Argus) vs. WTI Financial",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_AFF",
             "Ticked": false
         },
         {
             "Name": "AFR",
-            "Maker": "Richards Bay Coal Futures",
+            "Exchange": "ICE",
+            "Maker": "Richards Bay Coal",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_AFR",
             "Ticked": false
         },
         {
-            "Name": "NCF",
-            "Maker": "Newcastle Coal Futures",
+            "Name": "AFR",
+            "Exchange": "ICE",
+            "Maker": "Richards Bay Coal",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_AFR",
             "Ticked": false
         },
         {
-            "Name": "C",
-            "Maker": "ECX EUA Futures",
+            "Name": "AG",
+            "Exchange": "MCX",
+            "Maker": "Silver 1000",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_AG",
             "Ticked": false
         },
         {
-            "Name": "CEU",
-            "Maker": "ECX EUAA Futures",
+            "Name": "AG",
+            "Exchange": "SHFE",
+            "Maker": "Silver",
+            "Contracts": 11,
+            "Code": "CHRIS/SHFE_AG",
             "Ticked": false
         },
         {
-            "Name": "CER",
-            "Maker": "ECX CER Emission Futures",
+            "Name": "AGA",
+            "Exchange": "CME",
+            "Maker": "Singapore Gasoil (Platts) vs. Gasoil",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_AGA",
             "Ticked": false
         },
         {
-            "Name": "ERU",
-            "Maker": "ECX ERU Emission Futures",
+            "Name": "AGM",
+            "Exchange": "MCX",
+            "Maker": "Silver Micro",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_AGM",
             "Ticked": false
         },
         {
-            "Name": "TIB",
-            "Maker": "WTI vs Brent Spread Option",
+            "Name": "AL",
+            "Exchange": "SHFE",
+            "Maker": "Aluminium",
+            "Contracts": 11,
+            "Code": "CHRIS/SHFE_AL",
             "Ticked": false
         },
         {
-            "Name": "BPB",
-            "Maker": "Endex Belgian Power Base Load Futures",
+            "Name": "AL",
+            "Exchange": "MCX",
+            "Maker": "Aluminium",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_AL",
             "Ticked": false
         },
         {
-            "Name": "DPB",
-            "Maker": "Endex Dutch Power Base Load Futures",
+            "Name": "ALM",
+            "Exchange": "MCX",
+            "Maker": "Aluminium Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_ALM",
             "Ticked": false
         },
         {
-            "Name": "DPA",
-            "Maker": "Endex Dutch Power Peak Load (8-20) Futures",
+            "Name": "AP",
+            "Exchange": "ASX",
+            "Maker": "SPI 200 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_AP",
             "Ticked": false
         },
         {
-            "Name": "TFM",
-            "Maker": "Endex Dutch TTF Gas Base Load Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "GNM",
-            "Maker": "Endex German NCG Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "GER",
-            "Maker": "Endex German GASPOOL Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "CC",
-            "Maker": "Cocoa Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "KC",
-            "Maker": "Coffee C Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "CT",
-            "Maker": "Cotton No. 2 Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "OJ",
-            "Maker": "Orange Juice Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "SB",
-            "Maker": "Sugar No. 11 Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "SF",
-            "Maker": "Sugar No. 16 Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "ICN",
-            "Maker": "Corn Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "IS",
-            "Maker": "Soybean Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "ISM",
-            "Maker": "Soybean Meal futures",
-            "Ticked": false
-        },
-        {
-            "Name": "IBO",
-            "Maker": "Soybean Oil Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "IW",
-            "Maker": "Wheat Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "RS",
-            "Maker": "Canola Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "BW",
-            "Maker": "Barley Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "DW",
-            "Maker": "Durum Wheat Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "WA",
-            "Maker": "Milling Wheat Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "RF",
-            "Maker": "Russell 1000 Index Mini Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "TF",
-            "Maker": "Russell 2000 Index Mini Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "DX",
-            "Maker": "US Dollar Index Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "SS",
-            "Maker": "GBP/CHF Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "SY",
-            "Maker": "GBP/JPY Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "MP",
-            "Maker": "Sm GBP/USD Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "RV",
-            "Maker": "Russell 1000 Value Index Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "RG",
-            "Maker": "Russell 1000 Growth Index Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "P",
-            "Maker": "UK Peak Electricity Futures",
-            "Ticked": false
-        },
-        {
-            "Name": "Y",
-            "Maker": "UK Base Electricity Futures",
+            "Name": "AP",
+            "Exchange": "SGX",
+            "Maker": "MSCI Asia APEX 50 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_AP",
             "Ticked": false
         },
         {
             "Name": "AR",
-            "Maker": "AUSTRALIAN DOLLAR/NEW ZEALAND DOLLAR FUTURES",
+            "Exchange": "ICE",
+            "Maker": "AUSTRALIAN DOLLAR/NEW ZEALAND DOLLAR",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_AR",
             "Ticked": false
         },
         {
-            "Name": "ZJ",
-            "Maker": "New Zealand Dollar/Japanese Yen Futures",
+            "Name": "ARW",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast Unl 87 Gasoline M1 (Platts) Crack Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_ARW",
             "Ticked": false
         },
         {
-            "Name": "NJ",
-            "Maker": " Norwegian Krone/Swedish Krona Futures",
+            "Name": "ATW",
+            "Exchange": "ICE",
+            "Maker": "Rotterdam Coal",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_ATW",
+            "Ticked": false
+        },
+        {
+            "Name": "ATW",
+            "Exchange": "ICE",
+            "Maker": "Rotterdam Coal",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_ATW",
+            "Ticked": false
+        },
+        {
+            "Name": "AU",
+            "Exchange": "SHFE",
+            "Maker": "Gold",
+            "Contracts": 9,
+            "Code": "CHRIS/SHFE_AU",
+            "Ticked": false
+        },
+        {
+            "Name": "AW",
+            "Exchange": "CME",
+            "Maker": "Dow Jones-UBS Commodity Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_AW",
+            "Ticked": false
+        },
+        {
+            "Name": "AXF",
+            "Exchange": "LIFFE",
+            "Maker": "AEX Dividend Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_AXF",
+            "Ticked": false
+        },
+        {
+            "Name": "B",
+            "Exchange": "MCX",
+            "Maker": "Brent Crude Oil",
+            "Contracts": 1,
+            "Code": "CHRIS/MCX_B",
+            "Ticked": false
+        },
+        {
+            "Name": "B",
+            "Exchange": "ICE",
+            "Maker": "Brent Crude Oil",
+            "Contracts": 25,
+            "Code": "CHRIS/ICE_B",
+            "Ticked": false
+        },
+        {
+            "Name": "B0",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu LDH Propane (OPIS)",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_B0",
+            "Ticked": false
+        },
+        {
+            "Name": "B3",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub 5 MW Peak Calendar-Month Real-Time LMP",
+            "Contracts": 30,
+            "Code": "CHRIS/CME_B3",
+            "Ticked": false
+        },
+        {
+            "Name": "B4",
+            "Exchange": "CME",
+            "Maker": "Algonquin City-Gates Natural Gas (Platts IFERC) Basis",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_B4",
+            "Ticked": false
+        },
+        {
+            "Name": "B6",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub Real-Time Off-Peak Calendar-Month 5 MW",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_B6",
+            "Ticked": false
+        },
+        {
+            "Name": "BAX",
+            "Exchange": "MX",
+            "Maker": "3-Month Canadian Bankers Acceptance",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_BAX",
+            "Ticked": false
+        },
+        {
+            "Name": "BB",
+            "Exchange": "CME",
+            "Maker": "Brent Crude Oil",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_BB",
+            "Ticked": false
+        },
+        {
+            "Name": "BB",
+            "Exchange": "ASX",
+            "Maker": "90-day New Zealand Bank Bills",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_BB",
+            "Ticked": false
+        },
+        {
+            "Name": "BK",
+            "Exchange": "CME",
+            "Maker": "WTI-Brent Financial",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_BK",
+            "Ticked": false
+        },
+        {
+            "Name": "BO",
+            "Exchange": "CME",
+            "Maker": "Soybean Oil",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_BO",
+            "Ticked": false
+        },
+        {
+            "Name": "BOB",
+            "Exchange": "CME",
+            "Maker": "3.5% Fuel Oil Barges FOB Rdam (Platts) Crack Spread (1000mt)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_BOB",
+            "Ticked": false
+        },
+        {
+            "Name": "BP",
+            "Exchange": "CME",
+            "Maker": "British Pound",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_BP",
+            "Ticked": false
+        },
+        {
+            "Name": "BPB",
+            "Exchange": "ICE",
+            "Maker": "Endex Belgian Power Base Load",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_BPB",
+            "Ticked": false
+        },
+        {
+            "Name": "BR",
+            "Exchange": "CME",
+            "Maker": "Brazilian Real",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_BR",
+            "Ticked": false
+        },
+        {
+            "Name": "BW",
+            "Exchange": "ICE",
+            "Maker": "Barley",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_BW",
+            "Ticked": false
+        },
+        {
+            "Name": "BW",
+            "Exchange": "ICE",
+            "Maker": "Barley",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_BW",
+            "Ticked": false
+        },
+        {
+            "Name": "BXF",
+            "Exchange": "LIFFE",
+            "Maker": "BEL 20 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_BXF",
+            "Ticked": false
+        },
+        {
+            "Name": "BY",
+            "Exchange": "CME",
+            "Maker": "British Pound/Japanese Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_BY",
+            "Ticked": false
+        },
+        {
+            "Name": "BZ",
+            "Exchange": "CME",
+            "Maker": "Brent Look-Alike",
+            "Contracts": 16,
+            "Code": "CHRIS/CME_BZ",
+            "Ticked": false
+        },
+        {
+            "Name": "C",
+            "Exchange": "LIFFE",
+            "Maker": "Cocoa",
+            "Contracts": 4,
+            "Code": "CHRIS/LIFFE_C",
+            "Ticked": false
+        },
+        {
+            "Name": "C",
+            "Exchange": "CME",
+            "Maker": "Corn",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_C",
+            "Ticked": false
+        },
+        {
+            "Name": "C",
+            "Exchange": "ICE",
+            "Maker": "EUA",
+            "Contracts": 16,
+            "Code": "CHRIS/ICE_C",
+            "Ticked": false
+        },
+        {
+            "Name": "C",
+            "Exchange": "ICE",
+            "Maker": "EUA ",
+            "Contracts": 16,
+            "Code": "CHRIS/ICE_C",
+            "Ticked": false
+        },
+        {
+            "Name": "C0",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Ethane (OPIS)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_C0",
+            "Ticked": false
+        },
+        {
+            "Name": "C75",
+            "Exchange": "ODE",
+            "Maker": "Corn75 Index",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_C75",
+            "Ticked": false
+        },
+        {
+            "Name": "CB",
+            "Exchange": "CME",
+            "Maker": "Cash-settled Butter",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_CB",
+            "Ticked": false
+        },
+        {
+            "Name": "CC",
+            "Exchange": "ICE",
+            "Maker": "Cocoa",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_CC",
+            "Ticked": false
+        },
+        {
+            "Name": "CD",
+            "Exchange": "CME",
+            "Maker": "Canadian Dollar",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_CD",
+            "Ticked": false
+        },
+        {
+            "Name": "CER",
+            "Exchange": "ICE",
+            "Maker": "CER Emissions",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_CER",
+            "Ticked": false
+        },
+        {
+            "Name": "CEU",
+            "Exchange": "ICE",
+            "Maker": "ECX EUAA",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_CEU",
+            "Ticked": false
+        },
+        {
+            "Name": "CFF",
+            "Exchange": "SGX",
+            "Maker": "China Coal Index",
+            "Contracts": 5,
+            "Code": "CHRIS/SGX_CFF",
+            "Ticked": false
+        },
+        {
+            "Name": "CGB",
+            "Exchange": "MX",
+            "Maker": "10-year Canadian Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_CGB",
+            "Ticked": false
+        },
+        {
+            "Name": "CGF",
+            "Exchange": "MX",
+            "Maker": "5-year Canadian Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_CGF",
+            "Ticked": false
+        },
+        {
+            "Name": "CGZ",
+            "Exchange": "MX",
+            "Maker": "2-year Canadian Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_CGZ",
+            "Ticked": false
+        },
+        {
+            "Name": "CI",
+            "Exchange": "CME",
+            "Maker": "CIG Rockies Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_CI",
+            "Ticked": false
+        },
+        {
+            "Name": "CIF",
+            "Exchange": "SGX",
+            "Maker": "IHS McCloskey Indonesian Sub-Bit FOB Index Futures",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_CIF",
+            "Ticked": false
+        },
+        {
+            "Name": "CL",
+            "Exchange": "MCX",
+            "Maker": "Crude Oil",
+            "Contracts": 4,
+            "Code": "CHRIS/MCX_CL",
+            "Ticked": false
+        },
+        {
+            "Name": "CL",
+            "Exchange": "CME",
+            "Maker": "WTI Crude Oil",
+            "Contracts": 38,
+            "Code": "CHRIS/CME_CL",
+            "Ticked": false
+        },
+        {
+            "Name": "CN",
+            "Exchange": "SGX",
+            "Maker": "FTSE China A50 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_CN",
+            "Ticked": false
+        },
+        {
+            "Name": "CNH",
+            "Exchange": "CME",
+            "Maker": "Standard-Size USD/Offshore RMB (CNH)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_CNH",
+            "Ticked": false
+        },
+        {
+            "Name": "CONF",
+            "Exchange": "EUREX",
+            "Maker": "CONF",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_CONF",
+            "Ticked": false
+        },
+        {
+            "Name": "CPO",
+            "Exchange": "CME",
+            "Maker": "Crude Palm Oil",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_CPO",
+            "Ticked": false
+        },
+        {
+            "Name": "CRDM",
+            "Exchange": "MCX",
+            "Maker": "Cardamom",
+            "Contracts": 3,
+            "Code": "CHRIS/MCX_CRDM",
+            "Ticked": false
+        },
+        {
+            "Name": "CS",
+            "Exchange": "CME",
+            "Maker": "WTI Financial",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_CS",
+            "Ticked": false
+        },
+        {
+            "Name": "CSC",
+            "Exchange": "CME",
+            "Maker": "Cash-Settled Cheese",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_CSC",
+            "Ticked": false
+        },
+        {
+            "Name": "CT",
+            "Exchange": "MCX",
+            "Maker": "Cotton",
+            "Contracts": 3,
+            "Code": "CHRIS/MCX_CT",
+            "Ticked": false
+        },
+        {
+            "Name": "CT",
+            "Exchange": "ICE",
+            "Maker": "Cotton",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_CT",
+            "Ticked": false
+        },
+        {
+            "Name": "CU",
+            "Exchange": "CME",
+            "Maker": "Chicago Ethanol (Platts)",
+            "Contracts": 13,
+            "Code": "CHRIS/CME_CU",
+            "Ticked": false
+        },
+        {
+            "Name": "CU",
+            "Exchange": "MCX",
+            "Maker": "Copper",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_CU",
+            "Ticked": false
+        },
+        {
+            "Name": "CU",
+            "Exchange": "SHFE",
+            "Maker": "Copper",
+            "Contracts": 11,
+            "Code": "CHRIS/SHFE_CU",
+            "Ticked": false
+        },
+        {
+            "Name": "CUM",
+            "Exchange": "MCX",
+            "Maker": "Copper Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_CUM",
+            "Ticked": false
+        },
+        {
+            "Name": "CY",
+            "Exchange": "CME",
+            "Maker": "Brent Financial",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_CY",
+            "Ticked": false
+        },
+        {
+            "Name": "CZ",
+            "Exchange": "CME",
+            "Maker": "Transco Zone 3 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_CZ",
+            "Ticked": false
+        },
+        {
+            "Name": "D0",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Normal Butane (OPIS)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_D0",
+            "Ticked": false
+        },
+        {
+            "Name": "D2",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone G Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_D2",
+            "Ticked": false
+        },
+        {
+            "Name": "D3",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone J Day-Ahead Peak Calendar-Month 5 MW",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_D3",
+            "Ticked": false
+        },
+        {
+            "Name": "D4",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone J Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_D4",
+            "Ticked": false
+        },
+        {
+            "Name": "D6",
+            "Exchange": "CME",
+            "Maker": "PJM Duquesne Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_D6",
+            "Ticked": false
+        },
+        {
+            "Name": "D7",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub Day-Ahead LMP Peak Calendar-Month 5 MW",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_D7",
+            "Ticked": false
+        },
+        {
+            "Name": "D8",
+            "Exchange": "CME",
+            "Maker": "PJM ComEd Zone 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_D8",
+            "Ticked": false
+        },
+        {
+            "Name": "D9",
+            "Exchange": "CME",
+            "Maker": "PJM ComEd Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_D9",
+            "Ticked": false
+        },
+        {
+            "Name": "DA",
+            "Exchange": "CME",
+            "Maker": "Class III Milk",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_DA",
+            "Ticked": false
+        },
+        {
+            "Name": "DB",
+            "Exchange": "CME",
+            "Maker": "Brent Crude Oil vs. Dubai Crude Oil (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_DB",
+            "Ticked": false
+        },
+        {
+            "Name": "DC",
+            "Exchange": "CME",
+            "Maker": "Dubai Crude Oil (Platts) Financial",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_DC",
+            "Ticked": false
+        },
+        {
+            "Name": "DJ",
+            "Exchange": "CME",
+            "Maker": "Full-Size Dow Jones",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_DJ",
+            "Ticked": false
+        },
+        {
+            "Name": "DJIA",
+            "Exchange": "OSE",
+            "Maker": "OSE DJIA",
+            "Contracts": 4,
+            "Code": "CHRIS/OSE_DJIA",
+            "Ticked": false
+        },
+        {
+            "Name": "DK",
+            "Exchange": "CME",
+            "Maker": "Class IV Milk",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_DK",
+            "Ticked": false
+        },
+        {
+            "Name": "DPA",
+            "Exchange": "ICE",
+            "Maker": "Endex Dutch Power Peak Load (8-20) Futures",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_DPA",
+            "Ticked": false
+        },
+        {
+            "Name": "DPB",
+            "Exchange": "ICE",
+            "Maker": "Endex Dutch Power Base Load",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_DPB",
+            "Ticked": false
+        },
+        {
+            "Name": "DW",
+            "Exchange": "ICE",
+            "Maker": "Durum Wheat",
+            "Contracts": 11,
+            "Code": "CHRIS/ICE_DW",
+            "Ticked": false
+        },
+        {
+            "Name": "DW",
+            "Exchange": "ICE",
+            "Maker": "Durum Wheat",
+            "Contracts": 11,
+            "Code": "CHRIS/ICE_DW",
+            "Ticked": false
+        },
+        {
+            "Name": "DX",
+            "Exchange": "ICE",
+            "Maker": "US Dollar Index",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_DX",
+            "Ticked": false
+        },
+        {
+            "Name": "DY",
+            "Exchange": "CME",
+            "Maker": "Dry Whey",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_DY",
+            "Ticked": false
+        },
+        {
+            "Name": "E3",
+            "Exchange": "CME",
+            "Maker": "PJM BGE Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_E3",
+            "Ticked": false
+        },
+        {
+            "Name": "E4",
+            "Exchange": "CME",
+            "Maker": "PJM Western Hub Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 51,
+            "Code": "CHRIS/CME_E4",
+            "Ticked": false
+        },
+        {
+            "Name": "E5",
+            "Exchange": "CME",
+            "Maker": "Argus LLS vs. WTI (Argus) Trade Month",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_E5",
+            "Ticked": false
+        },
+        {
+            "Name": "E7",
+            "Exchange": "CME",
+            "Maker": "E-mini Euro FX",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_E7",
+            "Ticked": false
+        },
+        {
+            "Name": "E8",
+            "Exchange": "CME",
+            "Maker": "PJM DPL Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_E8",
+            "Ticked": false
+        },
+        {
+            "Name": "EBM",
+            "Exchange": "LIFFE",
+            "Maker": "Milling Wheat",
+            "Contracts": 6,
+            "Code": "CHRIS/LIFFE_EBM",
+            "Ticked": false
+        },
+        {
+            "Name": "EC",
+            "Exchange": "CME",
+            "Maker": "Euro FX",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_EC",
+            "Ticked": false
+        },
+        {
+            "Name": "ECO",
+            "Exchange": "LIFFE",
+            "Maker": "Rapeseed",
+            "Contracts": 9,
+            "Code": "CHRIS/LIFFE_ECO",
+            "Ticked": false
+        },
+        {
+            "Name": "ED",
+            "Exchange": "SGX",
+            "Maker": "Eurodollar",
+            "Contracts": 4,
+            "Code": "CHRIS/SGX_ED",
+            "Ticked": false
+        },
+        {
+            "Name": "ED",
+            "Exchange": "CME",
+            "Maker": "3-month Eurodollar",
+            "Contracts": 37,
+            "Code": "CHRIS/CME_ED",
+            "Ticked": false
+        },
+        {
+            "Name": "EH",
+            "Exchange": "CME",
+            "Maker": "Ethanol",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_EH",
+            "Ticked": false
+        },
+        {
+            "Name": "EJ",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) Off-Peak LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_EJ",
+            "Ticked": false
+        },
+        {
+            "Name": "EL",
+            "Exchange": "SGX",
+            "Maker": "Euroyen LIBOR",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_EL",
+            "Ticked": false
+        },
+        {
+            "Name": "EM",
+            "Exchange": "CME",
+            "Maker": "1-month Eurodollar",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_EM",
+            "Ticked": false
+        },
+        {
+            "Name": "EMA",
+            "Exchange": "LIFFE",
+            "Maker": "Corn",
+            "Contracts": 10,
+            "Code": "CHRIS/LIFFE_EMA",
+            "Ticked": false
+        },
+        {
+            "Name": "EN",
+            "Exchange": "CME",
+            "Maker": "European Naphtha (Platts) Crack Spread",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_EN",
+            "Ticked": false
+        },
+        {
+            "Name": "EO3",
+            "Exchange": "LIFFE",
+            "Maker": "3-month EONIA Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_EO3",
+            "Ticked": false
+        },
+        {
+            "Name": "EOB",
+            "Exchange": "LIFFE",
+            "Maker": "Malting Barley",
+            "Contracts": 9,
+            "Code": "CHRIS/LIFFE_EOB",
+            "Ticked": false
+        },
+        {
+            "Name": "EON",
+            "Exchange": "LIFFE",
+            "Maker": "1-month EONIA",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_EON",
+            "Ticked": false
+        },
+        {
+            "Name": "EPE",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE EPRA/NAREIT Euro Zone Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_EPE",
+            "Ticked": false
+        },
+        {
+            "Name": "EPL",
+            "Exchange": "LIFFE",
+            "Maker": "Skimmed Milk Powder",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_EPL",
+            "Ticked": false
+        },
+        {
+            "Name": "EPR",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE EPRA/NAREIT Europe Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_EPR",
+            "Ticked": false
+        },
+        {
+            "Name": "ERU",
+            "Exchange": "ICE",
+            "Maker": "ECX ERU Emission",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ERU",
+            "Ticked": false
+        },
+        {
+            "Name": "ES",
+            "Exchange": "CME",
+            "Maker": "E-mini S&P 500 Index",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_ES",
+            "Ticked": false
+        },
+        {
+            "Name": "EW",
+            "Exchange": "CME",
+            "Maker": "East-West Fuel Oil Spread (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_EW",
+            "Ticked": false
+        },
+        {
+            "Name": "EY",
+            "Exchange": "SGX",
+            "Maker": "Euroyen TIBOR",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_EY",
+            "Ticked": false
+        },
+        {
+            "Name": "EY",
+            "Exchange": "CME",
+            "Maker": "Euroyen Tibor",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_EY",
+            "Ticked": false
+        },
+        {
+            "Name": "F2",
+            "Exchange": "CME",
+            "Maker": "PJM JCPL Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 39,
+            "Code": "CHRIS/CME_F2",
+            "Ticked": false
+        },
+        {
+            "Name": "F2CR",
+            "Exchange": "EUREX",
+            "Maker": "CER Mid December",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_F2CR",
+            "Ticked": false
+        },
+        {
+            "Name": "F2MX",
+            "Exchange": "EUREX",
+            "Maker": "MDAX",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_F2MX",
+            "Ticked": false
+        },
+        {
+            "Name": "F5",
+            "Exchange": "CME",
+            "Maker": "PJM PPL Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_F5",
+            "Ticked": false
+        },
+        {
+            "Name": "FB",
+            "Exchange": "SGX",
+            "Maker": "Fuel Oil 380cst",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_FB",
+            "Ticked": false
+        },
+        {
+            "Name": "FBTP",
+            "Exchange": "EUREX",
+            "Maker": "Long-Term Euro-BTP",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FBTP",
+            "Ticked": false
+        },
+        {
+            "Name": "FBTS",
+            "Exchange": "EUREX",
+            "Maker": "Short-Term Euro-BTP",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FBTS",
+            "Ticked": false
+        },
+        {
+            "Name": "FBUT",
+            "Exchange": "EUREX",
+            "Maker": "Butter",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FBUT",
+            "Ticked": false
+        },
+        {
+            "Name": "FC",
+            "Exchange": "CME",
+            "Maker": "Feeder Cattle",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_FC",
+            "Ticked": false
+        },
+        {
+            "Name": "FCAG",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Agriculture",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCAG",
+            "Ticked": false
+        },
+        {
+            "Name": "FCCO",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Commodity Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCCO",
+            "Ticked": false
+        },
+        {
+            "Name": "FCE",
+            "Exchange": "LIFFE",
+            "Maker": "CAC40 Index",
+            "Contracts": 3,
+            "Code": "CHRIS/LIFFE_FCE",
+            "Ticked": false
+        },
+        {
+            "Name": "FCEN",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Energy Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCEN",
+            "Ticked": false
+        },
+        {
+            "Name": "FCGR",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Grains",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCGR",
+            "Ticked": false
+        },
+        {
+            "Name": "FCIN",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Industrial Metals",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCIN",
+            "Ticked": false
+        },
+        {
+            "Name": "FCLI",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Livestock",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCLI",
+            "Ticked": false
+        },
+        {
+            "Name": "FCPE",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Petroleum",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCPE",
+            "Ticked": false
+        },
+        {
+            "Name": "FCPR",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Precious Metals",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCPR",
+            "Ticked": false
+        },
+        {
+            "Name": "FCSO",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS Softs",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCSO",
+            "Ticked": false
+        },
+        {
+            "Name": "FCXE",
+            "Exchange": "EUREX",
+            "Maker": "Dow Jones-UBS EX Energy Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FCXE",
+            "Ticked": false
+        },
+        {
+            "Name": "FDAX",
+            "Exchange": "EUREX",
+            "Maker": "DAX",
+            "Contracts": 3,
+            "Code": "CHRIS/EUREX_FDAX",
+            "Ticked": false
+        },
+        {
+            "Name": "FDIV",
+            "Exchange": "EUREX",
+            "Maker": "TecDAX",
+            "Contracts": 3,
+            "Code": "CHRIS/EUREX_FDIV",
+            "Ticked": false
+        },
+        {
+            "Name": "FDM",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_FDM",
+            "Ticked": false
+        },
+        {
+            "Name": "FEAA",
+            "Exchange": "EUREX",
+            "Maker": "EUAA",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEAA",
+            "Ticked": false
+        },
+        {
+            "Name": "FEDV",
+            "Exchange": "EUREX",
+            "Maker": "EURO STOXX Select Dividend 30 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEDV",
+            "Ticked": false
+        },
+        {
+            "Name": "FEF",
+            "Exchange": "LIFFE",
+            "Maker": "FTSEUROFIRST 80 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_FEF",
+            "Ticked": false
+        },
+        {
+            "Name": "FEF",
+            "Exchange": "SGX",
+            "Maker": "Iron Ore",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_FEF",
+            "Ticked": false
+        },
+        {
+            "Name": "FEO",
+            "Exchange": "LIFFE",
+            "Maker": "FTSEUROFIRST 100 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_FEO",
+            "Ticked": false
+        },
+        {
+            "Name": "FEO1",
+            "Exchange": "EUREX",
+            "Maker": "1-month EONIA",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEO1",
+            "Ticked": false
+        },
+        {
+            "Name": "FEPP",
+            "Exchange": "EUREX",
+            "Maker": "Potatos",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEPP",
+            "Ticked": false
+        },
+        {
+            "Name": "FERU",
+            "Exchange": "EUREX",
+            "Maker": "ERU",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FERU",
+            "Ticked": false
+        },
+        {
+            "Name": "FESX",
+            "Exchange": "EUREX",
+            "Maker": "EURO STOXX 50 Index",
+            "Contracts": 3,
+            "Code": "CHRIS/EUREX_FESX",
+            "Ticked": false
+        },
+        {
+            "Name": "FEU3",
+            "Exchange": "EUREX",
+            "Maker": "3-month EURIBOR",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEU3",
+            "Ticked": false
+        },
+        {
+            "Name": "FEXD",
+            "Exchange": "EUREX",
+            "Maker": "EURO STOXX 50 Index Dividend",
+            "Contracts": 10,
+            "Code": "CHRIS/EUREX_FEXD",
+            "Ticked": false
+        },
+        {
+            "Name": "FEXF",
+            "Exchange": "EUREX",
+            "Maker": "EURO STOXX 50 ex Financials Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FEXF",
+            "Ticked": false
+        },
+        {
+            "Name": "FF",
+            "Exchange": "CME",
+            "Maker": "30 Day Fed Funds",
+            "Contracts": 24,
+            "Code": "CHRIS/CME_FF",
+            "Ticked": false
+        },
+        {
+            "Name": "FFOX",
+            "Exchange": "EUREX",
+            "Maker": "OMXH25 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FFOX",
+            "Ticked": false
+        },
+        {
+            "Name": "FGBL",
+            "Exchange": "EUREX",
+            "Maker": "Euro-Bund",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FGBL",
+            "Ticked": false
+        },
+        {
+            "Name": "FGBM",
+            "Exchange": "EUREX",
+            "Maker": "Euro-Bobl",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FGBM",
+            "Ticked": false
+        },
+        {
+            "Name": "FGBS",
+            "Exchange": "EUREX",
+            "Maker": "Euro-Schatz",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FGBS",
+            "Ticked": false
+        },
+        {
+            "Name": "FGBX",
+            "Exchange": "EUREX",
+            "Maker": "Euro-Buxl",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FGBX",
+            "Ticked": false
+        },
+        {
+            "Name": "FH",
+            "Exchange": "CME",
+            "Maker": "WTS (Argus) vs. WTI Trade Month",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_FH",
+            "Ticked": false
+        },
+        {
+            "Name": "FHOG",
+            "Exchange": "EUREX",
+            "Maker": "Hogs",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FHOG",
+            "Ticked": false
+        },
+        {
+            "Name": "FI",
+            "Exchange": "CME",
+            "Maker": "1% Fuel Oil Cargoes FOB NWE (Platts) Crack Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_FI",
+            "Ticked": false
+        },
+        {
+            "Name": "FMAS",
+            "Exchange": "EUREX",
+            "Maker": "MSCI AC Asia Pacific ex Japan Index Futures",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMAS",
+            "Ticked": false
+        },
+        {
+            "Name": "FMCL",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Chile Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMCL",
+            "Ticked": false
+        },
+        {
+            "Name": "FMCN",
+            "Exchange": "EUREX",
+            "Maker": "MSCI China Free Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMCN",
+            "Ticked": false
+        },
+        {
+            "Name": "FMCO",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Columbia Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMCO",
+            "Ticked": false
+        },
+        {
+            "Name": "FMCZ",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Czech Republic Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMCZ",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEA",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Emerging Markets Asia Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEA",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEE",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Emerging Markets EMEA Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEE",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEL",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Emerging Markets Latin America Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEL",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEM",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Emerging Markets Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEM",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEU",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Europe Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEU",
+            "Ticked": false
+        },
+        {
+            "Name": "FMEY",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Egypt Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMEY",
+            "Ticked": false
+        },
+        {
+            "Name": "FMFM",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Frontier Markets Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMFM",
+            "Ticked": false
+        },
+        {
+            "Name": "FMHU",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Hungary Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMHU",
+            "Ticked": false
+        },
+        {
+            "Name": "FMIN",
+            "Exchange": "EUREX",
+            "Maker": "MSCI India Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMIN",
+            "Ticked": false
+        },
+        {
+            "Name": "FMJP",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Japan Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMJP",
+            "Ticked": false
+        },
+        {
+            "Name": "FMMA",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Morocco Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMMA",
+            "Ticked": false
+        },
+        {
+            "Name": "FMMX",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Mexico Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMMX",
+            "Ticked": false
+        },
+        {
+            "Name": "FMMY",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Malaysia Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMMY",
+            "Ticked": false
+        },
+        {
+            "Name": "FMPE",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Peru Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMPE",
+            "Ticked": false
+        },
+        {
+            "Name": "FMPH",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Philippines Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMPH",
+            "Ticked": false
+        },
+        {
+            "Name": "FMPL",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Poland Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMPL",
+            "Ticked": false
+        },
+        {
+            "Name": "FMRS",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Russia Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMRS",
+            "Ticked": false
+        },
+        {
+            "Name": "FMRU",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Russia Price Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMRU",
+            "Ticked": false
+        },
+        {
+            "Name": "FMTH",
+            "Exchange": "EUREX",
+            "Maker": "MSCI Thailand Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMTH",
+            "Ticked": false
+        },
+        {
+            "Name": "FMWO",
+            "Exchange": "EUREX",
+            "Maker": "MSCI World Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMWO",
+            "Ticked": false
+        },
+        {
+            "Name": "FMX",
+            "Exchange": "LIFFE",
+            "Maker": "AMX Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_FMX",
+            "Ticked": false
+        },
+        {
+            "Name": "FMZA",
+            "Exchange": "EUREX",
+            "Maker": "MSCI South Africa Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FMZA",
+            "Ticked": false
+        },
+        {
+            "Name": "FO",
+            "Exchange": "CME",
+            "Maker": "3.5% Fuel Oil Barges FOB Rdam (Platts) Crack Spread",
+            "Contracts": 16,
+            "Code": "CHRIS/CME_FO",
+            "Ticked": false
+        },
+        {
+            "Name": "FOAM",
+            "Exchange": "EUREX",
+            "Maker": "Mid-Term Euro-OAT",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FOAM",
+            "Ticked": false
+        },
+        {
+            "Name": "FOAT",
+            "Exchange": "EUREX",
+            "Maker": "Euro-OAT",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FOAT",
+            "Ticked": false
+        },
+        {
+            "Name": "FP",
+            "Exchange": "CME",
+            "Maker": "Florida Gas Zone 3 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_FP",
+            "Ticked": false
+        },
+        {
+            "Name": "FPIG",
+            "Exchange": "EUREX",
+            "Maker": "Piglets",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FPIG",
+            "Ticked": false
+        },
+        {
+            "Name": "FRDX",
+            "Exchange": "EUREX",
+            "Maker": "RDX USD Index",
+            "Contracts": 9,
+            "Code": "CHRIS/EUREX_FRDX",
+            "Ticked": false
+        },
+        {
+            "Name": "FS",
+            "Exchange": "CME",
+            "Maker": "1% Fuel Oil Cargoes FOB NWE (Platts) vs. 3.5% Fuel Oil Barges FOB Rdam (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_FS",
+            "Ticked": false
+        },
+        {
+            "Name": "FS",
+            "Exchange": "ODE",
+            "Maker": "Frozen Shrimp",
+            "Contracts": 2,
+            "Code": "CHRIS/ODE_FS",
+            "Ticked": false
+        },
+        {
+            "Name": "FSLI",
+            "Exchange": "EUREX",
+            "Maker": "SLI Swiss Leader Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FSLI",
+            "Ticked": false
+        },
+        {
+            "Name": "FSMI",
+            "Exchange": "EUREX",
+            "Maker": "SMI",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FSMI",
+            "Ticked": false
+        },
+        {
+            "Name": "FSMM",
+            "Exchange": "EUREX",
+            "Maker": "SMIM ",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FSMM",
+            "Ticked": false
+        },
+        {
+            "Name": "FSMP",
+            "Exchange": "EUREX",
+            "Maker": "Skimmed Milk Powder",
+            "Contracts": 10,
+            "Code": "CHRIS/EUREX_FSMP",
+            "Ticked": false
+        },
+        {
+            "Name": "FSTX",
+            "Exchange": "EUREX",
+            "Maker": "STOXX Europe 50 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FSTX",
+            "Ticked": false
+        },
+        {
+            "Name": "FTDX",
+            "Exchange": "EUREX",
+            "Maker": "DivDAX",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FTDX",
+            "Ticked": false
+        },
+        {
+            "Name": "FTI",
+            "Exchange": "LIFFE",
+            "Maker": "AEX Index",
+            "Contracts": 4,
+            "Code": "CHRIS/LIFFE_FTI",
+            "Ticked": false
+        },
+        {
+            "Name": "FTM",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub Real-Time Off-Peak Calendar-Month 5 MW",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_FTM",
+            "Ticked": false
+        },
+        {
+            "Name": "FU",
+            "Exchange": "SHFE",
+            "Maker": "Fuel Oil",
+            "Contracts": 2,
+            "Code": "CHRIS/SHFE_FU",
+            "Ticked": false
+        },
+        {
+            "Name": "FV",
+            "Exchange": "CME",
+            "Maker": "5 Year Treasury Note",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_FV",
+            "Ticked": false
+        },
+        {
+            "Name": "FVS",
+            "Exchange": "EUREX",
+            "Maker": "VSTOXX",
+            "Contracts": 7,
+            "Code": "CHRIS/EUREX_FVS",
+            "Ticked": false
+        },
+        {
+            "Name": "FWHY",
+            "Exchange": "EUREX",
+            "Maker": "Whey Powder",
+            "Contracts": 2,
+            "Code": "CHRIS/EUREX_FWHY",
+            "Ticked": false
+        },
+        {
+            "Name": "FY",
+            "Exchange": "CME",
+            "Maker": "Dated Brent (Platts) to Frontline Brent",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_FY",
+            "Ticked": false
+        },
+        {
+            "Name": "G",
+            "Exchange": "ICE",
+            "Maker": "Gasoil",
+            "Contracts": 13,
+            "Code": "CHRIS/ICE_G",
+            "Ticked": false
+        },
+        {
+            "Name": "G",
+            "Exchange": "LIFFE",
+            "Maker": "Short Gilt",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_G",
+            "Ticked": false
+        },
+        {
+            "Name": "GA",
+            "Exchange": "CME",
+            "Maker": "S&P-GSCI Excess Return Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_GA",
+            "Ticked": false
+        },
+        {
+            "Name": "GA",
+            "Exchange": "CME",
+            "Maker": "S&P-GSCI Excess Return Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_GA",
+            "Ticked": false
+        },
+        {
+            "Name": "GC",
+            "Exchange": "CME",
+            "Maker": "Gold",
+            "Contracts": 16,
+            "Code": "CHRIS/CME_GC",
+            "Ticked": false
+        },
+        {
+            "Name": "GC",
+            "Exchange": "MCX",
+            "Maker": "Gold",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GC",
+            "Ticked": false
+        },
+        {
+            "Name": "GCI",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast No.6 Fuel Oil 3.0% (Platts) Brent Crack Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_GCI",
+            "Ticked": false
+        },
+        {
+            "Name": "GCU",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast No. 6 Fuel Oil 3.0% (Platts) vs. European 3.5% Fuel Oil Barges FOB Rdam (Platts)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_GCU",
+            "Ticked": false
+        },
+        {
+            "Name": "GD",
+            "Exchange": "MCX",
+            "Maker": "Gold Petal New Delhi",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GD",
+            "Ticked": false
+        },
+        {
+            "Name": "GE",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast Jet Fuel (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_GE",
+            "Ticked": false
+        },
+        {
+            "Name": "GER",
+            "Exchange": "ICE",
+            "Maker": "Endex German GASPOOL",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_GER",
+            "Ticked": false
+        },
+        {
+            "Name": "GG",
+            "Exchange": "MCX",
+            "Maker": "Gold Guinea",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GG",
+            "Ticked": false
+        },
+        {
+            "Name": "GI",
+            "Exchange": "CME",
+            "Maker": "S and P Goldman Sachs Commodity Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_GI",
+            "Ticked": false
+        },
+        {
+            "Name": "GL",
+            "Exchange": "CME",
+            "Maker": "Columbia Gulf Louisiana Natural Gas (Platts IFERC) Basis",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_GL",
+            "Ticked": false
+        },
+        {
+            "Name": "GM",
+            "Exchange": "MCX",
+            "Maker": "Gold Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GM",
+            "Ticked": false
+        },
+        {
+            "Name": "GNM",
+            "Exchange": "ICE",
+            "Maker": "Endex German NCG",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_GNM",
+            "Ticked": false
+        },
+        {
+            "Name": "GOF",
+            "Exchange": "SGX",
+            "Maker": "Platts Gasoil FOB Singapore Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_GOF",
+            "Ticked": false
+        },
+        {
+            "Name": "GP",
+            "Exchange": "MCX",
+            "Maker": "Gold Petal",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GP",
+            "Ticked": false
+        },
+        {
+            "Name": "GRM",
+            "Exchange": "MCX",
+            "Maker": "Guar Gum",
+            "Contracts": 1,
+            "Code": "CHRIS/MCX_GRM",
+            "Ticked": false
+        },
+        {
+            "Name": "GRS",
+            "Exchange": "MCX",
+            "Maker": "Guar Seed",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_GRS",
+            "Ticked": false
+        },
+        {
+            "Name": "GV",
+            "Exchange": "CBOE",
+            "Maker": "Gold VIX",
+            "Contracts": 2,
+            "Code": "CHRIS/CBOE_GV",
+            "Ticked": false
+        },
+        {
+            "Name": "GW",
+            "Exchange": "ASX",
+            "Maker": "Greasy Wool",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_GW",
+            "Ticked": false
+        },
+        {
+            "Name": "GY",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast ULSD (Platts) Crack Spread",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_GY",
+            "Ticked": false
+        },
+        {
+            "Name": "GZ",
+            "Exchange": "CME",
+            "Maker": "European Gasoil Brent Crack Spread",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_GZ",
+            "Ticked": false
+        },
+        {
+            "Name": "H",
+            "Exchange": "LIFFE",
+            "Maker": "Medium Gilt",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_H",
+            "Ticked": false
+        },
+        {
+            "Name": "H2",
+            "Exchange": "CME",
+            "Maker": "ISO New England Mass Hub Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 46,
+            "Code": "CHRIS/CME_H2",
+            "Ticked": false
+        },
+        {
+            "Name": "H3",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) 5 Month Peak Calendar-Month Real-Time",
+            "Contracts": 20,
+            "Code": "CHRIS/CME_H3",
+            "Ticked": false
+        },
+        {
+            "Name": "H4",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) Real-Time Off-Peak Calendar-Month 5 MW",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_H4",
+            "Ticked": false
+        },
+        {
+            "Name": "H5",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) Day-Ahead Peak Calendar-Month 5 MW",
+            "Contracts": 18,
+            "Code": "CHRIS/CME_H5",
+            "Ticked": false
+        },
+        {
+            "Name": "HA",
+            "Exchange": "CME",
+            "Maker": "NY Harbor ULSD vs. Gasoil",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_HA",
+            "Ticked": false
+        },
+        {
+            "Name": "HB",
+            "Exchange": "CME",
+            "Maker": "Henry Hub Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_HB",
+            "Ticked": false
+        },
+        {
+            "Name": "HG",
+            "Exchange": "CME",
+            "Maker": "Copper",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_HG",
+            "Ticked": false
+        },
+        {
+            "Name": "HH",
+            "Exchange": "CME",
+            "Maker": "Natural Gas (Henry Hub) Last-day Financial",
+            "Contracts": 44,
+            "Code": "CHRIS/CME_HH",
+            "Ticked": false
+        },
+        {
+            "Name": "HK",
+            "Exchange": "SGX",
+            "Maker": "MSCI Hong Kong+ Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_HK",
+            "Ticked": false
+        },
+        {
+            "Name": "HK",
+            "Exchange": "CME",
+            "Maker": "NY Harbor ULSD Crack Spread",
+            "Contracts": 13,
+            "Code": "CHRIS/CME_HK",
+            "Ticked": false
+        },
+        {
+            "Name": "HMO",
+            "Exchange": "CME",
+            "Maker": "MISO Michigan Hub 5 MW Off-Peak Calendar-Month Day-Ahead",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_HMO",
+            "Ticked": false
+        },
+        {
+            "Name": "HMW",
+            "Exchange": "CME",
+            "Maker": "MISO Michigan Hub 5 MW Peak Calendar-Month Day-Ahead",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_HMW",
+            "Ticked": false
+        },
+        {
+            "Name": "HO",
+            "Exchange": "CME",
+            "Maker": "Heating Oil",
+            "Contracts": 17,
+            "Code": "CHRIS/CME_HO",
+            "Ticked": false
+        },
+        {
+            "Name": "HOB",
+            "Exchange": "CME",
+            "Maker": "NY Harbor ULSD Brent Crack Spread",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_HOB",
+            "Ticked": false
+        },
+        {
+            "Name": "HP",
+            "Exchange": "CME",
+            "Maker": "Natural Gas (Henry Hub) Penultimate Financial",
+            "Contracts": 33,
+            "Code": "CHRIS/CME_HP",
+            "Ticked": false
+        },
+        {
+            "Name": "HR",
+            "Exchange": "CME",
+            "Maker": "U.S. Midwest Domestic Hot-Rolled Coil Steel (CRU) Index",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_HR",
+            "Ticked": false
+        },
+        {
+            "Name": "I",
+            "Exchange": "LIFFE",
+            "Maker": "3-month EURIBOR",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_I",
+            "Ticked": false
+        },
+        {
+            "Name": "I3",
+            "Exchange": "CME",
+            "Maker": "30 Year Interest Rate Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_I3",
+            "Ticked": false
+        },
+        {
+            "Name": "I5",
+            "Exchange": "CME",
+            "Maker": "ERCOT North 345 kV Hub 5 MW Peak",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_I5",
+            "Ticked": false
+        },
+        {
+            "Name": "I6",
+            "Exchange": "CME",
+            "Maker": "ERCOT North 345 kV Hub 5 MW Off-Peak",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_I6",
+            "Ticked": false
+        },
+        {
+            "Name": "IB",
+            "Exchange": "ASX",
+            "Maker": "30-day Australian Interbank Cash Rate",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_IB",
+            "Ticked": false
+        },
+        {
+            "Name": "IBO",
+            "Exchange": "ICE",
+            "Maker": "Soybean Oil",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_IBO",
+            "Ticked": false
+        },
+        {
+            "Name": "IBV",
+            "Exchange": "CME",
+            "Maker": "Ibovespa Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_IBV",
+            "Ticked": false
+        },
+        {
+            "Name": "IC",
+            "Exchange": "MGEX",
+            "Maker": "National Corn Index",
+            "Contracts": 1,
+            "Code": "CHRIS/MGEX_IC",
+            "Ticked": false
+        },
+        {
+            "Name": "ICN",
+            "Exchange": "ICE",
+            "Maker": "Corn",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ICN",
+            "Ticked": false
+        },
+        {
+            "Name": "ID",
+            "Exchange": "SGX",
+            "Maker": "MSCI Indonesia Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_ID",
+            "Ticked": false
+        },
+        {
+            "Name": "IH",
+            "Exchange": "MGEX",
+            "Maker": "Hard Red Winter Wheat Index",
+            "Contracts": 1,
+            "Code": "CHRIS/MGEX_IH",
+            "Ticked": false
+        },
+        {
+            "Name": "IN",
+            "Exchange": "CME",
+            "Maker": "Henry Hub Natural Gas (Platts Gas Daily/Platts IFERC) Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_IN",
+            "Ticked": false
+        },
+        {
+            "Name": "IN",
+            "Exchange": "SGX",
+            "Maker": "Nifty Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_IN",
+            "Ticked": false
+        },
+        {
+            "Name": "IP",
+            "Exchange": "MGEX",
+            "Maker": "Hard Red Spring Wheat Index",
+            "Contracts": 1,
+            "Code": "CHRIS/MGEX_IP",
+            "Ticked": false
+        },
+        {
+            "Name": "IR",
+            "Exchange": "ASX",
+            "Maker": "90-day Australian Bank Bills",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_IR",
+            "Ticked": false
+        },
+        {
+            "Name": "IR",
+            "Exchange": "SGX",
+            "Maker": "Indonesia SICOM OTC TSR20 Rubber",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_IR",
+            "Ticked": false
+        },
+        {
+            "Name": "IS",
+            "Exchange": "ICE",
+            "Maker": "Soybean",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_IS",
+            "Ticked": false
+        },
+        {
+            "Name": "IS",
+            "Exchange": "MGEX",
+            "Maker": "National Soybean Index",
+            "Contracts": 1,
+            "Code": "CHRIS/MGEX_IS",
+            "Ticked": false
+        },
+        {
+            "Name": "ISM",
+            "Exchange": "ICE",
+            "Maker": "Soybean Meal",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ISM",
+            "Ticked": false
+        },
+        {
+            "Name": "IW",
+            "Exchange": "MGEX",
+            "Maker": "Soft Red Winter Wheat Index",
+            "Contracts": 1,
+            "Code": "CHRIS/MGEX_IW",
+            "Ticked": false
+        },
+        {
+            "Name": "IW",
+            "Exchange": "ICE",
+            "Maker": "Wheat",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_IW",
+            "Ticked": false
+        },
+        {
+            "Name": "J",
+            "Exchange": "LIFFE",
+            "Maker": "3-month TIBOR",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_J",
+            "Ticked": false
+        },
+        {
+            "Name": "J2",
+            "Exchange": "CME",
+            "Maker": "PJM JCPL Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_J2",
+            "Ticked": false
+        },
+        {
+            "Name": "J4",
+            "Exchange": "CME",
+            "Maker": "PJM Western Hub Day-Ahead Peak Calendar-Month 5 MW  ",
+            "Contracts": 33,
+            "Code": "CHRIS/CME_J4",
+            "Ticked": false
+        },
+        {
+            "Name": "J7",
+            "Exchange": "CME",
+            "Maker": "E-mini Japanese Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_J7",
+            "Ticked": false
+        },
+        {
+            "Name": "JB",
+            "Exchange": "SGX",
+            "Maker": "10-year Mini Japanese Government Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_JB",
+            "Ticked": false
+        },
+        {
+            "Name": "JBA",
+            "Exchange": "TFX",
+            "Maker": "3-month Euroyen",
+            "Contracts": 10,
+            "Code": "CHRIS/TFX_JBA",
+            "Ticked": false
+        },
+        {
+            "Name": "JG",
+            "Exchange": "SGX",
+            "Maker": "10-year Full-Sized Japanese Government Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_JG",
+            "Ticked": false
+        },
+        {
+            "Name": "JGB",
+            "Exchange": "LIFFE",
+            "Maker": "Japanese Government Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_JGB",
+            "Ticked": false
+        },
+        {
+            "Name": "JM",
+            "Exchange": "CME",
+            "Maker": "PJM Western Hub Real-Time Peak Calendar-Month 2.5 MW",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_JM",
+            "Ticked": false
+        },
+        {
+            "Name": "JP",
+            "Exchange": "CME",
+            "Maker": "PJM Off-Peak Calendar-Month LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_JP",
+            "Ticked": false
+        },
+        {
+            "Name": "JR",
+            "Exchange": "CME",
+            "Maker": "Dow Jones Real Estate",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_JR",
+            "Ticked": false
+        },
+        {
+            "Name": "JS",
+            "Exchange": "CME",
+            "Maker": "Los Angeles Jet (OPIS) vs. NY Harbor ULSD",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_JS",
+            "Ticked": false
+        },
+        {
+            "Name": "JY",
+            "Exchange": "CME",
+            "Maker": "Japanese Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_JY",
+            "Ticked": false
+        },
+        {
+            "Name": "K2",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_K2",
+            "Ticked": false
+        },
+        {
+            "Name": "K3",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone A Day-Ahead Peak Calendar-Month 5 MW",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_K3",
+            "Ticked": false
+        },
+        {
+            "Name": "K4",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone A Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_K4",
+            "Ticked": false
+        },
+        {
+            "Name": "KA",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone A Peak LBMP",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_KA",
+            "Ticked": false
+        },
+        {
+            "Name": "KB",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone A Off-Peak LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KB",
+            "Ticked": false
+        },
+        {
+            "Name": "KC",
+            "Exchange": "ICE",
+            "Maker": "Coffee C",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_KC",
+            "Ticked": false
+        },
+        {
+            "Name": "KG",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone G Peak LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KG",
+            "Ticked": false
+        },
+        {
+            "Name": "KH",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone G Off-Peak LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KH",
+            "Ticked": false
+        },
+        {
+            "Name": "KI",
+            "Exchange": "CME",
+            "Maker": "ISO New England Monthly Off Peak LMP Swap Future",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KI",
+            "Ticked": false
+        },
+        {
+            "Name": "KJ",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone J Peak LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KJ",
+            "Ticked": false
+        },
+        {
+            "Name": "KK",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone J Off-Peak LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_KK",
+            "Ticked": false
+        },
+        {
+            "Name": "KP",
+            "Exchange": "MCX",
+            "Maker": "Kapas",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_KP",
+            "Ticked": false
+        },
+        {
+            "Name": "KPK",
+            "Exchange": "MCX",
+            "Maker": "Kapaisa Khali",
+            "Contracts": 1,
+            "Code": "CHRIS/MCX_KPK",
+            "Ticked": false
+        },
+        {
+            "Name": "KRF",
+            "Exchange": "SGX",
+            "Maker": "Platts Kerosene FOB Singapore Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_KRF",
             "Ticked": false
         },
         {
             "Name": "KRU",
-            "Maker": "Russian Ruble/US Dollar Futures",
+            "Exchange": "ICE",
+            "Maker": "Russian Ruble/US Dollar",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_KRU",
             "Ticked": false
         },
         {
-            "Name": "ZR",
-            "Maker": "US Dollar/South African Rand Futures",
+            "Name": "KS",
+            "Exchange": "CME",
+            "Maker": "Singapore Jet Kerosene (Platts)",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_KS",
+            "Ticked": false
+        },
+        {
+            "Name": "KW",
+            "Exchange": "CME",
+            "Maker": "KC HRW Wheat",
+            "Contracts": 6,
+            "Code": "CHRIS/CME_KW",
+            "Ticked": false
+        },
+        {
+            "Name": "L",
+            "Exchange": "LIFFE",
+            "Maker": "Short Sterling",
+            "Contracts": 16,
+            "Code": "CHRIS/LIFFE_L",
+            "Ticked": false
+        },
+        {
+            "Name": "L1",
+            "Exchange": "CME",
+            "Maker": "PJM Western Hub Peak Calendar-Month Real-Time LMP",
+            "Contracts": 46,
+            "Code": "CHRIS/CME_L1",
+            "Ticked": false
+        },
+        {
+            "Name": "L3",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_L3",
+            "Ticked": false
+        },
+        {
+            "Name": "L4",
+            "Exchange": "CME",
+            "Maker": "Tennessee 800 Leg Natural Gas (Platts Gas Daily/Platts IFERC) Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_L4",
+            "Ticked": false
+        },
+        {
+            "Name": "L5",
+            "Exchange": "CME",
+            "Maker": "PJM PPL Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_L5",
+            "Ticked": false
+        },
+        {
+            "Name": "L6",
+            "Exchange": "CME",
+            "Maker": "PJM PSEG Zone Peak Calendar-Month Day-Ahead LMP 5 MW",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_L6",
+            "Ticked": false
+        },
+        {
+            "Name": "L9",
+            "Exchange": "CME",
+            "Maker": "ISO New England West Central Massachusetts Zone 5 MW Off-Peak Calendar-Month Day Ahead LMP",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_L9",
+            "Ticked": false
+        },
+        {
+            "Name": "LB",
+            "Exchange": "CME",
+            "Maker": "Lumber",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_LB",
+            "Ticked": false
+        },
+        {
+            "Name": "LC",
+            "Exchange": "CME",
+            "Maker": "Live Cattle",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_LC",
+            "Ticked": false
+        },
+        {
+            "Name": "LGB",
+            "Exchange": "MX",
+            "Maker": "30-year Canadian Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_LGB",
+            "Ticked": false
+        },
+        {
+            "Name": "LGB",
+            "Exchange": "MX",
+            "Maker": "30-year Canadian Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_LGB",
+            "Ticked": false
+        },
+        {
+            "Name": "LN",
+            "Exchange": "CME",
+            "Maker": "Lean Hogs",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_LN",
+            "Ticked": false
+        },
+        {
+            "Name": "LT",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast ULSD (Platts) Up-Down",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_LT",
+            "Ticked": false
+        },
+        {
+            "Name": "LY",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast ULSD (Platts)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_LY",
+            "Ticked": false
+        },
+        {
+            "Name": "M",
+            "Exchange": "ICE",
+            "Maker": "UK Natural Gas",
+            "Contracts": 13,
+            "Code": "CHRIS/ICE_M",
+            "Ticked": false
+        },
+        {
+            "Name": "M6B",
+            "Exchange": "CME",
+            "Maker": "E-micro British Pound/American Dollar",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_M6B",
+            "Ticked": false
+        },
+        {
+            "Name": "M6E",
+            "Exchange": "CME",
+            "Maker": "E-micro Euro/American Dollar",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_M6E",
+            "Ticked": false
+        },
+        {
+            "Name": "MBE",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Spot Ethylene In-Well",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MBE",
+            "Ticked": false
+        },
+        {
+            "Name": "MBN",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Ethylene (PCW) Financial",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MBN",
+            "Ticked": false
+        },
+        {
+            "Name": "MCC",
+            "Exchange": "CME",
+            "Maker": "Indonesian Coal (McCloskey sub-bituminous)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MCC",
+            "Ticked": false
+        },
+        {
+            "Name": "MD",
+            "Exchange": "CME",
+            "Maker": "S&P 400 MidCap Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MD",
+            "Ticked": false
+        },
+        {
+            "Name": "ME",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast Jet (Platts) Up-Down",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_ME",
+            "Ticked": false
+        },
+        {
+            "Name": "MEL",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub (formerly Cinergy Hub) Real-Time Peak Calendar-Month 2.5 MW",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MEL",
+            "Ticked": false
+        },
+        {
+            "Name": "MEO",
+            "Exchange": "CME",
+            "Maker": "Mini Gasoline Euro-bob Oxy NWE Barges (Argus)",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_MEO",
+            "Ticked": false
+        },
+        {
+            "Name": "MF",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast No. 6 Fuel Oil 3.0% (Platts)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_MF",
+            "Ticked": false
+        },
+        {
+            "Name": "MFA",
+            "Exchange": "LIFFE",
+            "Maker": "Mini AEX Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_MFA",
+            "Ticked": false
+        },
+        {
+            "Name": "MFC",
+            "Exchange": "LIFFE",
+            "Maker": "Mini CAC40 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_MFC",
+            "Ticked": false
+        },
+        {
+            "Name": "MFF",
+            "Exchange": "CME",
+            "Maker": "Coal (API4) FOB Richards Bay (ARGUS-McCloskey)",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_MFF",
+            "Ticked": false
+        },
+        {
+            "Name": "MG",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast No. 6 Fuel Oil (Platts) Crack Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MG",
+            "Ticked": false
+        },
+        {
+            "Name": "MGC",
+            "Exchange": "CME",
+            "Maker": "E-micro Gold",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MGC",
+            "Ticked": false
+        },
+        {
+            "Name": "MJN",
+            "Exchange": "CME",
+            "Maker": "Mini Japan C&F Naphtha (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MJN",
+            "Ticked": false
+        },
+        {
+            "Name": "MM",
+            "Exchange": "CME",
+            "Maker": "New York Harbor Residual Fuel 1.0% (Platts)",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_MM",
+            "Ticked": false
+        },
+        {
+            "Name": "MNB",
+            "Exchange": "CME",
+            "Maker": "Mont Belvieu Normal Butane LDH (OPIS)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MNB",
+            "Ticked": false
+        },
+        {
+            "Name": "MNC",
+            "Exchange": "CME",
+            "Maker": "Mini European Naphtha CIF NWE (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MNC",
+            "Ticked": false
+        },
+        {
+            "Name": "MO",
+            "Exchange": "MCX",
+            "Maker": "Mentha Oil",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_MO",
+            "Ticked": false
+        },
+        {
+            "Name": "MOD",
+            "Exchange": "CME",
+            "Maker": "PJM ATSI Zone 5 MW Off-Peak Calendar-Month Day-Ahead",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_MOD",
+            "Ticked": false
+        },
+        {
+            "Name": "MP",
+            "Exchange": "ICE",
+            "Maker": "Sm GBP/USD",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_MP",
+            "Ticked": false
+        },
+        {
+            "Name": "MP",
+            "Exchange": "CME",
+            "Maker": "Mexican Peso",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_MP",
+            "Ticked": false
+        },
+        {
+            "Name": "MPE",
+            "Exchange": "LIFFE",
+            "Maker": "MSCI Europe Index NTR",
+            "Contracts": 3,
+            "Code": "CHRIS/LIFFE_MPE",
+            "Ticked": false
+        },
+        {
+            "Name": "MPX",
+            "Exchange": "CME",
+            "Maker": "NY Harbor ULSD Financial",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_MPX",
+            "Ticked": false
+        },
+        {
+            "Name": "MR",
+            "Exchange": "SGX",
+            "Maker": "Malaysia SICOM OTC TSR20 Rubber",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_MR",
+            "Ticked": false
+        },
+        {
+            "Name": "MTF",
+            "Exchange": "CME",
+            "Maker": "Coal (API2) CIF ARA (ARGUS-McCloskey)",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_MTF",
+            "Ticked": false
+        },
+        {
+            "Name": "MTS",
+            "Exchange": "CME",
+            "Maker": "Mini Singapore Fuel Oil 380 cst (Platts)",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_MTS",
+            "Ticked": false
+        },
+        {
+            "Name": "MW",
+            "Exchange": "MGEX",
+            "Maker": "Hard Red Spring Wheat",
+            "Contracts": 6,
+            "Code": "CHRIS/MGEX_MW",
+            "Ticked": false
+        },
+        {
+            "Name": "N",
+            "Exchange": "ICE",
+            "Maker": "NYH RBOB Gasoline",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_N",
+            "Ticked": false
+        },
+        {
+            "Name": "N1",
+            "Exchange": "CME",
+            "Maker": "ERCOT West 345 kV Hub 5 MW Peak",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_N1",
+            "Ticked": false
+        },
+        {
+            "Name": "N1U",
+            "Exchange": "CME",
+            "Maker": "10 Year USD Deliverable Interest Rate Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_N1U",
+            "Ticked": false
+        },
+        {
+            "Name": "N1Y",
+            "Exchange": "CME",
+            "Maker": "Nikkei/Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_N1Y",
+            "Ticked": false
+        },
+        {
+            "Name": "N3",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub Day-Ahead LMP Peak Calendar-Month 5 MW",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_N3",
+            "Ticked": false
+        },
+        {
+            "Name": "N9",
+            "Exchange": "CME",
+            "Maker": "PJM Western Hub Real-Time Off-Peak Calendar-Month 5 MW",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_N9",
+            "Ticked": false
+        },
+        {
+            "Name": "NCF",
+            "Exchange": "ICE",
+            "Maker": "Newcastle Coal",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_NCF",
+            "Ticked": false
+        },
+        {
+            "Name": "ND",
+            "Exchange": "SGX",
+            "Maker": "Nikkei Stock Average Dividend Point Index",
+            "Contracts": 8,
+            "Code": "CHRIS/SGX_ND",
+            "Ticked": false
+        },
+        {
+            "Name": "ND",
+            "Exchange": "CME",
+            "Maker": "NASDAQ 100",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_ND",
+            "Ticked": false
+        },
+        {
+            "Name": "NE",
+            "Exchange": "CME",
+            "Maker": "New Zealand Dollar",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NE",
+            "Ticked": false
+        },
+        {
+            "Name": "NEN",
+            "Exchange": "CME",
+            "Maker": "ANR Oklahoma Natural Gas (Platts IFERC) Basis",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_NEN",
+            "Ticked": false
+        },
+        {
+            "Name": "NF",
+            "Exchange": "CME",
+            "Maker": "Nonfat Dry Milk",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_NF",
+            "Ticked": false
+        },
+        {
+            "Name": "NFN",
+            "Exchange": "CME",
+            "Maker": "MichCon Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NFN",
+            "Ticked": false
+        },
+        {
+            "Name": "NG",
+            "Exchange": "CME",
+            "Maker": "Natural Gas",
+            "Contracts": 43,
+            "Code": "CHRIS/CME_NG",
+            "Ticked": false
+        },
+        {
+            "Name": "NG",
+            "Exchange": "MCX",
+            "Maker": "Natural Gas",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_NG",
+            "Ticked": false
+        },
+        {
+            "Name": "NH",
+            "Exchange": "CME",
+            "Maker": "Houston Ship Channel Natural Gas (Platts IFERC) Basis",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_NH",
+            "Ticked": false
+        },
+        {
+            "Name": "NI",
+            "Exchange": "CME",
+            "Maker": "ISO New England Mass Hub Day-Ahead Peak Calendar-Month 2.5 MW",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NI",
+            "Ticked": false
+        },
+        {
+            "Name": "NI",
+            "Exchange": "MCX",
+            "Maker": "Nickel",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_NI",
+            "Ticked": false
+        },
+        {
+            "Name": "NIM",
+            "Exchange": "MCX",
+            "Maker": "Nickel Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_NIM",
+            "Ticked": false
+        },
+        {
+            "Name": "NJ",
+            "Exchange": "CME",
+            "Maker": "San Juan Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NJ",
+            "Ticked": false
+        },
+        {
+            "Name": "NJ",
+            "Exchange": "ICE",
+            "Maker": " Norwegian Krone/Swedish Krona",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_NJ",
+            "Ticked": false
+        },
+        {
+            "Name": "NJF",
+            "Exchange": "SGX",
+            "Maker": "Platts Naphtha CFR Japan Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_NJF",
+            "Ticked": false
+        },
+        {
+            "Name": "NK",
+            "Exchange": "CME",
+            "Maker": "Nikkei 225 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NK",
+            "Ticked": false
+        },
+        {
+            "Name": "NK",
+            "Exchange": "SGX",
+            "Maker": "Nikkei 225 Index",
+            "Contracts": 10,
+            "Code": "CHRIS/SGX_NK",
+            "Ticked": false
+        },
+        {
+            "Name": "NK225",
+            "Exchange": "OSE",
+            "Maker": "Nikkei 225",
+            "Contracts": 2,
+            "Code": "CHRIS/OSE_NK225",
+            "Ticked": false
+        },
+        {
+            "Name": "NK225M",
+            "Exchange": "OSE",
+            "Maker": "Nikkei 225 Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/OSE_NK225M",
+            "Ticked": false
+        },
+        {
+            "Name": "NK300",
+            "Exchange": "OSE",
+            "Maker": "Nikkei 300",
+            "Contracts": 2,
+            "Code": "CHRIS/OSE_NK300",
+            "Ticked": false
+        },
+        {
+            "Name": "NKN",
+            "Exchange": "CME",
+            "Maker": "Sumas Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NKN",
+            "Ticked": false
+        },
+        {
+            "Name": "NKVI",
+            "Exchange": "OSE",
+            "Maker": "Nikkei Stock Average Volatility Index",
+            "Contracts": 2,
+            "Code": "CHRIS/OSE_NKVI",
+            "Ticked": false
+        },
+        {
+            "Name": "NL",
+            "Exchange": "CME",
+            "Maker": "NGPL Mid-Con Natural Gas (Platts IFERC) Basis",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_NL",
+            "Ticked": false
+        },
+        {
+            "Name": "NN",
+            "Exchange": "CME",
+            "Maker": "Henry Hub Swap",
+            "Contracts": 60,
+            "Code": "CHRIS/CME_NN",
+            "Ticked": false
+        },
+        {
+            "Name": "NP",
+            "Exchange": "CME",
+            "Maker": "Henry Hub Penultimate NP",
+            "Contracts": 57,
+            "Code": "CHRIS/CME_NP",
+            "Ticked": false
+        },
+        {
+            "Name": "NQ",
+            "Exchange": "CME",
+            "Maker": "E-mini NASDAQ 100 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NQ",
+            "Ticked": false
+        },
+        {
+            "Name": "NR",
+            "Exchange": "CME",
+            "Maker": "Rockies Natural Gas (Platts IFERC) Basis",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_NR",
+            "Ticked": false
+        },
+        {
+            "Name": "NS",
+            "Exchange": "CME",
+            "Maker": "SoCal Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NS",
             "Ticked": false
         },
         {
             "Name": "NT",
-            "Maker": "US Dollar/Norwegian Krone Futures",
+            "Exchange": "ICE",
+            "Maker": "US Dollar/Norwegian Krone",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_NT",
+            "Ticked": false
+        },
+        {
+            "Name": "NU",
+            "Exchange": "SGX",
+            "Maker": "USD Nikkei 225 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_NU",
+            "Ticked": false
+        },
+        {
+            "Name": "NW",
+            "Exchange": "CME",
+            "Maker": "Waha Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NW",
+            "Ticked": false
+        },
+        {
+            "Name": "NX",
+            "Exchange": "CME",
+            "Maker": "Texas Eastern Zone M-3 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_NX",
+            "Ticked": false
+        },
+        {
+            "Name": "NYF",
+            "Exchange": "CME",
+            "Maker": "NY Fuel Oil 1.0% (Platts) vs. European 1% Fuel Oil Cargoes FOB NWE (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NYF",
+            "Ticked": false
+        },
+        {
+            "Name": "NZ",
+            "Exchange": "CME",
+            "Maker": "Transco Zone 6 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_NZ",
+            "Ticked": false
+        },
+        {
+            "Name": "O",
+            "Exchange": "CME",
+            "Maker": "Oats",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_O",
+            "Ticked": false
+        },
+        {
+            "Name": "O",
+            "Exchange": "ICE",
+            "Maker": "Heating Oil",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_O",
+            "Ticked": false
+        },
+        {
+            "Name": "O1",
+            "Exchange": "CME",
+            "Maker": "ERCOT West 345 kV Hub 5 MW Off-Peak",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_O1",
+            "Ticked": false
+        },
+        {
+            "Name": "OFM",
+            "Exchange": "CME",
+            "Maker": "Ontario Off-Peak Calendar-Month",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_OFM",
+            "Ticked": false
+        },
+        {
+            "Name": "OI",
+            "Exchange": "ASX",
+            "Maker": "3-month Overnight Index Swap",
+            "Contracts": 4,
+            "Code": "CHRIS/ASX_OI",
+            "Ticked": false
+        },
+        {
+            "Name": "OIS",
+            "Exchange": "MX",
+            "Maker": "Overnight Index Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_OIS",
+            "Ticked": false
+        },
+        {
+            "Name": "OJ",
+            "Exchange": "ICE",
+            "Maker": "Orange Juice",
+            "Contracts": 7,
+            "Code": "CHRIS/ICE_OJ",
+            "Ticked": false
+        },
+        {
+            "Name": "ONX",
+            "Exchange": "MX",
+            "Maker": "30-day Canadian Overnight Repo Rate",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_ONX",
+            "Ticked": false
+        },
+        {
+            "Name": "OPM",
+            "Exchange": "CME",
+            "Maker": "Ontario Peak Calendar-Month",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_OPM",
+            "Ticked": false
+        },
+        {
+            "Name": "OR",
+            "Exchange": "ODE",
+            "Maker": "Osaka Rice",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_OR",
+            "Ticked": false
+        },
+        {
+            "Name": "OV",
+            "Exchange": "CBOE",
+            "Maker": "Crude Oil ETF VIX",
+            "Contracts": 2,
+            "Code": "CHRIS/CBOE_OV",
+            "Ticked": false
+        },
+        {
+            "Name": "P",
+            "Exchange": "ICE",
+            "Maker": "UK Peak Electricity",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_P",
+            "Ticked": false
+        },
+        {
+            "Name": "P",
+            "Exchange": "ICE",
+            "Maker": "UK Peak Electricity",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_P",
+            "Ticked": false
+        },
+        {
+            "Name": "P5",
+            "Exchange": "CME",
+            "Maker": "ISO New England South East Massachusetts Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_P5",
+            "Ticked": false
+        },
+        {
+            "Name": "P7",
+            "Exchange": "CME",
+            "Maker": "ISO New England North East Massachusetts Zone 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_P7",
+            "Ticked": false
+        },
+        {
+            "Name": "P8",
+            "Exchange": "CME",
+            "Maker": "ISO New England North East Massachusetts Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_P8",
+            "Ticked": false
+        },
+        {
+            "Name": "PA",
+            "Exchange": "CME",
+            "Maker": "Palladium",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_PA",
+            "Ticked": false
+        },
+        {
+            "Name": "PB",
+            "Exchange": "SHFE",
+            "Maker": "Lead",
+            "Contracts": 4,
+            "Code": "CHRIS/SHFE_PB",
+            "Ticked": false
+        },
+        {
+            "Name": "PB",
+            "Exchange": "MCX",
+            "Maker": "Lead",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_PB",
+            "Ticked": false
+        },
+        {
+            "Name": "PBM",
+            "Exchange": "MCX",
+            "Maker": "Lead Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_PBM",
+            "Ticked": false
+        },
+        {
+            "Name": "PC",
+            "Exchange": "CME",
+            "Maker": "PG&E Citygate Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_PC",
+            "Ticked": false
+        },
+        {
+            "Name": "PD",
+            "Exchange": "CME",
+            "Maker": "NGPL TexOk Natural Gas (Platts IFERC) Basis",
+            "Contracts": 19,
+            "Code": "CHRIS/CME_PD",
+            "Ticked": false
+        },
+        {
+            "Name": "PDM",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub Day-Ahead Peak Calendar-Month 5 MW",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_PDM",
+            "Ticked": false
+        },
+        {
+            "Name": "PF",
+            "Exchange": "CME",
+            "Maker": "Ventura Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_PF",
+            "Ticked": false
+        },
+        {
+            "Name": "PG",
+            "Exchange": "CME",
+            "Maker": "Dominion South Point Natural Gas (Platts IFERC) Basis",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_PG",
+            "Ticked": false
+        },
+        {
+            "Name": "PH",
+            "Exchange": "CME",
+            "Maker": "Panhandle Natural Gas (Platts IFERC) Basis",
+            "Contracts": 21,
+            "Code": "CHRIS/CME_PH",
+            "Ticked": false
+        },
+        {
+            "Name": "PL",
+            "Exchange": "CME",
+            "Maker": "Platinum",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_PL",
+            "Ticked": false
+        },
+        {
+            "Name": "POT",
+            "Exchange": "MCX",
+            "Maker": "Potato",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_POT",
+            "Ticked": false
+        },
+        {
+            "Name": "PSI",
+            "Exchange": "LIFFE",
+            "Maker": "PSI 20 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_PSI",
+            "Ticked": false
+        },
+        {
+            "Name": "PTM",
+            "Exchange": "CME",
+            "Maker": "MISO Indiana Hub Real-Time Peak Calendar-Month 5 MW",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_PTM",
+            "Ticked": false
+        },
+        {
+            "Name": "PZ",
+            "Exchange": "CME",
+            "Maker": "Polish Zloty",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_PZ",
+            "Ticked": false
+        },
+        {
+            "Name": "Q",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE Eurotop 100 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_Q",
+            "Ticked": false
+        },
+        {
+            "Name": "Q5",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone C 5 MW Peak Calendar-Month Day-Ahead LBMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_Q5",
+            "Ticked": false
+        },
+        {
+            "Name": "QG",
+            "Exchange": "CME",
+            "Maker": "E-mini Natural Gas",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_QG",
+            "Ticked": false
+        },
+        {
+            "Name": "QL",
+            "Exchange": "CME",
+            "Maker": "Coal",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_QL",
+            "Ticked": false
+        },
+        {
+            "Name": "QM",
+            "Exchange": "CME",
+            "Maker": "E-mini Crude Oil",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_QM",
+            "Ticked": false
+        },
+        {
+            "Name": "QP",
+            "Exchange": "CME",
+            "Maker": "Powder River Basin Coal (Platts OTC Broker Index)",
+            "Contracts": 6,
+            "Code": "CHRIS/CME_QP",
+            "Ticked": false
+        },
+        {
+            "Name": "QX",
+            "Exchange": "CME",
+            "Maker": "Eastern Rail Delivery CSX Coal",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_QX",
+            "Ticked": false
+        },
+        {
+            "Name": "R",
+            "Exchange": "LIFFE",
+            "Maker": "Long Gilt",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_R",
+            "Ticked": false
+        },
+        {
+            "Name": "R3",
+            "Exchange": "CME",
+            "Maker": "PJM BGE Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 27,
+            "Code": "CHRIS/CME_R3",
+            "Ticked": false
+        },
+        {
+            "Name": "R6",
+            "Exchange": "CME",
+            "Maker": "ISO New England West Central Massachusetts Zone 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_R6",
+            "Ticked": false
+        },
+        {
+            "Name": "R7",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub Day-Ahead Off-Peak Calendar-Month 5 MW",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_R7",
+            "Ticked": false
+        },
+        {
+            "Name": "RA",
+            "Exchange": "CME",
+            "Maker": "South African Rand",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_RA",
+            "Ticked": false
+        },
+        {
+            "Name": "RB",
+            "Exchange": "SHFE",
+            "Maker": "Steel Rebar",
+            "Contracts": 11,
+            "Code": "CHRIS/SHFE_RB",
+            "Ticked": false
+        },
+        {
+            "Name": "RB",
+            "Exchange": "CME",
+            "Maker": "Gasoline",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_RB",
+            "Ticked": false
+        },
+        {
+            "Name": "RBB",
+            "Exchange": "CME",
+            "Maker": "RBOB Gasoline Brent Crack Spread",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_RBB",
+            "Ticked": false
+        },
+        {
+            "Name": "RC",
+            "Exchange": "LIFFE",
+            "Maker": "Coffee",
+            "Contracts": 6,
+            "Code": "CHRIS/LIFFE_RC",
+            "Ticked": false
+        },
+        {
+            "Name": "RF",
+            "Exchange": "CME",
+            "Maker": "Euro/Swiss Franc",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_RF",
+            "Ticked": false
+        },
+        {
+            "Name": "RF",
+            "Exchange": "ICE",
+            "Maker": "Russell 1000",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_RF",
+            "Ticked": false
+        },
+        {
+            "Name": "RG",
+            "Exchange": "ICE",
+            "Maker": "Russell Growth",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_RG",
+            "Ticked": false
+        },
+        {
+            "Name": "RGF",
+            "Exchange": "SGX",
+            "Maker": "Singapore Regrade Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_RGF",
+            "Ticked": false
+        },
+        {
+            "Name": "RK",
+            "Exchange": "CME",
+            "Maker": "Singapore Jet Kerosene (Platts) vs. Gasoil (Platts)",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_RK",
+            "Ticked": false
+        },
+        {
+            "Name": "RL",
+            "Exchange": "CME",
+            "Maker": "RBOB Gasoline Financial",
+            "Contracts": 8,
+            "Code": "CHRIS/CME_RL",
+            "Ticked": false
+        },
+        {
+            "Name": "RM",
+            "Exchange": "CME",
+            "Maker": "RBOB Gasoline Crack Spread",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_RM",
+            "Ticked": false
+        },
+        {
+            "Name": "RP",
+            "Exchange": "CME",
+            "Maker": "Euro/British Pound",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_RP",
+            "Ticked": false
+        },
+        {
+            "Name": "RR",
+            "Exchange": "CME",
+            "Maker": "Rough Rice",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_RR",
+            "Ticked": false
+        },
+        {
+            "Name": "RS",
+            "Exchange": "ICE",
+            "Maker": "Canola",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_RS",
+            "Ticked": false
+        },
+        {
+            "Name": "RS",
+            "Exchange": "ICE",
+            "Maker": "Canola",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_RS",
+            "Ticked": false
+        },
+        {
+            "Name": "RS",
+            "Exchange": "ODE",
+            "Maker": "Raw Sugar",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_RS",
+            "Ticked": false
+        },
+        {
+            "Name": "RT",
+            "Exchange": "SGX",
+            "Maker": "SICOM RSS3 Rubber",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_RT",
+            "Ticked": false
+        },
+        {
+            "Name": "RU",
+            "Exchange": "CME",
+            "Maker": "Russian Ruble",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_RU",
+            "Ticked": false
+        },
+        {
+            "Name": "RU",
+            "Exchange": "SHFE",
+            "Maker": "Natural Rubber",
+            "Contracts": 2,
+            "Code": "CHRIS/SHFE_RU",
+            "Ticked": false
+        },
+        {
+            "Name": "RV",
+            "Exchange": "ICE",
+            "Maker": "Russell Value",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_RV",
+            "Ticked": false
+        },
+        {
+            "Name": "RV",
+            "Exchange": "CME",
+            "Maker": "Gulf Coast Unl 87 Gasoline M1 (Platts) vs. RBOB Gasoline",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_RV",
+            "Ticked": false
+        },
+        {
+            "Name": "RY",
+            "Exchange": "CME",
+            "Maker": "Euro/Japanese Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_RY",
+            "Ticked": false
+        },
+        {
+            "Name": "S",
+            "Exchange": "CME",
+            "Maker": "Soybeans",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_S",
+            "Ticked": false
+        },
+        {
+            "Name": "S",
+            "Exchange": "LIFFE",
+            "Maker": "EUROSWISS Interest Rate",
+            "Contracts": 8,
+            "Code": "CHRIS/LIFFE_S",
+            "Ticked": false
+        },
+        {
+            "Name": "S4",
+            "Exchange": "CME",
+            "Maker": "PJM APS Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_S4",
+            "Ticked": false
+        },
+        {
+            "Name": "SA",
+            "Exchange": "CME",
+            "Maker": "5 Year Interest Rate Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_SA",
+            "Ticked": false
+        },
+        {
+            "Name": "SB",
+            "Exchange": "ODE",
+            "Maker": "US Soybeans",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_SB",
+            "Ticked": false
+        },
+        {
+            "Name": "SB",
+            "Exchange": "ICE",
+            "Maker": "Sugar No. 11",
+            "Contracts": 6,
+            "Code": "CHRIS/ICE_SB",
+            "Ticked": false
+        },
+        {
+            "Name": "SCF",
+            "Exchange": "MX",
+            "Maker": "Mini S&P/TSX Composite Index",
+            "Contracts": 4,
+            "Code": "CHRIS/MX_SCF",
+            "Ticked": false
+        },
+        {
+            "Name": "SD",
+            "Exchange": "CME",
+            "Maker": "Singapore Fuel Oil 180 cst (Platts) vs. 380 cst (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_SD",
+            "Ticked": false
+        },
+        {
+            "Name": "SE",
+            "Exchange": "CME",
+            "Maker": "Singapore Fuel Oil 380 cst (Platts)",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_SE",
+            "Ticked": false
+        },
+        {
+            "Name": "SF",
+            "Exchange": "ICE",
+            "Maker": "Sugar",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_SF",
+            "Ticked": false
+        },
+        {
+            "Name": "SF",
+            "Exchange": "ICE",
+            "Maker": "Sugar No. 16",
+            "Contracts": 5,
+            "Code": "CHRIS/ICE_SF",
+            "Ticked": false
+        },
+        {
+            "Name": "SF",
+            "Exchange": "CME",
+            "Maker": "Swiss Franc",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_SF",
+            "Ticked": false
+        },
+        {
+            "Name": "SG",
+            "Exchange": "CME",
+            "Maker": "Singapore Gasoil (Platts)",
+            "Contracts": 6,
+            "Code": "CHRIS/CME_SG",
+            "Ticked": false
+        },
+        {
+            "Name": "SG",
+            "Exchange": "SGX",
+            "Maker": "MSCI Singapore Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_SG",
+            "Ticked": false
+        },
+        {
+            "Name": "SI",
+            "Exchange": "CME",
+            "Maker": "Silver",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_SI",
+            "Ticked": false
+        },
+        {
+            "Name": "SI",
+            "Exchange": "MCX",
+            "Maker": "Silver",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_SI",
+            "Ticked": false
+        },
+        {
+            "Name": "SIM",
+            "Exchange": "MCX",
+            "Maker": "Silver Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_SIM",
+            "Ticked": false
+        },
+        {
+            "Name": "SM",
+            "Exchange": "CME",
+            "Maker": "Soybean Meal",
+            "Contracts": 11,
+            "Code": "CHRIS/CME_SM",
+            "Ticked": false
+        },
+        {
+            "Name": "SP",
+            "Exchange": "CME",
+            "Maker": "Full-Size S&P 500 Index",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_SP",
+            "Ticked": false
+        },
+        {
+            "Name": "SS",
+            "Exchange": "ICE",
+            "Maker": "GBP/CHF",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_SS",
+            "Ticked": false
+        },
+        {
+            "Name": "SSI",
+            "Exchange": "CME",
+            "Maker": "Coal (API 8) cfr South China (Argus/McCloskey)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_SSI",
+            "Ticked": false
+        },
+        {
+            "Name": "ST",
+            "Exchange": "SGX",
+            "Maker": "FTSE Straits Times Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_ST",
+            "Ticked": false
+        },
+        {
+            "Name": "STLRPR",
+            "Exchange": "MCX",
+            "Maker": "Steel",
+            "Contracts": 1,
+            "Code": "CHRIS/MCX_STLRPR",
+            "Ticked": false
+        },
+        {
+            "Name": "SXA",
+            "Exchange": "MX",
+            "Maker": "S&P/TSX Global Gold Index",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_SXA",
+            "Ticked": false
+        },
+        {
+            "Name": "SXB",
+            "Exchange": "MX",
+            "Maker": "S&P/TSX Capped Financials Index ",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_SXB",
+            "Ticked": false
+        },
+        {
+            "Name": "SXF",
+            "Exchange": "MX",
+            "Maker": "S&P/TSX 60 Index",
+            "Contracts": 4,
+            "Code": "CHRIS/MX_SXF",
+            "Ticked": false
+        },
+        {
+            "Name": "SXH",
+            "Exchange": "MX",
+            "Maker": "S&P/TSX Capped Information Technology Index",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_SXH",
+            "Ticked": false
+        },
+        {
+            "Name": "SXM",
+            "Exchange": "MX",
+            "Maker": "Mini S&P/TSX 60 Index",
+            "Contracts": 4,
+            "Code": "CHRIS/MX_SXM",
+            "Ticked": false
+        },
+        {
+            "Name": "SXY",
+            "Exchange": "MX",
+            "Maker": "S&P/TSX Capped Energy Index ",
+            "Contracts": 2,
+            "Code": "CHRIS/MX_SXY",
+            "Ticked": false
+        },
+        {
+            "Name": "SY",
+            "Exchange": "ICE",
+            "Maker": "GBP/JPY",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_SY",
+            "Ticked": false
+        },
+        {
+            "Name": "SZ",
+            "Exchange": "CME",
+            "Maker": "Southern Natural Louisiana Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_SZ",
+            "Ticked": false
+        },
+        {
+            "Name": "T",
+            "Exchange": "LIFFE",
+            "Maker": "Feed Wheat",
+            "Contracts": 7,
+            "Code": "CHRIS/LIFFE_T",
+            "Ticked": false
+        },
+        {
+            "Name": "T",
+            "Exchange": "ICE",
+            "Maker": "WTI Crude",
+            "Contracts": 7,
+            "Code": "CHRIS/ICE_T",
+            "Ticked": false
+        },
+        {
+            "Name": "T3",
+            "Exchange": "CME",
+            "Maker": "NYISO Zone G Day-Ahead Peak Calendar-Month 5 MW",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_T3",
+            "Ticked": false
+        },
+        {
+            "Name": "TC",
+            "Exchange": "CME",
+            "Maker": "Columbia Gas TCO (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_TC",
+            "Ticked": false
+        },
+        {
+            "Name": "TF",
+            "Exchange": "ICE",
+            "Maker": "Russell Small-Cap",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_TF",
+            "Ticked": false
+        },
+        {
+            "Name": "TF",
+            "Exchange": "SGX",
+            "Maker": "SICOM Rubber",
+            "Contracts": 5,
+            "Code": "CHRIS/SGX_TF",
+            "Ticked": false
+        },
+        {
+            "Name": "TFM",
+            "Exchange": "ICE",
+            "Maker": "Endex Dutch TTF Gas Base Load",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_TFM",
+            "Ticked": false
+        },
+        {
+            "Name": "TIB",
+            "Exchange": "ICE",
+            "Maker": "WTI vs Brent Spread Option",
+            "Contracts": 4,
+            "Code": "CHRIS/ICE_TIB",
+            "Ticked": false
+        },
+        {
+            "Name": "TIO",
+            "Exchange": "CME",
+            "Maker": "Iron Ore 62% Fe CFR China (TSI)",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_TIO",
+            "Ticked": false
+        },
+        {
+            "Name": "TN",
+            "Exchange": "ASX",
+            "Maker": "10-year New Zealand Government Stock",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_TN",
+            "Ticked": false
+        },
+        {
+            "Name": "TPI",
+            "Exchange": "LIFFE",
+            "Maker": "TOPIX Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_TPI",
+            "Ticked": false
+        },
+        {
+            "Name": "TR",
+            "Exchange": "CME",
+            "Maker": "Transco Zone 4 Natural Gas (Platts IFERC) Basis",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_TR",
+            "Ticked": false
+        },
+        {
+            "Name": "TR",
+            "Exchange": "SGX",
+            "Maker": "Thailand SICOM OTC TSR20 Rubber",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_TR",
+            "Ticked": false
+        },
+        {
+            "Name": "TR",
+            "Exchange": "ODE",
+            "Maker": "Tokyo Rice",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_TR",
+            "Ticked": false
+        },
+        {
+            "Name": "TRY",
+            "Exchange": "CME",
+            "Maker": "Turkish Lira",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_TRY",
+            "Ticked": false
+        },
+        {
+            "Name": "TU",
+            "Exchange": "CME",
+            "Maker": "2 Year Treasury Note",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_TU",
+            "Ticked": false
+        },
+        {
+            "Name": "TW",
+            "Exchange": "SGX",
+            "Maker": "MSCI Taiwan Index",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_TW",
+            "Ticked": false
+        },
+        {
+            "Name": "TY",
+            "Exchange": "ASX",
+            "Maker": "3-year New Zealand Government Stock",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_TY",
+            "Ticked": false
+        },
+        {
+            "Name": "TY",
+            "Exchange": "CME",
+            "Maker": "10 Year Treasury Note",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_TY",
+            "Ticked": false
+        },
+        {
+            "Name": "TZ6",
+            "Exchange": "CME",
+            "Maker": "Transco Zone 6 Non-N.Y. Natural Gas (Platts IFERC) Basis",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_TZ6",
+            "Ticked": false
+        },
+        {
+            "Name": "U3",
+            "Exchange": "CME",
+            "Maker": "ISO New England New Hampshire Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_U3",
+            "Ticked": false
+        },
+        {
+            "Name": "U4",
+            "Exchange": "CME",
+            "Maker": "ISO New England Rhode Island Zone 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 8,
+            "Code": "CHRIS/CME_U4",
+            "Ticked": false
+        },
+        {
+            "Name": "U5",
+            "Exchange": "CME",
+            "Maker": "ISO New England Rhode Island Zone 5 MW Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_U5",
+            "Ticked": false
+        },
+        {
+            "Name": "U6",
+            "Exchange": "CME",
+            "Maker": "ISO New England Mass Hub 5 MW Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 10,
+            "Code": "CHRIS/CME_U6",
+            "Ticked": false
+        },
+        {
+            "Name": "UA",
+            "Exchange": "CME",
+            "Maker": "Singapore Fuel Oil 180 cst (Platts)",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_UA",
+            "Ticked": false
+        },
+        {
+            "Name": "UB",
+            "Exchange": "ASX",
+            "Maker": "Feed Barley",
+            "Contracts": 7,
+            "Code": "CHRIS/ASX_UB",
+            "Ticked": false
+        },
+        {
+            "Name": "UB",
+            "Exchange": "CME",
+            "Maker": "Dated Brent (Platts) Financial",
+            "Contracts": 5,
+            "Code": "CHRIS/CME_UB",
+            "Ticked": false
+        },
+        {
+            "Name": "UL",
+            "Exchange": "CME",
+            "Maker": "Ultra Treasury Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_UL",
+            "Ticked": false
+        },
+        {
+            "Name": "ULS",
+            "Exchange": "ICE",
+            "Maker": "Low Sulphur Gasoil",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ULS",
+            "Ticked": false
+        },
+        {
+            "Name": "ULS",
+            "Exchange": "ICE",
+            "Maker": "Low Sulphur Gasoil",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ULS",
+            "Ticked": false
+        },
+        {
+            "Name": "UM",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub Real-Time Peak Calendar-Month 2.5 MW",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_UM",
+            "Ticked": false
+        },
+        {
+            "Name": "UN",
+            "Exchange": "CME",
+            "Maker": "European Naphtha Cargoes CIF NWE (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_UN",
+            "Ticked": false
+        },
+        {
+            "Name": "UO",
+            "Exchange": "CME",
+            "Maker": "PJM Northern Illinois Hub Off-Peak LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_UO",
+            "Ticked": false
+        },
+        {
+            "Name": "US",
+            "Exchange": "CME",
+            "Maker": "30-Year Treasury Bond",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_US",
+            "Ticked": false
+        },
+        {
+            "Name": "US",
+            "Exchange": "ASX",
+            "Maker": "Sorghum",
+            "Contracts": 6,
+            "Code": "CHRIS/ASX_US",
+            "Ticked": false
+        },
+        {
+            "Name": "UV",
+            "Exchange": "CME",
+            "Maker": "European 3.5% Fuel Oil Barges FOB Rdam (Platts)",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_UV",
+            "Ticked": false
+        },
+        {
+            "Name": "UX",
+            "Exchange": "CME",
+            "Maker": "UxC Uranium U3O8",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_UX",
+            "Ticked": false
+        },
+        {
+            "Name": "V3",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub Real-Time Off-Peak Calendar-Month 5 MW",
+            "Contracts": 58,
+            "Code": "CHRIS/CME_V3",
+            "Ticked": false
+        },
+        {
+            "Name": "VC",
+            "Exchange": "ASX",
+            "Maker": "EA Canola",
+            "Contracts": 6,
+            "Code": "CHRIS/ASX_VC",
+            "Ticked": false
+        },
+        {
+            "Name": "VCF",
+            "Exchange": "SGX",
+            "Maker": "Singapore Visco Spread",
+            "Contracts": 2,
+            "Code": "CHRIS/SGX_VCF",
+            "Ticked": false
+        },
+        {
+            "Name": "VM",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub Real-Time Peak Calendar-Month 2.5 MW",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_VM",
+            "Ticked": false
+        },
+        {
+            "Name": "VN",
+            "Exchange": "CBOE",
+            "Maker": "NASDAQ 100 VIX",
+            "Contracts": 2,
+            "Code": "CHRIS/CBOE_VN",
+            "Ticked": false
+        },
+        {
+            "Name": "VP",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub Off-Peak LMP",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_VP",
+            "Ticked": false
+        },
+        {
+            "Name": "VR",
+            "Exchange": "CME",
+            "Maker": "NY 1% Fuel Oil (Platts) vs. Gulf Coast 3% Fuel Oil (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_VR",
+            "Ticked": false
+        },
+        {
+            "Name": "VW",
+            "Exchange": "ASX",
+            "Maker": "NSW Wheat",
+            "Contracts": 6,
+            "Code": "CHRIS/ASX_VW",
+            "Ticked": false
+        },
+        {
+            "Name": "VX",
+            "Exchange": "CBOE",
+            "Maker": "S&P 500 VIX",
+            "Contracts": 9,
+            "Code": "CHRIS/CBOE_VX",
+            "Ticked": false
+        },
+        {
+            "Name": "VXEW",
+            "Exchange": "CBOE",
+            "Maker": "Brazil ETF Volatility Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CBOE_VXEW",
+            "Ticked": false
+        },
+        {
+            "Name": "W",
+            "Exchange": "LIFFE",
+            "Maker": "White Sugar",
+            "Contracts": 8,
+            "Code": "CHRIS/LIFFE_W",
+            "Ticked": false
+        },
+        {
+            "Name": "W",
+            "Exchange": "CME",
+            "Maker": "Wheat",
+            "Contracts": 7,
+            "Code": "CHRIS/CME_W",
+            "Ticked": false
+        },
+        {
+            "Name": "W4",
+            "Exchange": "CME",
+            "Maker": "PJM APS Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_W4",
+            "Ticked": false
+        },
+        {
+            "Name": "W6",
+            "Exchange": "CME",
+            "Maker": "PJM PSEG Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 15,
+            "Code": "CHRIS/CME_W6",
+            "Ticked": false
+        },
+        {
+            "Name": "WA",
+            "Exchange": "ICE",
+            "Maker": "Milling Wheat",
+            "Contracts": 11,
+            "Code": "CHRIS/ICE_WA",
+            "Ticked": false
+        },
+        {
+            "Name": "WA",
+            "Exchange": "ICE",
+            "Maker": "Milling Wheat",
+            "Contracts": 11,
+            "Code": "CHRIS/ICE_WA",
+            "Ticked": false
+        },
+        {
+            "Name": "WCC",
+            "Exchange": "CME",
+            "Maker": "Canadian Heavy Crude Oil Index (Net Energy)",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_WCC",
+            "Ticked": false
+        },
+        {
+            "Name": "WJ",
+            "Exchange": "CME",
+            "Maker": "LLS (Argus) vs. WTI Financial",
+            "Contracts": 22,
+            "Code": "CHRIS/CME_WJ",
+            "Ticked": false
+        },
+        {
+            "Name": "WK",
+            "Exchange": "ASX",
+            "Maker": "WA Wheat",
+            "Contracts": 6,
+            "Code": "CHRIS/ASX_WK",
+            "Ticked": false
+        },
+        {
+            "Name": "WQ",
+            "Exchange": "CME",
+            "Maker": "Gasoil 0.1 Barges FOB Rdam (Platts) vs. Gasoil",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_WQ",
+            "Ticked": false
+        },
+        {
+            "Name": "WR",
+            "Exchange": "SHFE",
+            "Maker": "Steel Wire",
+            "Contracts": 2,
+            "Code": "CHRIS/SHFE_WR",
+            "Ticked": false
+        },
+        {
+            "Name": "WS",
+            "Exchange": "CME",
+            "Maker": "Crude Oil Financial",
+            "Contracts": 9,
+            "Code": "CHRIS/CME_WS",
+            "Ticked": false
+        },
+        {
+            "Name": "X1",
+            "Exchange": "CME",
+            "Maker": "PJM AECO Zone Off-Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 39,
+            "Code": "CHRIS/CME_X1",
+            "Ticked": false
+        },
+        {
+            "Name": "XAF",
+            "Exchange": "CME",
+            "Maker": "E-mini Financial Sector",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XAF",
+            "Ticked": false
+        },
+        {
+            "Name": "XAK",
+            "Exchange": "CME",
+            "Maker": "E-mini Technology Sector",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XAK",
+            "Ticked": false
+        },
+        {
+            "Name": "XAP",
+            "Exchange": "CME",
+            "Maker": "E-mini Consumer Staples Sector",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XAP",
+            "Ticked": false
+        },
+        {
+            "Name": "XAU",
+            "Exchange": "CME",
+            "Maker": "E-mini Utilities Sector",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XAU",
+            "Ticked": false
+        },
+        {
+            "Name": "XAY",
+            "Exchange": "CME",
+            "Maker": "E-mini Consumer Discretionary Sector",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XAY",
+            "Ticked": false
+        },
+        {
+            "Name": "XFC",
+            "Exchange": "LIFFE",
+            "Maker": "CAC40 Dividend Index",
+            "Contracts": 3,
+            "Code": "CHRIS/LIFFE_XFC",
+            "Ticked": false
+        },
+        {
+            "Name": "XN",
+            "Exchange": "CME",
+            "Maker": "SoCal Natural Gas (Platts IFERC) Fixed Price",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_XN",
+            "Ticked": false
+        },
+        {
+            "Name": "XS",
+            "Exchange": "ASX",
+            "Maker": "10-year Australian Interest Rate Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_XS",
+            "Ticked": false
+        },
+        {
+            "Name": "XZ",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE 100 Dividend Index",
+            "Contracts": 4,
+            "Code": "CHRIS/LIFFE_XZ",
+            "Ticked": false
+        },
+        {
+            "Name": "Y",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE 250 Index",
+            "Contracts": 1,
+            "Code": "CHRIS/LIFFE_Y",
+            "Ticked": false
+        },
+        {
+            "Name": "Y",
+            "Exchange": "ICE",
+            "Maker": "UK Base Electricity",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_Y",
+            "Ticked": false
+        },
+        {
+            "Name": "Y",
+            "Exchange": "ICE",
+            "Maker": "UK Base Electricity",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_Y",
+            "Ticked": false
+        },
+        {
+            "Name": "Y1",
+            "Exchange": "CME",
+            "Maker": "PJM AECO Zone Peak Calendar-Month Day-Ahead LMP",
+            "Contracts": 12,
+            "Code": "CHRIS/CME_Y1",
+            "Ticked": false
+        },
+        {
+            "Name": "Y7",
+            "Exchange": "CME",
+            "Maker": "Tennessee 500 Leg Natural Gas (Platts Gas Daily/Platts IFERC) Index",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_Y7",
+            "Ticked": false
+        },
+        {
+            "Name": "YC",
+            "Exchange": "CME",
+            "Maker": "Mini-Corn",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_YC",
+            "Ticked": false
+        },
+        {
+            "Name": "YC",
+            "Exchange": "ODE",
+            "Maker": "Corn",
+            "Contracts": 5,
+            "Code": "CHRIS/ODE_YC",
+            "Ticked": false
+        },
+        {
+            "Name": "YH",
+            "Exchange": "CME",
+            "Maker": "NY Heating Oil (Platts) vs. NY Harbor ULSD",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_YH",
+            "Ticked": false
+        },
+        {
+            "Name": "YK",
+            "Exchange": "CME",
+            "Maker": "Mini Soybean",
+            "Contracts": 3,
+            "Code": "CHRIS/CME_YK",
+            "Ticked": false
+        },
+        {
+            "Name": "YM",
+            "Exchange": "CME",
+            "Maker": "E-mini Dow Jones",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_YM",
+            "Ticked": false
+        },
+        {
+            "Name": "YS",
+            "Exchange": "ASX",
+            "Maker": "3-year Australian Interest Rate Swap",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_YS",
+            "Ticked": false
+        },
+        {
+            "Name": "YT",
+            "Exchange": "ASX",
+            "Maker": "3-year Australian Treasury Bonds",
+            "Contracts": 2,
+            "Code": "CHRIS/ASX_YT",
+            "Ticked": false
+        },
+        {
+            "Name": "YW",
+            "Exchange": "CME",
+            "Maker": "Mini Wheat",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_YW",
+            "Ticked": false
+        },
+        {
+            "Name": "YX",
+            "Exchange": "CME",
+            "Maker": "Mars (Argus) vs. WTI Financial",
+            "Contracts": 4,
+            "Code": "CHRIS/CME_YX",
+            "Ticked": false
+        },
+        {
+            "Name": "YZ",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE 100 Declared Dividend Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_YZ",
+            "Ticked": false
+        },
+        {
+            "Name": "Z",
+            "Exchange": "CME",
+            "Maker": "Euro/Polish Zloty",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_Z",
+            "Ticked": false
+        },
+        {
+            "Name": "Z",
+            "Exchange": "LIFFE",
+            "Maker": "FTSE 100 Index",
+            "Contracts": 2,
+            "Code": "CHRIS/LIFFE_Z",
+            "Ticked": false
+        },
+        {
+            "Name": "Z1",
+            "Exchange": "CME",
+            "Maker": "Ethanol T2 FOB Rdam Including Duty (Platts)",
+            "Contracts": 2,
+            "Code": "CHRIS/CME_Z1",
+            "Ticked": false
+        },
+        {
+            "Name": "Z9",
+            "Exchange": "CME",
+            "Maker": "PJM AEP Dayton Hub 5MW Peak Calendar-Month Real-Time LMP",
+            "Contracts": 34,
+            "Code": "CHRIS/CME_Z9",
+            "Ticked": false
+        },
+        {
+            "Name": "ZJ",
+            "Exchange": "ICE",
+            "Maker": "New Zealand Dollar/Japanese Yen",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ZJ",
+            "Ticked": false
+        },
+        {
+            "Name": "ZN",
+            "Exchange": "MCX",
+            "Maker": "Zinc",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_ZN",
+            "Ticked": false
+        },
+        {
+            "Name": "ZN",
+            "Exchange": "SHFE",
+            "Maker": "Zinc",
+            "Contracts": 6,
+            "Code": "CHRIS/SHFE_ZN",
+            "Ticked": false
+        },
+        {
+            "Name": "ZNM",
+            "Exchange": "MCX",
+            "Maker": "Zinc Mini",
+            "Contracts": 2,
+            "Code": "CHRIS/MCX_ZNM",
+            "Ticked": false
+        },
+        {
+            "Name": "ZR",
+            "Exchange": "ICE",
+            "Maker": "US Dollar/South African Rand",
+            "Contracts": 2,
+            "Code": "CHRIS/ICE_ZR",
             "Ticked": false
         }
     ]

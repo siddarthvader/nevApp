@@ -11,6 +11,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.searchVolume = 0;
     $scope.searchIndustry;
     $scope.searchSector;
+    $scope.dates={};
 
     //since default is currency
     $scope.allTickers = [
@@ -33,6 +34,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         $scope.modalOpen = !$scope.modalOpen;
         document.getElementsByTagName('html')[0].classList.toggle('is-clipped');
         $scope.currencyData = {};
+        $scope.dates={};
     };
 
     $scope.changeProductType = function () {
@@ -76,11 +78,16 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         // var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
         // var API_QUERY = 'select * from yahoo.finance.historicaldata where symbol = "YHOO" and startDate = "2009-09-11" and endDate = "2010-03-10"';
         var symbols = [];
+        var code=[];
         $scope.tickerMappedToDetails = {};
         $scope.searchSymbol.forEach(function (element) {
             symbols.push(element.Name);
             if ($scope.searchProductType === 'EQU') {
                 $scope.tickerMappedToDetails[element.Name] = element;
+            }
+
+            if($scope.searchProductType==='FUT'){
+                code.push(element.Code);
             }
 
         }, this);
@@ -115,6 +122,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             else if ($scope.searchProductType === 'FUT') {
                 payload = {
                     symbols: symbols,
+                    code:code,
                     minProb: parseFloat($scope.searchMinProbChange),
                     minValChange: parseFloat($scope.searchMinValChange),
                     minPer: parseFloat($scope.searchMinPerChange),
@@ -141,7 +149,10 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
                 }
                 else if ($scope.searchProductType === 'EQU') {
                     $scope.currencyData = data.data;
+                     $scope.dates=data.dates;
                 } else {
+                    $scope.currencyData=data.data;
+                    $scope.dates=data.dates;
 
                 }
 
