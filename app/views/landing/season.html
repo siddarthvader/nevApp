@@ -143,8 +143,8 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <div isteven-multi-select input-model="allTickers" output-properties="Name" output-model="searchSymbol" button-label="Name"
-                                item-label="Maker" tick-property="ticked"></div>
+                            <div isteven-multi-select input-model="allTickers" output-properties="Name Sector Maker Industry" output-model="searchSymbol" button-label="Name"
+                                item-label="Maker" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
     <div class="modal-background overflow-auto">
         <div class="is-fullwidth m-40px ">
             <div class="box column">
-                <span class="tag is-info">Current Week</span>
+                <span class="tag is-info black-text">Current Week</span>
                 <span class="tag is-warning">Chosen Week</span>
                 <span class="tag is-light green-text" ng-if="conWeeks">Consecutive Weeks</span>
                 <div class="mb-5" ng-repeat="(freq,dataSet) in currencyData">

@@ -156,6 +156,10 @@ body {
   color: #3273dc;
 }
 
+.black-text {
+  color: #000 !important;
+}
+
 .green-text {
   color: #23d160 !important;
 }
