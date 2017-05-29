@@ -7,50 +7,49 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
     preEarn.searchKey = "AAPL";
     $scope.newDate = new Date();
 
-    $scope.fetchYahooNews = () => {
-        var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
-
-        var yahooUrl = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20pm.finance.articles%20where%20symbol%20in%20(%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22)&format=json&diagnostics=true&callback=&appid=' + APP_ID;
-        $sce.trustAsResourceUrl(yahooUrl);
-        $httpshooter.queue({
-            method: 'GET',
-            url: yahooUrl
-        }).then(function (data) {
-            console.log(data);
-        }, function (err) {
-            console.log(err, "err")
-        });
-
-
-    };
-
     $scope.fetchPreEarn = function () {
-        $scope.symbol = preEarn.searchKey;
+        $scope.symbol = preEarn.searchKey.toUpperCase();
         $scope.tradingViewChartUrl = 'https://s.tradingview.com/widgetembed/?symbol=' + encodeURIComponent(preEarn.prefix + ":" + $scope.symbol) + '&interval=daily&symboledit=1&saveimage=1&toolbarbg=f1f3f6&calendar=1&hotlist=1&news=1&newsvendors=stocktwits&studies=1&hideideas=1&theme=White&style=1&timezone=Etc%2FUTC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=localhost&utm_medium=widget&utm_campaign=chart&utm_term=' + encodeURIComponent($scope.symbol)
         console.log(preEarn.prefix);
 
         $scope.zacksChartUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas';
         document.getElementById('tradingChart').setAttribute('src', $scope.tradingViewChartUrl);
         document.getElementById('zacksEPS').setAttribute('src', $scope.zacksChartUrl);
-
-        // $scope.fetchYahooNews();
+        $scope.fetchNews();
     };
 
-    $httpshooter.queue({
-        method: 'POST',
-        url: api.getNote,
-        headers: {
-            token: $localStorage.session.token
-        },
-        data: {
-            email: $localStorage.session.email
-        }
-    }).then(function (data) {
-        $scope.notes = [];
-        if (data.data.notes.length) {
-            $scope.notes = data.data.notes;
-        }
-    });
+    $scope.fetchNews = function () {
+        var url = "https://api.intrinio.com/news?ticker=" + preEarn.searchKey.toUpperCase() + "&page_number=1&page_size=26";
+        $httpshooter.queue({
+            method: 'GET',
+            url: url,
+            headers: {
+                Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
+            }
+        }).then(function (data) {
+            $scope.news = data.data;
+        });
+    }
+
+    $scope.getNote = function () {
+        $httpshooter.queue({
+            method: 'POST',
+            url: api.getNote,
+            headers: {
+                token: $localStorage.session.token
+            },
+            data: {
+                email: $localStorage.session.email
+            }
+        }).then(function (data) {
+            $scope.notes = [];
+            if (data.data.notes.length) {
+                $scope.notes = data.data.notes;
+            }
+        });
+    }
+
+
 
     $scope.addNote = function () {
         if (preEarn.noteText) {
@@ -131,10 +130,10 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
             }).then(function (data) {
                 if (data.data.message) {
                     $scope.notes.splice(index, 1);
-                    $scope.editIndex=-1;
-                    $scope.notes[index]={
-                        text:preEarn.editNoteText,
-                        timestamp:moment(preEarn.newNoteTimestamp, 'DD-MMM-YYYY').unix()
+                    $scope.editIndex = -1;
+                    $scope.notes[index] = {
+                        text: preEarn.editNoteText,
+                        timestamp: moment(preEarn.newNoteTimestamp, 'DD-MMM-YYYY').unix()
                     }
                 }
             });
@@ -144,7 +143,8 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
 
 
     $scope.$on('$viewContentLoaded', function () {
-
+        $scope.getNote();
+        $scope.fetchNews();
 
     });
 
