@@ -14,6 +14,8 @@ var api={
     scrapeEPS:server+'scrapeZacksForEPS',
     addNote:server+'addNote',
     getNote:server+'getNote',
+    editNote:server+'editNote',
+    deleteNote:server+'deleteNote',
     deleteTokens:server+'deleteTokens',
     changePwd:server+'changePwd',
     currencyData:server+'currencyData',
