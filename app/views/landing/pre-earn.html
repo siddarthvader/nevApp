@@ -153,12 +153,23 @@
 
                 </div>
             </div>
-            <!--<div class="tile is-child is-3">
-                <div class="box">
-                    <feed id="newsFeed" ticker="{{preEarn.ticker}}">
-                    </feed>
+            <div class="tile is-child is-2">
+                <div class="box overflow-auto" style="height:35%">
+                    <div class="pt-6" ng-repeat="new in news">
+                        <a ng-href="{{new.url}}" target="_blank">
+                            <label class="blue-text title is-6 bold-text cursor-p">
+                                {{new.title}}
+                            </label>      
+                            </a>
+                        <label class="small-text">
+                            {{moment(new.publication_date).format('DD-MMM-YYYY')}}
+                                </label>
+                    </div>
+                    <div class="red-text" ng-if="!news.length">
+                        No relevant news found
+                    </div>
                 </div>
-            </div>-->
+            </div>
 
         </div>
 
