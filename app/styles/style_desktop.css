@@ -344,3 +344,18 @@ body {
 .hoverView:hover .smallView span {
   text-decoration: underline;
 }
+
+[class^="Bdbw"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#weightage section h3 {
+  padding-top: 1.5rem;
+}
+
+#weightage section h3 > span {
+  color: #3273dc;
+  font-weight: bold;
+}
