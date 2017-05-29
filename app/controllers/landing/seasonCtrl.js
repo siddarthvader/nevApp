@@ -14,6 +14,16 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.dates={};
 
     //since default is currency
+
+    $scope.getFreq=function(key,freq){
+        if(freq==='monthly'){
+            return moment().month(key-1).format('MMM')
+        }
+        else{
+            return "Week" + key;
+        }
+    };
+
     $scope.allTickers = [
         { Name: "AUD", Maker: "Australian Dollar", ticked: false },
         { Name: "EUR", Maker: "Euro", ticked: false },

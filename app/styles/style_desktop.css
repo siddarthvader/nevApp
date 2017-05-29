@@ -164,6 +164,10 @@ body {
   color: #23d160 !important;
 }
 
+.red-text {
+  color: #ff3860;
+}
+
 .green-background {
   background-color: #23d160 !important;
 }
@@ -174,6 +178,10 @@ body {
 
 .blue-background {
   background: #3273dc;
+}
+
+.red-background {
+  background: #ff3860;
 }
 
 .small-text {

@@ -45,7 +45,7 @@
                     </p>
 
                     <p class="control">
-                        <a class="button is-primary" ng-click="fetchPreEarn()">
+                        <a class="button is-primary" id="submitBtn" ng-click="fetchPreEarn()">
                     Search
                     </a>
                     </p>
@@ -76,31 +76,70 @@
         </div>
 
         <div class="tile is-parent">
-            <div class="tile is-child is-3">
+            <div class="tile is-child is-4">
                 <div class="box">
                     <ul ng-if="notes.length">
                         <li class="columns is-mobile" ng-repeat="note in notes track by $index">
 
-                            <div class="is-8 column">
-                                {{$index+1}}- {{note.text}}
-                            </div>
-                            <div class="is-4 column has-text-right">
-                                <label class="subtitle is-6">{{moment(note.timestamp,'X').format("DD MMM YY")}}
+                            <div class="is-8 column" ng-if="editIndex!==$index">
+                                <div>
+                                    {{$index+1}}- {{note.text}}
+                                </div>
+                                <label class="subtitle small-text">{{moment(note.timestamp,'X').format("DD MMM YY")}}
                                 </label>
+                            </div>
+                            <div class="is-12 column" ng-if="editIndex===$index">
+                                <div class="field">
+                                    <p class="control is-expanded">
+                                        {{$index+1}}-<textarea class="input" type="text" ng-model="preEarn.editNoteText"></textarea>
+                                    </p>
+                                </div>
+                                <div class="field has-addons ">
+                                    <p classs="control">
+                                        <datepicker date-set={{oldNoteTimeStamp.toString()}} date-format="dd-MMM-yyyy">
+                                            <input ng-model="preEarn.newNoteTimestamp" type="text" />
+                                        </datepicker>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <a class="button is-primary is-outlined is-pulled-right" ng-click="editNoteSub($index)">
+                                Edit
+                                </a>
+
+                                    </p>
+                                    <p class="control">
+                                        <a class="button is-light" ng-click="canceledit()">
+                                Cancel
+                                </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="is-4 column has-text-right" ng-if="editIndex!==$index">
+                                <span class="icon is-small cursor-p" ng-click="editNote(note,$index)">
+                                    <i class="fa fa-pencil"></i>
+                                </span>
+                                <span class="icon is-small cursor-p" ng-click="deleteNote(note,$index)">
+                                    <i class="fa fa-minus red-text"></i>
+                                </span>
                             </div>
                         </li>
                     </ul>
                     <p ng-if="!notes.length" class="help is-info has-text-centered">
                         Nothing to show
                     </p>
-                    <div class="field">
+                    <div class="field mt-4">
+                        <label class="  label blue-text">Add Note</label>
                         <p class="control is-expanded">
                             <textarea class="input" type="text" ng-model="preEarn.noteText"></textarea>
                         </p>
                     </div>
-                    <div class="field has-addons has-addons-right">
-                        <p class="control">
-                            <a class="button is-primary" ng-click="addNote()">
+                    <div class="field has-addons ">
+                        <p classs="control">
+                            <datepicker date-format="dd-MMM-yyyy" date-set={{newDate.toString()}}>
+                                <input ng-model="addNoteTimestamp" type="text" />
+                            </datepicker>
+                        </p>
+                        <p class="control is-expanded">
+                            <a class="button is-primary is-pulled-right" ng-click="addNote()">
                                 Add
                                 </a>
                         </p>
@@ -114,12 +153,12 @@
 
                 </div>
             </div>
-            <div class="tile is-child is-3">
+            <!--<div class="tile is-child is-3">
                 <div class="box">
                     <feed id="newsFeed" ticker="{{preEarn.ticker}}">
                     </feed>
                 </div>
-            </div>
+            </div>-->
 
         </div>
 

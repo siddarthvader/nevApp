@@ -32,8 +32,9 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
         }).then(function (data) {
             console.log(data);
             $scope.companyDesc = data.long_description;
-            $scope.symbol = data.ticker;
-            $scope.shortDesc=data.short_description;
+            $scope.ticker = data.ticker;
+            $scope.industry=data.industry_group;
+            $scope.sector=data.sector;
             if (!$scope.marketPrefix) {
                 $scope.marketPrefix = data.securities[0].stock_exchange;
             }
