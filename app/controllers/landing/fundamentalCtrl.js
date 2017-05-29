@@ -1,7 +1,7 @@
 nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $rootScope, $sessionStorage, $httpshooter, $timeout) {
     var funda = this;
     $scope.moment = moment;
-    $scope.date=moment().format('DD-MMM-YYYY')
+    $scope.date = moment().format('DD-MMM-YYYY')
 
     $scope.toggleSubmenu = function (mode) {
         $scope.subMenuMode = mode;
@@ -33,8 +33,8 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             console.log(data);
             $scope.companyDesc = data.long_description;
             $scope.ticker = data.ticker;
-            $scope.industry=data.industry_group;
-            $scope.sector=data.sector;
+            $scope.industry = data.industry_group;
+            $scope.sector = data.sector;
             if (!$scope.marketPrefix) {
                 $scope.marketPrefix = data.securities[0].stock_exchange;
             }
@@ -56,6 +56,8 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
 
         });
+
+        $scope.fetchYahooWeightage();
 
     }
 
@@ -85,7 +87,32 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
 
         }
-    
-    })
+
+    });
+
+    $scope.fetchYahooWeightage = function () {
+        $httpshooter.queue({
+            url: api.fetchYahooWeightage,
+            method: 'POST',
+            headers: {
+                token: $localStorage.session.token
+            },
+            data: {
+                email: $localStorage.session.email,
+                ticker: $scope.symbol
+            }
+
+        }).then(function (data) {
+            console.log(data);
+            var div = document.createElement('div');
+            div.innerHTML = data.data.html;
+            if (document.getElementById('weightage').childNodes[1]) {
+                document.getElementById('weightage').replaceChild(div.firstChild, document.getElementById('weightage').childNodes[1]);
+            }
+            else {
+                document.getElementById('weightage').appendChild(div.firstChild);
+            }
+        });
+    }
 
 });
