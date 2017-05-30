@@ -359,3 +359,49 @@ body {
   color: #3273dc;
   font-weight: bold;
 }
+
+.rank_chip {
+  color: #FFF;
+  line-height: 16px;
+  padding-right: 0;
+  margin-right: 0;
+  font-weight: old;
+  width: 18px;
+  display: inline-block;
+  margin: 0 23px 0 0;
+  height: 18px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9);
+  -webkit-text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9);
+  -moz-text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 1px #fff;
+  -webkit-box-shadow: 0 1px 1px #fff;
+}
+
+.rank_chip.rankrect_1 {
+  background-color: #00ad13;
+  border: 1px solid #028d11;
+}
+
+.rank_chip.rankrect_2 {
+  background-color: #086218;
+  border: 1px solid #023d0c;
+}
+
+.rank_chip.rankrect_3 {
+  background-color: #ec9c01;
+  border: 1px solid #ba7c01;
+}
+
+.rank_chip.rankrect_4 {
+  background-color: #800101;
+  border: 1px solid #560202;
+}
+
+.rank_chip.rankrect_5 {
+  background-color: #e10d0d;
+  border: 1px solid #b50101;
+}

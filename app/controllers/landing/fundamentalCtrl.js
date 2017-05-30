@@ -44,7 +44,7 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             if ($scope.subMenuMode === 'equities') {
                 $timeout(function () {
                     document.getElementById('zacksEPS').setAttribute('src', $scope.zacksChartUrl);
-                    document.getElementById('zacksRank').setAttribute('src', $scope.zacksRankUrl);
+                    // document.getElementById('zacksRank').setAttribute('src', $scope.zacksRankUrl);
                 })
             }
             else {
@@ -58,6 +58,7 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
         });
 
         $scope.fetchYahooWeightage();
+        $scope.fetchZacksRank();
 
     }
 
@@ -73,22 +74,27 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             $scope.marketPrefix = 'NASDAQ';
             $scope.symbol = 'AAPL';
             $scope.fetchFundaContent();
-            // var iframe = document.createElement('iframe');
-            // iframe.src = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas'
-            // iframe.setAttribute('width', '100%');
-            // iframe.setAttribute('height', '400px');
-            // iframe.setAttribute('scrolling', 'no');
 
-            // document.getElementById('zacksEPSParent').appendChild(iframe);
-            // // $scope.zacksChartUrl = ;
-            // $scope.zacksRankUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#quote_ribbon_v2';
-            // // document.getElementById('zacksEPS').setAttribute('src', $scope.zacksChartUrl);
-            // document.getElementById('zacksRank').setAttribute('src', $scope.zacksRankUrl);
-
+            //
 
         }
 
     });
+
+    $scope.rankarray=[1,2,3,4,5];
+    $scope.fetchZacksRank=function(){
+        $httpshooter.queue({
+            url:"https://quote-feed.zacks.com/index?t="+$scope.symbol,
+            method:'GET'
+        }).then(function(data){
+            $scope.zacksData=data[$scope.symbol];
+            $scope.zacksData.zacks_rank=parseInt($scope.zacksData.zacks_rank);
+        })
+    };
+
+    $scope.getZacksClass=function(index){
+        return "rankrect_"+index;
+    }
 
     $scope.fetchYahooWeightage = function () {
         $httpshooter.queue({

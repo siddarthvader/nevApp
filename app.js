@@ -12,7 +12,8 @@ var listen_IP='127.0.0.1';
 
 listen_IP=process.env.SERVER_IP||listen_IP;
 
-var port =process.env.PORT||8080;
+
+var port =process.env.PORT||8000;
 
 app.use(express.static(__dirname));
 app.use(express.static(__dirname+'/app'));
