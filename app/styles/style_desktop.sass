@@ -237,7 +237,7 @@ body
         opacity: 0.6 
         transform: translateY(190px)
         transition: all ease .5s
-    &.ng-enter-stagger
+    &.ng-enter-stagger,&.ng-leave-stagger
         transition-delay: 0.2s 
         -webkit-transition-delay: 0.2s 
         transition-duration: .0s
@@ -245,5 +245,11 @@ body
         *animation-delay: 0.2s
         *animation-duration: 0s
     &.ng-enter.ng-enter-active
-            opacity: 1.0 
-            transform: translateY(0px)
+        opacity: 1.0 
+        transform: translateY(0px)
+    &.ng-leave 
+        transition : 0.5s linear all
+        opacity : 1
+    &.ng-leave.ng-leave-active
+        opacity : 0
+        transform : translateY(-100px)

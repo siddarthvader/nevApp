@@ -12,6 +12,17 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.searchIndustry;
     $scope.searchSector;
     $scope.dates={};
+    $scope.subMenuMode='criteria';
+    $scope.toggleSubmenu=function(mode){
+        $scope.subMenuMode = mode;
+        if (mode === 'criteria') {
+
+        }
+        else {
+
+        }
+
+    };
 
     //since default is currency
 
@@ -69,6 +80,13 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }).then(function (data) {
                 console.log(data);
                 $scope.allTickers = data.data;
+                $scope.allSectors=[];
+                $scope.allIndustries=[];
+                data.data.forEach(function(f,i){
+                    if($scope.allSectors){
+
+                    }
+                });
 
             });
         }
@@ -101,8 +119,6 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }
 
         }, this);
-
-        console.log($scope.tickerMappedToDetails);
 
         if (symbols.length) {
             var payload = {};

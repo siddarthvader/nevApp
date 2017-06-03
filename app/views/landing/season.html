@@ -1,7 +1,13 @@
 <div class="container  is-fluid animated fadeInUp">
+    <div class="tabs is-toggle is-right is-fullwidth">
+        <ul>
+            <li ng-class="{'is-active':subMenuMode==='criteria'}" ng-click="toggleSubmenu('criteria')"><a>Search Criteria</a></li>
+            <li ng-class="{'is-active':subMenuMode==='products'}" ng-click="toggleSubmenu('products')"><a> Products</a></li>
+        </ul>
+    </div>
     <div class="columns">
         <div class="column is-6 is-offset-4">
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" >
                 <div class="field-label is-normal">
                     <label class="label">Product type</label>
                 </div>
@@ -19,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria'">
                 <div class="field-label is-normal">
                     <label class="label">Week No.</label>
                 </div>
@@ -31,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria'">
                 <div class="field-label is-normal">
                     <label class="label">Min Probablity</label>
                 </div>
@@ -43,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria'">
                 <div class="field-label is-normal">
                     <label class="label">Min $ change</label>
                 </div>
@@ -55,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria'">
                 <div class="field-label is-normal">
                     <label class="label">Min % change</label>
                 </div>
@@ -67,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria'">
                 <div class="field-label">
                     <label class="label">Consecutive 2 weeks?</label>
                 </div>
@@ -87,19 +93,28 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-show="searchProductType==='EQU'">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria' && searchProductType==='EQU'">
                 <div class="field-label is-normal">
                     <label class="label">Sector</label>
                 </div>
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" ng-model="searchSector" placeholder="number">
+                            <div isteven-multi-select search-property="Sector" input-model="allTickers" output-properties="Name Sector Maker Industry Exchange Code Contracts"
+                                output-model="searchSector" button-label="Sector" item-label="Sector" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
+                <!--<div class="field-body">
+                    
+                    <div class="field is-narrow">
+                        <p class="control">
+                            <input class="input" type="text" ng-model="searchSector" placeholder="number">
+                        </p>
+                    </div>
+                </div>-->
             </div>
-            <div class="field is-horizontal" ng-if="searchProductType==='EQU'">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria' && searchProductType==='EQU'">
                 <div class="field-label is-normal">
                     <label class="label">Industry</label>
                 </div>
@@ -111,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show="subMenuMode==='criteria' && searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Market Cap</label>
                 </div>
@@ -123,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="field is-horizontal" ng-show="searchProductType!='CUR'">
+            <div class="field is-horizontal" ng-show=" subMenuMode==='criteria' && searchProductType!='CUR'">
                 <div class="field-label is-normal">
                     <label class="label">Volume</label>
                 </div>
@@ -182,18 +197,18 @@
 
                     <div class="column is-6">
                         <table class="table is-striped" ng-if="Object.size(dates)">
-                              <thead>
-                                  <tr>
-                                      <th class="small-text"><strong> Symbol</strong></th>
-                                      <th class="small-text"><strong>From Date</strong></th>
-                                  </tr>
-                              </thead> 
-                              <tbody>
-                                  <tr ng-repeat="(ticker,date) in dates">
-                                      <td class="small-text">{{ticker}}</td>
-                                      <td class="small-text">{{date}}</td>
-                                  </tr>
-                              </tbody>  
+                            <thead>
+                                <tr>
+                                    <th class="small-text"><strong> Symbol</strong></th>
+                                    <th class="small-text"><strong>From Date</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="(ticker,date) in dates">
+                                    <td class="small-text">{{ticker}}</td>
+                                    <td class="small-text">{{date}}</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
