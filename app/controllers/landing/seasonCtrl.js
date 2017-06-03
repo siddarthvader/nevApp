@@ -80,14 +80,23 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }).then(function (data) {
                 console.log(data);
                 $scope.allTickers = data.data;
-                $scope.allSectors=[];
-                $scope.allIndustries=[];
-                data.data.forEach(function(f,i){
-                    if($scope.allSectors){
+            });
 
-                    }
-                });
+            $httpshooter.queue({
+                url: 'app/static/json/sectorData.json',
+                method: 'get'
+            }).then(function (data) {
+                console.log(data);
+                $scope.allSectors=data.data;
 
+            });
+
+            $httpshooter.queue({
+                url: 'app/static/json/industryData.json',
+                method: 'get'
+            }).then(function (data) {
+                console.log(data);
+                $scope.allIndustries=data.data;
             });
         }
         else {

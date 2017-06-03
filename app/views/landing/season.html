@@ -7,7 +7,7 @@
     </div>
     <div class="columns">
         <div class="column is-6 is-offset-4">
-            <div class="field is-horizontal" >
+            <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Product type</label>
                 </div>
@@ -100,8 +100,8 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <div isteven-multi-select search-property="Sector" input-model="allTickers" output-properties="Name Sector Maker Industry Exchange Code Contracts"
-                                output-model="searchSector" button-label="Sector" item-label="Sector" tick-property="Ticked"></div>
+                            <div isteven-multi-select search-property="Sector" input-model="allSectors" output-properties="Sector TickerData" output-model="searchSector"
+                                button-label="Sector" item-label="Sector" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -121,7 +121,8 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <input class="input" type="text" ng-model="searchIndustry" placeholder="number">
+                            <div isteven-multi-select search-property="Industry" input-model="allIndustries" output-properties="Industry TickerData" output-model="searchIndustry"
+                                button-label="Industry" item-label="Industry" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
