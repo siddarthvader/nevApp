@@ -23,11 +23,37 @@ var api={
     getFuturesData:server+'getFuturesData',
     fetchYahooWeightage:server+'fetchYahooWeightage'
 }
-
-Object.size = function(obj) {
+Object.size = function (obj) {
     var size = 0, key;
     for (key in obj) {
         if (obj.hasOwnProperty(key)) size++;
     }
     return size;
 };
+
+Array.prototype.removeDuplicate = function () {
+    var prims = { "boolean": {}, "number": {}, "string": {} }, objs = [];
+
+    return this.filter(function (item) {
+        var type = typeof item;
+        if (type in prims)
+            return prims[type].hasOwnProperty(item) ? false : (prims[type][item] = true);
+        else
+            return objs.indexOf(item) >= 0 ? false : objs.push(item);
+    });
+};
+
+Array.prototype.getDuplicateValues = function () {
+    var cache = {};
+    var results = [];
+    for (var i = 0, len = this.length; i < len; i++) {
+        if (cache[this[i]] === true) {
+            results.push(this[i]);
+        } else {
+            cache[this[i]] = true;
+        }
+
+    }
+    return results;
+}
+

@@ -11,9 +11,9 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.searchVolume = 0;
     $scope.searchIndustry;
     $scope.searchSector;
-    $scope.dates={};
-    $scope.subMenuMode='criteria';
-    $scope.toggleSubmenu=function(mode){
+    $scope.dates = {};
+    $scope.subMenuMode = 'criteria';
+    $scope.toggleSubmenu = function (mode) {
         $scope.subMenuMode = mode;
         if (mode === 'criteria') {
 
@@ -26,11 +26,11 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
 
     //since default is currency
 
-    $scope.getFreq=function(key,freq){
-        if(freq==='monthly'){
-            return moment().month(key-1).format('MMM')
+    $scope.getFreq = function (key, freq) {
+        if (freq === 'monthly') {
+            return moment().month(key - 1).format('MMM')
         }
-        else{
+        else {
             return "Week" + key;
         }
     };
@@ -55,7 +55,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         $scope.modalOpen = !$scope.modalOpen;
         document.getElementsByTagName('html')[0].classList.toggle('is-clipped');
         $scope.currencyData = {};
-        $scope.dates={};
+        $scope.dates = {};
     };
 
     $scope.changeProductType = function () {
@@ -80,14 +80,23 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }).then(function (data) {
                 console.log(data);
                 $scope.allTickers = data.data;
-                $scope.allSectors=[];
-                $scope.allIndustries=[];
-                data.data.forEach(function(f,i){
-                    if($scope.allSectors){
+            });
 
-                    }
-                });
+            $httpshooter.queue({
+                url: 'app/static/json/sectorData.json',
+                method: 'get'
+            }).then(function (data) {
+                console.log(data);
+                $scope.allSectors = data.data;
 
+            });
+
+            $httpshooter.queue({
+                url: 'app/static/json/industryData.json',
+                method: 'get'
+            }).then(function (data) {
+                console.log(data);
+                $scope.allIndustries = data.data;
             });
         }
         else {
@@ -106,20 +115,48 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         // var APP_ID = 'dj0yJmk9aVJUbGlZWUtEbEFlJmQ9WVdrOWNGcGFRek14TldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03MQ--';
         // var API_QUERY = 'select * from yahoo.finance.historicaldata where symbol = "YHOO" and startDate = "2009-09-11" and endDate = "2010-03-10"';
         var symbols = [];
-        var code=[];
+        var code = [];
         $scope.tickerMappedToDetails = {};
-        $scope.searchSymbol.forEach(function (element) {
-            symbols.push(element.Name);
-            if ($scope.searchProductType === 'EQU') {
-                $scope.tickerMappedToDetails[element.Name] = element;
+        if ($scope.searchSymbol.length) {
+            $scope.searchSymbol.forEach(function (element) {
+                symbols.push(element.Name);
+                if ($scope.searchProductType === 'EQU') {
+                    $scope.tickerMappedToDetails[element.Name] = element;
+                }
+
+                if ($scope.searchProductType === 'FUT') {
+                    code.push(element.Code);
+                }
+
+            }, this);
+        }
+        else {
+
+            if ($scope.searchSector.length) {
+                $scope.searchSector.forEach(function (ele) {
+                    ele.TickerData.forEach(function (element) {
+                        symbols.push(element.Name);
+                        $scope.tickerMappedToDetails[element.Name] = element;
+                    });
+                }, this);
             }
 
-            if($scope.searchProductType==='FUT'){
-                code.push(element.Code);
+            if ($scope.searchIndustry.length) {
+                $scope.searchIndustry.forEach(function (ele) {
+                    ele.TickerData.forEach(function (element) {
+                        symbols.push(element.Name);
+                        $scope.tickerMappedToDetails[element.Name] = element;
+                    });
+                }, this);
             }
 
-        }, this);
+            if ($scope.searchIndustry.length && $scope.searchSector.length) {
+                symbols = symbols.getDuplicateValues();
+            }
 
+        }
+
+        symbols = symbols.removeDuplicate();
         if (symbols.length) {
             var payload = {};
             var url;
@@ -148,7 +185,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             else if ($scope.searchProductType === 'FUT') {
                 payload = {
                     symbols: symbols,
-                    code:code,
+                    code: code,
                     minProb: parseFloat($scope.searchMinProbChange),
                     minValChange: parseFloat($scope.searchMinValChange),
                     minPer: parseFloat($scope.searchMinPerChange),
@@ -175,10 +212,10 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
                 }
                 else if ($scope.searchProductType === 'EQU') {
                     $scope.currencyData = data.data;
-                     $scope.dates=data.dates;
+                    $scope.dates = data.dates;
                 } else {
-                    $scope.currencyData=data.data;
-                    $scope.dates=data.dates;
+                    $scope.currencyData = data.data;
+                    $scope.dates = data.dates;
 
                 }
 
