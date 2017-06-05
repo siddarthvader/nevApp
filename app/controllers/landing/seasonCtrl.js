@@ -88,7 +88,6 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }).then(function (data) {
                 console.log(data);
                 $scope.allSectors = data.data;
-
             });
 
             $httpshooter.queue({
@@ -131,33 +130,11 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }, this);
         }
         else {
-
-            if ($scope.searchSector.length) {
-                $scope.searchSector.forEach(function (ele) {
-                    ele.TickerData.forEach(function (element) {
-                        symbols.push(element.Name);
-                        $scope.tickerMappedToDetails[element.Name] = element;
-                    });
-                }, this);
-            }
-
-            if ($scope.searchIndustry.length) {
-                $scope.searchIndustry.forEach(function (ele) {
-                    ele.TickerData.forEach(function (element) {
-                        symbols.push(element.Name);
-                        $scope.tickerMappedToDetails[element.Name] = element;
-                    });
-                }, this);
-            }
-
-            if ($scope.searchIndustry.length && $scope.searchSector.length) {
-                symbols = symbols.getDuplicateValues();
-            }
-
+            symbols = $scope.searchSymbols;
         }
 
-        symbols = symbols.removeDuplicate();
         if (symbols.length) {
+            symbols = symbols.removeDuplicate();
             var payload = {};
             var url;
             if ($scope.searchProductType === 'CUR') {
@@ -242,19 +219,64 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         return parseInt(str);
     };
 
-    $scope.updateTickerList = function (data) {
-        if (!$scope.searchSymbols) {
-            $scope.searchSymbols = [];
+    $scope.updateTickerList = function (mode, action) {
+
+        if (action === 'reset') {
+            if (mode === 'sector') {
+                $scope.searchSector.forEach(function (ele, i) {
+                    $scope.searchSector[i].Ticked = false;
+                });
+            }
+            else {
+                $scope.searchIndustry.forEach(function (ele, i) {
+                    $scope.searchIndustry[i].Ticked = false;
+                });
+            }
         }
-        if (data.Ticked) {
-            data.TickerData.forEach(function (element) {
-                $scope.searchSymbols.push(element.Name);
+
+
+        var sectors = [];
+        var industry = [];
+
+        if ($scope.searchSector.length) {
+
+            $scope.searchSector.forEach(function (ind, i) {
+                if (ind.Ticked) {
+                    ind.TickerData.forEach(function (element) {
+                        sectors.push(element.Name);
+                    });
+                }
             });
         }
 
-        if ($scope.searchIndustry.length && $scope.searchSector.length) {
+        if ($scope.searchIndustry.length) {
+            $scope.searchIndustry.forEach(function (ind, i) {
+                if (ind.Ticked) {
+                    ind.TickerData.forEach(function (element) {
+                        industry.push(element.Name);
+                    });
+                }
+            });
+
+        }
+
+        if (sectors.length && industry.length) {
+            $scope.searchSymbols = sectors.concat(industry);
             $scope.searchSymbols = $scope.searchSymbols.getDuplicateValues();
+        }
+        else {
+            if (sectors.length) {
+                $scope.searchSymbols = sectors;
+            }
+            else {
+                $scope.searchSymbols = industry;
+            }
         }
 
     };
+
+    $scope.fReset = function () {
+        $scope.searchSymbols = [];
+    };
+
 });
