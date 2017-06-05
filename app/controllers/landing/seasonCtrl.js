@@ -240,5 +240,21 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
 
     $scope.toInt = function (str) {
         return parseInt(str);
-    }
+    };
+
+    $scope.updateTickerList = function (data) {
+        if (!$scope.searchSymbols) {
+            $scope.searchSymbols = [];
+        }
+        if (data.Ticked) {
+            data.TickerData.forEach(function (element) {
+                $scope.searchSymbols.push(element.Name);
+            });
+        }
+
+        if ($scope.searchIndustry.length && $scope.searchSector.length) {
+            $scope.searchSymbols = $scope.searchSymbols.getDuplicateValues();
+        }
+
+    };
 });

@@ -6,7 +6,7 @@
         </ul>
     </div>
     <div class="columns">
-        <div class="column is-6 is-offset-4">
+        <div class="column is-6 is-offset-3">
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Product type</label>
@@ -101,7 +101,8 @@
                     <div class="field is-narrow">
                         <p class="control">
                             <div isteven-multi-select search-property="Sector" input-model="allSectors" output-properties="Sector TickerData" output-model="searchSector"
-                                button-label="Sector" item-label="Sector" tick-property="Ticked"></div>
+                                button-label="Sector" on-select-all="fSelectAll()" on-select-none="fSelectNone()" on-reset="fReset()"
+                                on-item-click="updateTickerList(data)" item-label="Sector" tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -121,8 +122,10 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <div isteven-multi-select search-property="Industry" input-model="allIndustries" output-properties="Industry TickerData" output-model="searchIndustry"
-                                button-label="Industry" item-label="Industry" tick-property="Ticked"></div>
+                            <div isteven-multi-select search-property="Industry" input-model="allIndustries" output-properties="Industry TickerData"
+                                output-model="searchIndustry" button-label="Industry" on-item-click="updateTickerList(data)"
+                                item-label="Industry" on-select-all="fSelectAll()" on-select-none="fSelectNone()" on-reset="fReset()"
+                                tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -179,6 +182,16 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="box" ng-if="searchSymbols">
+                <div class="title blue-text bold-text is-5">
+                    Selected Tickers ({{searchSymbols.length}})
+                </div>
+                <span class="tag is-info fast-transition" ng-repeat="tag in searchSymbols">
+                    {{tag}}
+                </span>
             </div>
         </div>
     </div>
