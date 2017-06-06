@@ -30,8 +30,11 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
         if (freq === 'monthly') {
             return moment().month(key - 1).format('MMM')
         }
-        else {
+        else if(freq==='weekly'){
             return "Week" + key;
+        }
+        else{
+            return "Day" + key
         }
     };
 
@@ -130,7 +133,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
             }, this);
         }
         else {
-            symbols = $scope.searchSymbols;
+            symbols = $scope.searchSymbols?$scope.searchSymbols:[];
         }
 
         if (symbols.length) {
