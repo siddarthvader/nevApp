@@ -33,9 +33,7 @@ nevApp.run(function ($state, $timeout, $rootScope, $window, $localStorage, AuthF
 
 
     $rootScope.$on('HTTP_CALL_STARTED', function (event, data) {
-        console.log(data.url)  // url of http call in action
-        console.log(data.data) // data of http call
-        console.log(data.headers) // headers of http call
+        console.log('start')  // url of http call in action
         document.getElementById('ui-blocker').classList.add('show');
 
     });
