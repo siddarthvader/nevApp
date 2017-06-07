@@ -79,7 +79,7 @@
             <div class="tile is-child is-4">
                 <div class="box">
                     <ul ng-if="notes.length">
-                        <li class="columns is-mobile" ng-repeat="note in notes track by $index">
+                        <li class="columns is-mobile animate" ng-repeat="note in notes track by $index">
 
                             <div class="is-8 column" ng-if="editIndex!==$index">
                                 <div>
@@ -155,7 +155,7 @@
             </div>
             <div class="tile is-child is-2">
                 <div class="box overflow-auto" style="height:17%">
-                    <div class="pt-6" ng-repeat="new in news">
+                    <div class="pt-6 animate" ng-repeat="new in news">
                         <a ng-href="{{new.url}}" target="_blank">
                             <label class="blue-text title is-6 bold-text cursor-p">
                                 {{new.title}}

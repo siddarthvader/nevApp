@@ -12,6 +12,7 @@ nevApp.controller('seasonCtrl', function ($state, $scope, $httpshooter, $localSt
     $scope.searchIndustry;
     $scope.searchSector;
     $scope.dates = {};
+    $scope.moment=moment;
     $scope.subMenuMode = 'criteria';
     $scope.toggleSubmenu = function (mode) {
         $scope.subMenuMode = mode;

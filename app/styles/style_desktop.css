@@ -411,13 +411,13 @@ body {
   border: 1px solid #b50101;
 }
 
-[ng-repeat]:not(.no-animate).ng-enter {
+.animate[ng-repeat].ng-enter {
   opacity: 0;
   transform: translateY(190px);
   transition: all ease .5s;
 }
 
-[ng-repeat]:not(.no-animate).ng-enter-stagger, [ng-repeat]:not(.no-animate).ng-leave-stagger {
+.animate[ng-repeat].ng-enter-stagger, .animate[ng-repeat].ng-leave-stagger {
   transition-delay: 0.2s;
   -webkit-transition-delay: 0.2s;
   transition-duration: .0s;
@@ -426,18 +426,18 @@ body {
   *animation-duration: 0s;
 }
 
-[ng-repeat]:not(.no-animate).ng-enter.ng-enter-active {
+.animate[ng-repeat].ng-enter.ng-enter-active {
   opacity: 1.0;
   transform: translateY(0px);
 }
 
-[ng-repeat]:not(.no-animate).fast-transition.ng-enter {
+.animate[ng-repeat].fast-transition.ng-enter {
   opacity: 0;
   transform: translateX(100px);
   transition: all ease .1s;
 }
 
-[ng-repeat]:not(.no-animate).fast-transition.ng-enter.ng-enter-stagger, [ng-repeat]:not(.no-animate).fast-transition.ng-enter.ng-leave-stagger {
+.animate[ng-repeat].fast-transition.ng-enter.ng-enter-stagger, .animate[ng-repeat].fast-transition.ng-enter.ng-leave-stagger {
   transition-delay: 0s;
   -webkit-transition-delay: 0.1s;
   transition-duration: .0s;
@@ -446,7 +446,7 @@ body {
   *animation-duration: 0s;
 }
 
-[ng-repeat]:not(.no-animate).fast-transition.ng-enter.ng-enter.ng-enter-active {
+.animate[ng-repeat].fast-transition.ng-enter.ng-enter.ng-enter-active {
   opacity: 1.0;
   transform: translateX(0px);
 }
