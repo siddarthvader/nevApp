@@ -21,7 +21,8 @@ var api = {
     currencyData: server + 'currencyData',
     getEquitiesData: server + 'getEquitiesData',
     getFuturesData: server + 'getFuturesData',
-    fetchYahooWeightage: server + 'fetchYahooWeightage'
+    fetchYahooWeightage: server + 'fetchYahooWeightage',
+    getQuotes:server+'getQuotes'
 }
 
 Object.size = function (obj) {

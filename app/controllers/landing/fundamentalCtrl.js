@@ -22,22 +22,31 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
     $scope.fetchFundaContent = function () {
 
-        var url = "https://api.intrinio.com/companies?ticker=" + $scope.symbol
         $httpshooter.queue({
-            method: 'GET',
-            url: url,
+            url: api.getQuotes,
+            method: "POST",
             headers: {
-                Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
+                'Token': $localStorage.session.token
+            },
+            data: {
+                symbol: $scope.symbol
             }
         }).then(function (data) {
-            console.log(data);
-            $scope.companyDesc = data.long_description;
-            $scope.ticker = data.ticker;
-            $scope.industry = data.industry_group;
-            $scope.sector = data.sector;
+            data = data.data;
+            $scope.quotes = data.summaryDetail;
+            $scope.fdata = data.financialData;
+            $scope.stats = data.defaultKeyStatistics;
+            $scope.calender = data.calendarEvents;
+            $scope.earnings = data.earnings;
+            $scope.history = data.upgradeDowngradeHistory
+            $scope.summary = data.summaryProfile;
+            $scope.price = data.price
+            $scope.ticker = data.price.symbol;
+
             if (!$scope.marketPrefix) {
-                $scope.marketPrefix = data.securities[0].stock_exchange;
+                $scope.marketPrefix = data.price.exchangeName;
             }
+
             $scope.zacksChartUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas';
             $scope.zacksRankUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#quote_ribbon_v2';
 
@@ -55,10 +64,28 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             document.getElementById('tradingChart').setAttribute('src', $scope.tradingViewChartUrl);
 
 
+
+
         });
+
+        // var url = "https://api.intrinio.com/companies?ticker=" + $scope.symbol
+        // $httpshooter.queue({
+        //     method: 'GET',
+        //     url: url,
+        //     headers: {
+        //         Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
+        //     }
+        // }).then(function (data) {
+        //     console.log(data);
+
+
+        // });
+
+
 
         $scope.fetchYahooWeightage();
         $scope.fetchZacksRank();
+
 
     }
 
@@ -81,19 +108,19 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
     });
 
-    $scope.rankarray=[1,2,3,4,5];
-    $scope.fetchZacksRank=function(){
+    $scope.rankarray = [1, 2, 3, 4, 5];
+    $scope.fetchZacksRank = function () {
         $httpshooter.queue({
-            url:"https://quote-feed.zacks.com/index?t="+$scope.symbol,
-            method:'GET'
-        }).then(function(data){
-            $scope.zacksData=data[$scope.symbol];
-            $scope.zacksData.zacks_rank=parseInt($scope.zacksData.zacks_rank);
+            url: "https://quote-feed.zacks.com/index?t=" + $scope.symbol,
+            method: 'GET'
+        }).then(function (data) {
+            $scope.zacksData = data[$scope.symbol];
+            $scope.zacksData.zacks_rank = parseInt($scope.zacksData.zacks_rank);
         })
     };
 
-    $scope.getZacksClass=function(index){
-        return "rankrect_"+index;
+    $scope.getZacksClass = function (index) {
+        return "rankrect_" + index;
     }
 
     $scope.fetchYahooWeightage = function () {
