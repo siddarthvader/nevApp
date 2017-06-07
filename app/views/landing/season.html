@@ -161,9 +161,9 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <p class="control">
-                            <div isteven-multi-select input-model="allTickers" output-properties="Name Sector Maker Industry Code Ticked ETF"
-                                output-model="searchSymbol" on-reset="fReset()" helper-elements="filter reset" button-label="Name"
-                                item-label="Name Maker" tick-property="Ticked"></div>
+                            <div isteven-multi-select input-model="allTickers" output-properties="Name Sector Maker Industry Code Ticked ETF" output-model="searchSymbol"
+                                on-reset="fReset()" helper-elements="filter reset" button-label="Name" item-label="Name Maker"
+                                tick-property="Ticked"></div>
                         </p>
                     </div>
                 </div>
@@ -183,14 +183,15 @@
                     </div>
                 </div>
             </div>
+            <div class="help is-info mb-4">
+                Try to keep selected Tickers below 10 for for fast processing.
+            </div>
         </div>
         <div class="column is-3">
+
             <div class="box" ng-if="searchSymbols">
                 <div class="title blue-text bold-text is-5 is-marginless">
                     Selected Tickers ({{searchSymbols.length}})
-                </div>
-                <div class="help is-danger mb-4">
-                    Try to keep selected Tickers below 6 for accurate resulate, as quandl has an API limit and it ignored ticker randomly if provided in bulk
                 </div>
                 <span class="tag is-info fast-transition animate
                 " ng-repeat="tag in searchSymbols track by $index|unique:'tag'">
@@ -210,7 +211,7 @@
                         <span class="tag is-info black-text">Current Week</span>
                         <span class="tag is-warning">Chosen Week</span>
                         <span class="tag is-light green-text" ng-if="conWeeks">Consecutive Weeks</span>
-                        
+
                     </div>
 
                     <div class="column is-8">
@@ -228,9 +229,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="help is-info mb-4 column is-10" ng-if="searchProductType==='EQU'">
+                        <!--<div class="help is-info mb-4 column is-10" ng-if="searchProductType==='EQU'">
                             Note- Quandl API only had data for these tickers, if any ticker is omitted in final results it means quandl did not provide data for that
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
