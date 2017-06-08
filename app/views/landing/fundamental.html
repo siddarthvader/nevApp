@@ -56,10 +56,15 @@
                             {{ticker}}
                         </td>
                         <td>
-                            {{summary.industry}}
+                            <span ng-if="!isETF">
+                             {{summary.industry}}
+                            </span>
+                            <span ng-if="isETF">
+                                {{stats.legalType}} 
+                            </span>
                         </td>
                         <td>
-                            {{fdata.currentPrice}}
+                            {{price.regularMarketPrice}}
                         </td>
                         <td>
                             {{quotes.trailingPE}}
@@ -77,10 +82,21 @@
                             {{quotes.fiftyTwoWeekLow}}-{{quotes.fiftyTwoWeekHigh}}
                         </td>
                         <td>
+                            <span ng-if="!isETF">
                             {{quotes.dividendYield}}
+                            </span>
+                            <span ng-if="isETF">
+                                {{quotes.yield}}
+                            </span>
                         </td>
                         <td>
+                            <span ng-if="!isETF">
                             {{quotes.beta}}
+
+                            </span>
+                            <span ng-if="isETF">
+                            {{stats.beta3Year}}
+                            </span>
                         </td>
                         <td>
                             {{fdata.returnOnEquity}}
@@ -131,13 +147,24 @@
                             {{date}}
                         </td>
                         <td>
+                            <span ng-if="!isETF">
                             {{summary.sector}}
+
+                            </span>
+                            <span ng-if="isETF">
+                                {{stats.category}}
+                            </span>
                         </td>
                         <td>
-                            {{summary.industry}}
+                            <span ng-if="!isETF">
+                             {{summary.industry}}
+                            </span>
+                            <span ng-if="isETF">
+                                {{stats.legalType}} 
+                            </span>
                         </td>
                         <td>
-                            {{ticker}}
+                            {{isETF}}
                         </td>
                         <td>
                             {{quotes.previousClose}}
@@ -149,21 +176,49 @@
                             {{quotes.fiftyTwoWeekLow}}
                         </td>
                         <td>
+                            <span ng-if="!isETF">
                             {{quotes.trailingPE}}
+
+                            </span>
+                            <span ng-if="isETF">
+
+                            </span>
                         </td>
                         <td>
+                            <span ng-if="!isETF">
                             {{quotes.beta}}
+
+                            </span>
+                            <span ng-if="isETF">
+                            {{stats.beta3Year}}
+                            </span>
                         </td>
-                        <td></td>
+                        <td>
+
+                            {{quotes.navPrice}}
+                        </td>
                         <td>
                             {{quotes.volume}}
                         </td>
-                        <td></td>
                         <td>
-                            {{moment(history.epochGradeDate)}}
+                            {{quotes.totalAssets}}
                         </td>
                         <td>
+                            <span ng-if="!isETF">
+                            <!--{{moment(history.epochGradeDate)}}-->
+                            </span>
+                            <span ng-if="isETF">
+
+                            </span>
+
+                        </td>
+                        <td>
+                            <span ng-if="!isETF">
                             {{quotes.dividendYield}}
+                            </span>
+                            <span ng-if="isETF">
+                                {{quotes.yield}}
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -200,7 +255,7 @@
                     </span>
                 </div>
                 <div class="has-text-right column is-6" ng-if="!zacksData.zacks_rank">
-                    <div class="help is-danger" >
+                    <div class="help is-danger">
                         No Rank found for the ticker
                     </div>
                 </div>

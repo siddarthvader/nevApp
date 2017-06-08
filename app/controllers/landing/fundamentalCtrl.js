@@ -69,6 +69,9 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             data = data.data;
             console.log(data);
             $scope.isETF = data.etf;
+            if($scope.isETF){
+                $scope.fetchYahooWeightage();
+            }
             $scope.marketPrefix = data.stock_exchange;
             $scope.fetchZacksRank();
         });
@@ -76,8 +79,6 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
     $scope.fetchFundaContent = function () {
 
-
-        $scope.fetchYahooWeightage();
         $scope.getExchangeName();
 
         $httpshooter.queue({
@@ -125,7 +126,7 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
 
     $scope.fetchYahooWeightage = function () {
-        $httpshooter.queue({
+        $http({
             url: api.fetchYahooWeightage,
             method: 'POST',
             headers: {
@@ -138,6 +139,7 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
         }).then(function (data) {
             console.log(data);
+            data=data.data;
             var div = document.createElement('div');
             div.innerHTML = data.data.html;
             if (document.getElementById('weightage').childNodes[1]) {
