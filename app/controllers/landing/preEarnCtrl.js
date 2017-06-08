@@ -10,6 +10,33 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
 
     };
 
+    $scope.drawCharts = function () {
+        $scope.tradingViewChartUrl = 'https://s.tradingview.com/widgetembed/?symbol=' + encodeURIComponent($scope.marketPrefix + ":" + $scope.symbol) + '&interval=daily&symboledit=1&saveimage=1&toolbarbg=f1f3f6&calendar=1&hotlist=1&news=1&newsvendors=stocktwits&studies=1&hideideas=1&theme=White&style=1&timezone=Etc%2FUTC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=localhost&utm_medium=widget&utm_campaign=chart&utm_term=' + encodeURIComponent($scope.symbol)
+        $scope.zacksChartUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas';
+        document.getElementById('tradingChart').setAttribute('src', $scope.tradingViewChartUrl);
+        document.getElementById('zacksEPS').setAttribute('src', $scope.zacksChartUrl);
+
+    }
+
+    $scope.rankarray = [1, 2, 3, 4, 5];
+    $scope.fetchZacksRank = function () {
+        $httpshooter.queue({
+            url: "https://quote-feed.zacks.com/index?t=" + preEarn.searchKey,
+            method: 'GET'
+        }).then(function (data) {
+            // data = data.data;
+            if (data[preEarn.searchKey]) {
+                $scope.zacksData = data[preEarn.searchKey];
+                $scope.zacksData.zacks_rank = parseInt($scope.zacksData.zacks_rank);
+                if ($scope.isETF) {
+                    $scope.marketPrefix = data[preEarn.searchKey].SUNGARD_EXCHANGE;
+                }
+                $scope.drawCharts();
+            }
+
+        })
+    };
+
     $scope.fetchPreEarn = function () {
 
         var url = "https://api.intrinio.com/securities?ticker=" + preEarn.searchKey
@@ -20,25 +47,25 @@ nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localS
                 Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
             }
         }).then(function (data) {
-            $scope.marketPrefix = data.price.exchangeName;
+            // data = data.data;
+            $scope.marketPrefix = data.stock_exchange;
+            $scope.isETF = data.etf;
+            $scope.fetchZacksRank();
             $scope.symbol = preEarn.searchKey.toUpperCase();
-            $scope.tradingViewChartUrl = 'https://s.tradingview.com/widgetembed/?symbol=' + encodeURIComponent($scope.marketPrefix + ":" + $scope.symbol) + '&interval=daily&symboledit=1&saveimage=1&toolbarbg=f1f3f6&calendar=1&hotlist=1&news=1&newsvendors=stocktwits&studies=1&hideideas=1&theme=White&style=1&timezone=Etc%2FUTC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=localhost&utm_medium=widget&utm_campaign=chart&utm_term=' + encodeURIComponent($scope.symbol)
-            $scope.zacksChartUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas';
-            document.getElementById('tradingChart').setAttribute('src', $scope.tradingViewChartUrl);
-            document.getElementById('zacksEPS').setAttribute('src', $scope.zacksChartUrl);
             $scope.fetchNews();
         });
     };
 
     $scope.fetchNews = function () {
         var url = "https://api.intrinio.com/news?ticker=" + preEarn.searchKey.toUpperCase() + "&page_number=1&page_size=26";
-        $httpshooter.queue({
+        $http({
             method: 'GET',
             url: url,
             headers: {
                 Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
             }
         }).then(function (data) {
+            data = data.data;
             $scope.news = data.data;
         });
     }
