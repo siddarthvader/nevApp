@@ -1,4 +1,4 @@
-var nevApp=angular.module('nevApp', ['ui.router', 'ngResource','ngAnimate' ,'ngCookies','angular-httpshooter','ngStorage','myChart','isteven-multi-select','720kb.datepicker','angular.filter']);
+var nevApp=angular.module('nevApp', ['ui.router', 'ngResource','ngAnimate' ,'ngCookies','angular-httpshooter','ngStorage','isteven-multi-select','720kb.datepicker','angular.filter']);
 
 nevApp.filter('orderObject', function () {
     return function (object, reverse) {

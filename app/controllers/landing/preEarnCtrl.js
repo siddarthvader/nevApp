@@ -1,5 +1,5 @@
 
-nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localStorage, $sce, d3, $http, $timeout) {
+nevApp.controller('preEarnCtrl', function ($state, $scope, $httpshooter, $localStorage, $sce, $http, $timeout) {
     var preEarn = this;
     var tradingViewChartUrl;
     $scope.moment = moment;
