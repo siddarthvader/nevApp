@@ -13,12 +13,19 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
         }
     };
 
-
-    $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-        if (fromState.name === 'landing.fundamental') {
-            delete $sessionStorage.fundamental;
-        }
-    });
+    $scope.getExchangeName = function () {
+        var url = "https://api.intrinio.com/securities?ticker=" + $scope.symbol
+        $httpshooter.queue({
+            method: 'GET',
+            url: url,
+            headers: {
+                Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
+            }
+        }).then(function (data) {
+            console.log(data);
+            $scope.marketPrefix = data.price.exchangeName;
+        });
+    };
 
     $scope.fetchFundaContent = function () {
 
@@ -43,9 +50,6 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             $scope.price = data.price
             $scope.ticker = data.price.symbol;
 
-            if (!$scope.marketPrefix) {
-                $scope.marketPrefix = data.price.exchangeName;
-            }
 
             $scope.zacksChartUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#chart_canvas';
             $scope.zacksRankUrl = 'https://www.zacks.com/stock/chart/' + $scope.symbol + '/price-consensus-eps-surprise-chart#quote_ribbon_v2';
@@ -68,24 +72,10 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
         });
 
-        // var url = "https://api.intrinio.com/companies?ticker=" + $scope.symbol
-        // $httpshooter.queue({
-        //     method: 'GET',
-        //     url: url,
-        //     headers: {
-        //         Authorization: "Basic MmJjYmNmMTE2YjZjNWUzMGFmNjlkYTczN2EyNjRkNTY6MDU5YjZhYmIzZWI1MGIxZGFmZDg4ZTAyNmRhOTU3Y2E="
-        //     }
-        // }).then(function (data) {
-        //     console.log(data);
-
-
-        // });
-
-
 
         $scope.fetchYahooWeightage();
         $scope.fetchZacksRank();
-
+        $scope.getExchangeName();
 
     }
 
@@ -147,5 +137,11 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
             }
         });
     }
+
+    $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+        if (fromState.name === 'landing.fundamental') {
+            delete $sessionStorage.fundamental;
+        }
+    });
 
 });
