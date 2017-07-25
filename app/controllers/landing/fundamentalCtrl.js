@@ -9,6 +9,7 @@ nevApp.controller('fundamentalCtrl', function ($state, $scope, $localStorage, $r
 
         }
         else {
+            
 
         }
     };
